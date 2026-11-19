@@ -729,19 +729,22 @@ body {
 }
 
 .project-metrics li {
+  position: relative;
+  padding-left: 1.25rem;
   font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-primary);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.45rem;
+  display: block;
+  line-height: 1.55;
 }
 
 .project-metrics li::before {
   content: "★";
   color: var(--accent);
   font-size: 0.8rem;
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .project-tags {
@@ -891,17 +894,21 @@ body {
 }
 
 .skill-items li {
+  position: relative;
+  padding-left: 1.3rem;
   font-size: 0.91rem;
   color: var(--text-secondary);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.55rem;
+  display: block;
+  line-height: 1.58;
 }
 
 .skill-items li::before {
   content: "✓";
   color: var(--teal);
   font-weight: 800;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .samples-grid {
