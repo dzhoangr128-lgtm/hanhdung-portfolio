@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Báo Cáo Bài Tập Cuối Môn Xây Kênh Social — Hoàng Thị Hạnh Dung</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      color: #1f2937;
+      line-height: 1.5;
+      margin: 0;
+      padding: 20px 28px;
+      background: #ffffff;
+      font-size: 12px;
+    }
+    .page-break {
+      page-break-before: always;
+      margin-top: 20px;
+      padding-top: 8px;
+    }
+    .cover-banner {
+      background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 55%, #166534 100%);
+      color: #ffffff;
+      padding: 20px 26px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+    }
+    .cover-banner h1 {
+      margin: 0 0 8px 0;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .cover-banner p {
+      margin: 4px 0;
+      font-size: 12.5px;
+      opacity: 0.96;
+    }
+    .header {
+      border-bottom: 3px solid #7c3aed;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #4c1d95;
+      text-transform: uppercase;
+    }
+    .header .sub {
+      font-size: 11.5px;
+      color: #4b5563;
+      margin-top: 4px;
+    }
+    .badge {
+      background: #f3e8ff;
+      color: #6d28d9;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+    h2 {
+      font-size: 13.5px;
+      color: #ffffff;
+      background: #5b21b6;
+      padding: 6px 12px;
+      border-radius: 5px;
+      margin-top: 14px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    h2.green { background: #166534; }
+    h2.teal { background: #0f766e; }
+    h3 {
+      font-size: 13px;
+      color: #4c1d95;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 11px;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 5px 7px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f3f4f6;
+      font-weight: 700;
+      color: #111827;
+    }
+    .grid-2, .screenshot-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .card-green {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-top: 4px solid #166534;
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+    .card-purple {
+      background: #faf5ff;
+      border: 1px solid #e9d5ff;
+      border-top: 4px solid #7c3aed;
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+    .tag-green {
+      display: inline-block;
+      background: #dcfce7;
+      color: #166534;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 10.5px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .tag-purple {
+      display: inline-block;
+      background: #f3e8ff;
+      color: #6d28d9;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 10.5px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .pill-p1 { background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 600; font-size: 10px; display: inline-block; }
+    .pill-p2 { background: #fef3c7; color: #92400e; padding: 2px 6px; border-radius: 4px; font-weight: 600; font-size: 10px; display: inline-block; }
+    .pill-p3 { background: #dbeafe; color: #1e40af; padding: 2px 6px; border-radius: 4px; font-weight: 600; font-size: 10px; display: inline-block; }
+    .pill-done { background: #d1fae5; color: #065f46; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 10px; display: inline-block; }
+    .pill-viral { background: #fae8ff; color: #86198f; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 10px; display: inline-block; }
+    .note-box {
+      background: #faf5ff;
+      border-left: 4px solid #7c3aed;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      font-size: 11.5px;
+    }
+    .link-box, .gate-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-left: 5px solid #166534;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      font-size: 11.5px;
+    }
+    .diag-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 4px solid #d97706;
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      font-size: 11.5px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .kpi-card {
+      background: #faf5ff;
+      border: 1px solid #e9d5ff;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+    .kpi-card .num {
+      font-size: 19px;
+      font-weight: 700;
+      color: #6d28d9;
+    }
+    .kpi-card .label {
+      font-size: 10.8px;
+      color: #4b5563;
+      margin-top: 3px;
+    }
+    .screenshot-box {
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 8px;
+      background: #f9fafb;
+      text-align: center;
+    }
+    .screenshot-box img {
+      max-width: 100%;
+      max-height: 410px;
+      object-fit: contain;
+      border-radius: 5px;
+      border: 1px solid #e5e7eb;
+    }
+    .screenshot-box .cap {
+      font-size: 10.8px;
+      font-weight: 600;
+      color: #374151;
+      margin-top: 6px;
+    }
+    .step-grid { display: grid; grid-template-columns: 1fr; gap: 9px; margin-bottom: 12px; }
+    .step-card { border: 1px solid #e5e7eb; border-left: 5px solid #7c3aed; border-radius: 6px; padding: 9px 14px; background: #fafafa; }
+    code { background: #f3e8ff; color: #5b21b6; padding: 1px 5px; border-radius: 4px; font-family: Consolas, monospace; font-size: 10.8px; }
+  </style>
+</head>
+<body>
+  <div class="cover-banner">
+    <h1>BÁO CÁO BÀI TẬP CUỐI MÔN: XÂY KÊNH SOCIAL (MÔN CONTENT AI — AICO01)</h1>
+    <p><strong>Học viên thực hiện:</strong> Hoàng Thị Hạnh Dung &nbsp;|&nbsp; <strong>Đơn vị đào tạo:</strong> Học viện Kstudy</p>
+    <p><strong>Kênh 1 (Facebook Fanpage — 10 bài công khai):</strong> Daizy Pilates — <a style="color:#fde047;" href="https://www.facebook.com/profile.php?id=61596228457366">https://www.facebook.com/profile.php?id=61596228457366</a></p>
+    <p><strong>Kênh 2 (TikTok — 14 bài công khai, 971 Thích, Viral 3.215 Views):</strong> Hào quang màu tím (@daizy.purple.aura) — <a style="color:#fde047;" href="https://www.tiktok.com/@daizy.purple.aura">https://www.tiktok.com/@daizy.purple.aura</a></p>
+  </div>
+
+  <div>
+
+  <div class="header">
+    <div>
+      <h1>1. BẢN ĐỊNH HƯỚNG CHIẾN LƯỢC NỘI DUNG XÂY KÊNH (CONTENT STRATEGY ONE-PAGE)</h1>
+      <div class="sub">Học viên: <strong>Hoàng Thị Hạnh Dung</strong> | Lớp: AICO01 — Học viện Kstudy | Hệ sinh thái 2 kênh: <strong>Facebook Daizy Pilates</strong> &amp; <strong>TikTok Hào quang màu tím</strong></div>
+    </div>
+    <div class="badge">PHẦN 1 / 4</div>
+  </div>
+
+  <h2>I. PHẠM VI THƯƠNG HIỆU, MỤC TIÊU KINH DOANH &amp; HÀNH ĐỘNG MONG MUỐN (CHẶNG 1 – 3)</h2>
+  <div class="grid-2">
+    <div class="card-green">
+      <span class="tag-green">KÊNH 1 • FACEBOOK FANPAGE (10 BÀI CÔNG KHAI)</span>
+      <h3 style="margin:4px 0 6px 0; color:#166534; font-size:14px;">🌿 DAIZY PILATES — Tập Pilates &amp; Dinh Dưỡng Lành Mạnh</h3>
+      <p style="margin:3px 0;"><strong>• Link kênh công khai:</strong> <a href="https://www.facebook.com/profile.php?id=61596228457366">https://www.facebook.com/profile.php?id=61596228457366</a></p>
+      <p style="margin:3px 0;"><strong>• Lĩnh vực &amp; Sản phẩm trọng tâm:</strong> Hướng dẫn tập Pilates chỉnh dáng (Mat &amp; Reformer) kết hợp chế độ ăn lành mạnh 2–1–1 cho nữ văn phòng.</p>
+      <p style="margin:3px 0;"><strong>• Mục tiêu trong 1 tháng:</strong> Xuất bản ≥ 10 bài chuyên sâu chuẩn hình ảnh Studio/Infographic; xây dựng uy tín chuyên môn và thu hút học viên đăng ký lớp trải nghiệm Pilates đầu tiên.</p>
+      <p style="margin:3px 0;"><strong>• Hành động mong muốn &amp; KPI:</strong> Khách hàng đọc hết bài, Lưu bài (Save) để tập theo tại bàn làm việc/tại nhà và Nhắn tin (Inbox) 3 thông tin cơ thể để tư vấn lịch tập.</p>
+    </div>
+    <div class="card-purple">
+      <span class="tag-purple">KÊNH 2 • TIKTOK PHOTO MODE (14 BÀI • 971 THÍCH • TOP 3.215 VIEWS)</span>
+      <h3 style="margin:4px 0 6px 0; color:#5b21b6; font-size:14px;">💜 HÀO QUANG MÀU TÍM (@daizy.purple.aura) — Thời Trang Phối Đồ</h3>
+      <p style="margin:3px 0;"><strong>• Link kênh công khai:</strong> <a href="https://www.tiktok.com/@daizy.purple.aura">https://www.tiktok.com/@daizy.purple.aura</a></p>
+      <p style="margin:3px 0;"><strong>• Lĩnh vực &amp; Sản phẩm trọng tâm:</strong> Thời trang phối đồ nữ tối giản, Xây dựng Tủ đồ con nhộng (Capsule Wardrobe) &amp; Phong cách Old Money "tiết kiệm năng lượng".</p>
+      <p style="margin:3px 0;"><strong>• Mục tiêu trong 1 tháng:</strong> Xuất bản ≥ 10–14 bộ Lookbook TikTok Photo Mode, đạt &gt;10.000 tổng lượt xem tự nhiên (FYP) và ≥ 500 lượt Thích/Lưu công thức phối đồ.</p>
+      <p style="margin:3px 0;"><strong>• Kết quả thực tế vượt KPI:</strong> Đã đăng <strong>14 bài công khai</strong>, đạt <strong>15 Followers, 971 Lượt thích</strong>, 7 bài cán mốc <strong>1.048 – 3.215 views/bài</strong> (Đạt tiêu chí cộng 1 điểm kênh chỉ số tốt).</p>
+    </div>
+  </div>
+
+  <h2>II. THÔNG TIN QUAN SÁT ĐƯỢC, BẢN ĐỒ 4D &amp; INSIGHT KHÁCH HÀNG (CHẶNG 4 – 6)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 19%;">Hạng mục phân tích</th>
+        <th style="width: 40.5%;">Kênh 1: Facebook "Daizy Pilates"<br>(Vóc Dáng &amp; Dinh Dưỡng Nữ Văn Phòng)</th>
+        <th style="width: 40.5%;">Kênh 2: TikTok "Hào quang màu tím"<br>(Thời Trang Phối Đồ "Tiết Kiệm Năng Lượng")</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Thông tin / đặc điểm quan sát được</strong></td>
+        <td>• Chị em văn phòng 22–35 tuổi ngồi máy tính 8 tiếng/ngày hay than đau cứng cổ vai gáy, lưng tôm, ngồi vắt chéo chân.<br>• Nhiều bạn chỉ nặng 45–48kg nhưng mặc váy ôm vẫn lộ bụng dưới; chiều 2h30 hay buồn ngủ và gọi trà sữa.</td>
+        <td>• Chị em văn phòng mỗi sáng mất 20–30 phút đứng trước tủ đồ đầy quần áo nhưng vẫn thở dài "không có gì để mặc".<br>• Thích mặc thanh lịch như tạp chí nhưng sợ tốn tiền mua nhiều đồ nhanh lỗi mốt.</td>
+      </tr>
+      <tr>
+        <td><strong>1. Nỗi đau (Pains)</strong></td>
+        <td>• Đổ xương chậu về trước (APT) làm lộ bụng dưới kém tự tin.<br>• Khớp hông bó cứng do ngồi vắt chéo chân; cơ thể tích nước, nặng bụng.</td>
+        <td>• Quá tải quyết định (Decision Fatigue) mỗi sáng đi làm.<br>• Mua đồ rời rạc theo cảm hứng nên không ghép được thành bộ hoàn chỉnh.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Mong muốn (Desires)</strong></td>
+        <td>• Có bài tập Pilates ngắn 1–5 phút chỉnh trục cơ thể thẳng đẹp và công thức ăn đủ chất (không nhịn cơm) mà vòng eo vẫn gọn.</td>
+        <td>• Sở hữu <strong>Tủ đồ con nhộng (Capsule Wardrobe)</strong> tối giản, nhìn vào bảng phối là mặc đẹp ngay trong 30 giây, không bao giờ lỗi mốt.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Rào cản (Barriers)</strong></td>
+        <td>• Ngại nhắn phòng tập vì "chưa từng tập Pilates bao giờ", không phân biệt được lớp Mat và Reformer, sợ hủy 1 buổi là bỏ cuộc luôn.</td>
+        <td>• Sợ đồ tối giản (trắng/đen/be/linen) bị đơn điệu hoặc sợ dáng người chưa chuẩn không mặc đẹp được chân váy midi, quần jeans.</td>
+      </tr>
+      <tr>
+        <td><strong>4. Điểm kích hoạt sự quan tâm</strong></td>
+        <td>• Khoảnh khắc nhìn ảnh chụp nghiêng thấy cổ rùa/bụng dưới nhô, hoặc cơn đau mỏi cổ vai gáy ập đến lúc 3h chiều tại bàn làm việc.</td>
+        <td>• Sáng thứ Hai vội đi làm hoặc chuẩn bị đi biển/hẹn hò cần công thức phối đồ ăn sẵn theo từng món (Chân váy midi, Váy liền, Linen, Jeans).</td>
+      </tr>
+      <tr>
+        <td><strong>Mâu thuẫn trung tâm &amp; Insight cốt lõi</strong></td>
+        <td><em>"Tôi biết mình cần tập luyện để lưng thẳng, eo thon và hết đau cổ vai gáy, nhưng tôi sợ các bài tập nặng nhọc và chế độ ăn kiêng khắc nghiệt vì công việc văn phòng đã quá bận; nên tôi cần những chỉ dẫn Pilates &amp; bữa ăn 2–1–1 nhẹ nhàng, rõ ràng từng bước để làm theo ngay."</em></td>
+        <td><em>"Tôi muốn xuất hiện tại văn phòng và dạo phố với vẻ ngoài thanh lịch, sang chảnh mỗi ngày, nhưng tôi không còn năng lượng để suy nghĩ cách phối đồ phức tạp mỗi sáng; nên tôi tìm kiếm những bảng phối Tủ đồ con nhộng trực quan giúp mặc đẹp tức thì và bền vững."</em></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="green">III. CƠ HỘI NỘI DUNG, LỜI HỨA, NHIỆM VỤ &amp; VÙNG NỘI DUNG (CHẶNG 7 – 12)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 19%;">Cấu phần Chiến lược</th>
+        <th style="width: 40.5%;">Kênh 1: Facebook "Daizy Pilates"</th>
+        <th style="width: 40.5%;">Kênh 2: TikTok "Hào quang màu tím" (@daizy.purple.aura)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Cơ hội nội dung (Market Gap)</strong></td>
+        <td>Thị trường hay hô hào "giảm 5kg cấp tốc / cắt hoàn toàn tinh bột". <strong>Khoảng trống của Daizy Pilates:</strong> Đi sâu vào chỉnh trục tư thế (xương chậu, cột sống, khớp hông) và ăn đủ chất theo đĩa 2–1–1.</td>
+        <td>Thị trường hay khoe haul mua sắm hàng chục món đồ rẻ tiền nhanh lỗi mốt. <strong>Khoảng trống của Hào quang màu tím:</strong> Phối đồ "tiết kiệm năng lượng" từ những items quốc dân dùng đi dùng lại nhiều năm.</td>
+      </tr>
+      <tr>
+        <td><strong>Lời hứa (Mission) &amp; Nhiệm vụ (Task)</strong></td>
+        <td>• <strong>Lời hứa:</strong> Mỗi bài viết là 1 chỉ dẫn chỉnh dáng hoặc bữa ăn lành áp dụng được trong 3 phút.<br>• <strong>Nhiệm vụ:</strong> Gỡ rào cản tâm lý người mới &amp; giải thích cơ chế cơ sinh học dễ hiểu.</td>
+        <td>• <strong>Lời hứa:</strong> Mở kênh ra là có sẵn công thức mặc đẹp thanh lịch trong 30 giây.<br>• <strong>Nhiệm vụ:</strong> Hệ thống hóa tủ đồ thành các bảng Lookbook trực quan để người xem lưu lại dùng ngay.</td>
+      </tr>
+      <tr>
+        <td><strong>Vùng nội dung &amp; 3 Trụ cột (Content Pillars)</strong></td>
+        <td>
+          <strong>1. Pilates Chỉnh Dáng Công Sở (40%):</strong> Mở vai trên ghế, <em>Pelvic Curl</em> thu bụng dưới, <em>Butterfly</em> mở khớp hông, <em>Cat-Cow</em>.<br>
+          <strong>2. Dinh Dưỡng Lành Mạnh 2–1–1 (35%):</strong> Đĩa ăn 2–1–1, hộp cơm trưa văn phòng, bữa xế trước tập, trà thảo mộc chiều.<br>
+          <strong>3. Cẩm Nang Nhập Môn Pilates (25%):</strong> 3 câu nhắn Studio, chọn Mat hay Reformer, cách xếp lịch tập quanh giờ tan làm.
+        </td>
+        <td>
+          <strong>1. Tủ Đồ Con Nhộng "Tiết Kiệm Năng Lượng" (40%):</strong> Capsule Wardrobe Part 1 &amp; Part 2, Daily Essentials, trang phục Casual dạo phố.<br>
+          <strong>2. Phối Đồ Theo Item Chủ Lực (35%):</strong> Chân váy midi sang chảnh, Váy liền thân hè, Quần jeans thanh lịch, Đồ đi biển.<br>
+          <strong>3. Phong Cách Old Money &amp; Xu Hướng 2026 (25%):</strong> Old Money gam trắng, Chất liệu Linen phóng khoáng, Minimalist thập niên 90s.
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Thông điệp chủ đạo &amp; Bằng chứng (Proof)</strong></td>
+        <td>• <strong>Thông điệp:</strong> <em>"Chỉnh trục đúng — Ăn lành đủ — Đẹp bền vững từ gốc."</em><br>• <strong>Bằng chứng:</strong> Cơ chế giải phẫu học rõ ràng (APT, nhịp thở 4-2-6, thứ tự gắp thức ăn) + Ảnh minh họa tư thế chuẩn Studio.</td>
+        <td>• <strong>Thông điệp:</strong> <em>"Tủ đồ tối giản, dễ ứng dụng mà không bao giờ lỗi mốt cho cô nàng muốn tiết kiệm năng lượng."</em><br>• <strong>Bằng chứng:</strong> Ma trận ghép 6–12 bộ trang phục thực tế trên mỗi bài đăng, chứng minh bằng <strong>971 lượt Thích</strong> và <strong>3.215 views</strong>.</td>
+      </tr>
+      <tr>
+        <td><strong>Giọng điệu &amp; Ranh giới (Boundaries)</strong></td>
+        <td>• <strong>Giọng điệu:</strong> Chuyên gia tận tâm, điềm tĩnh, trình bày tách dòng khoa học.<br>• <strong>Ranh giới:</strong> Không cam kết giảm cân thần tốc, không khuyên nhịn ăn cực đoan, không dùng ảnh trùng lặp.</td>
+        <td>• <strong>Giọng điệu:</strong> Tinh tế, hiện đại, chuẩn biên tập viên thời trang (Editorial Chic).<br>• <strong>Ranh giới:</strong> Không cổ xúy mua sắm lãng phí, không đăng ảnh kém chất lượng hoặc rối mắt.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+  <div class="page-break">
+
+  <div class="header">
+    <div>
+      <h1>2. CONTENT PLAN 1 THÁNG &amp; MA TRẬN REPURPOSE ĐA KÊNH</h1>
+      <div class="sub">Học viên: <strong>Hoàng Thị Hạnh Dung</strong> | Lớp: AICO01 — Học viện Kstudy | Đã xuất bản thực tế: <strong>24 bài công khai</strong> (10 bài Facebook + 14 bài TikTok)</div>
+    </div>
+    <div class="badge">PHẦN 2 / 4</div>
+  </div>
+
+  <div class="note-box">
+    <strong>Kiến trúc Chuỗi nội dung (Content Series) &amp; Phân bổ 30 ngày:</strong> Mỗi dòng kế hoạch dưới đây đều gắn chặt với <strong>Mục tiêu tầng phễu (TOF/MOF/BOF)</strong>, <strong>Trụ cột &amp; Chuỗi bài</strong>, <strong>1 trong 6 Nhóm góc tiếp cận chuẩn AICO01</strong> (Nỗi đau/Sai lầm, Phản biện niềm tin cũ, So sánh/Lựa chọn, Hướng dẫn từng bước, Bằng chứng/Công thức, Tình huống thực tế), <strong>CTA</strong> và <strong>KPI thực tế</strong>.
+  </div>
+
+  <h2 class="green">PHẦN A. CONTENT PLAN 1 THÁNG — KÊNH 1: FACEBOOK "DAIZY PILATES" (12 BÀI / 4 TUẦN — ĐÃ ĐĂNG 10 BÀI)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 4%;">STT</th>
+        <th style="width: 6%;">Lịch</th>
+        <th style="width: 8%;">Mục tiêu</th>
+        <th style="width: 13%;">Trụ cột &amp; Chuỗi</th>
+        <th style="width: 15%;">Nhóm góc &amp; Angle cụ thể</th>
+        <th style="width: 25%;">Tiêu đề / Hook chính trên Kênh</th>
+        <th style="width: 14%;">Định dạng &amp; Visual</th>
+        <th style="width: 15%;">CTA &amp; Trạng thái</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>01</strong></td>
+        <td>Tuần 1<br>Thứ 2</td>
+        <td>BOF<br>Mở lời</td>
+        <td><span class="pill-p3">3. Nhập môn</span><br>Chuỗi: Ngày đầu đi tập</td>
+        <td><strong>Hướng dẫn từng bước:</strong> Gỡ tâm lý ngại nhắn phòng tập lần đầu.</td>
+        <td><strong>Chưa từng tập Pilates? Nhắn studio 3 câu này:</strong> Tình trạng cơ thể, mục tiêu chỉnh dáng &amp; khung giờ.</td>
+        <td>Post + Infographic 3 câu hỏi mẫu</td>
+        <td>Lưu bài &amp; nhắn Studio<br><span class="pill-done">Đã đăng FB #1</span></td>
+      </tr>
+      <tr>
+        <td><strong>02</strong></td>
+        <td>Tuần 1<br>Thứ 4</td>
+        <td>MOF<br>Hiểu đúng</td>
+        <td><span class="pill-p3">3. Nhập môn</span><br>Chuỗi: Ngày đầu đi tập</td>
+        <td><strong>So sánh / Lựa chọn:</strong> Phân biệt rõ cảm giác tập trên thảm và trên máy.</td>
+        <td><strong>Mat hay Reformer? Chọn lớp Pilates đầu tiên:</strong> Đặt Mat và Reformer cạnh nhau theo mục tiêu.</td>
+        <td>Post + Infographic bảng so sánh</td>
+        <td>Bình luận lớp bạn chọn<br><span class="pill-done">Đã đăng FB #2</span></td>
+      </tr>
+      <tr>
+        <td><strong>03</strong></td>
+        <td>Tuần 1<br>Thứ 6</td>
+        <td>MOF<br>Duy trì</td>
+        <td><span class="pill-p3">3. Nhập môn</span><br>Chuỗi: Lịch tập công sở</td>
+        <td><strong>Tình huống thực tế:</strong> Cách quay lại nhịp tập sau 1 buổi phải tăng ca.</td>
+        <td><strong>Hủy một buổi Pilates rồi, làm sao để quay lại?</strong> Công thức 2 buổi cố định + 1 buổi dự phòng.</td>
+        <td>Post + Infographic sổ tay lịch tập</td>
+        <td>Chia sẻ khung giờ tan làm<br><span class="pill-done">Đã đăng FB #3</span></td>
+      </tr>
+      <tr>
+        <td><strong>04</strong></td>
+        <td>Tuần 2<br>Thứ 2</td>
+        <td>TOF<br>Tương tác</td>
+        <td><span class="pill-p2">2. Ăn lành 2-1-1</span><br>Chuỗi: Bữa trưa nhẹ bụng</td>
+        <td><strong>Hướng dẫn từng bước:</strong> Công thức chọn món nhanh khi gọi cơm trưa văn phòng.</td>
+        <td><strong>Đến trưa lại bí món? Chọn cơm, món đạm và rau:</strong> Ghép 1 đạm + 1 rau + cơm vừa đủ không buồn ngủ.</td>
+        <td>Post + Infographic 3 hộp cơm trưa</td>
+        <td>Comment món trưa nay<br><span class="pill-done">Đã đăng FB #4</span></td>
+      </tr>
+      <tr>
+        <td><strong>05</strong></td>
+        <td>Tuần 2<br>Thứ 4</td>
+        <td>MOF<br>Nuôi dưỡng</td>
+        <td><span class="pill-p2">2. Ăn lành 2-1-1</span><br>Chuỗi: Ăn xế trước tập</td>
+        <td><strong>Bằng chứng / Công thức:</strong> Ăn nhẹ trước 60 phút để không đói lả hay tức bụng.</td>
+        <td><strong>Tối có lớp Pilates, ăn xế thế nào cho tiện?</strong> 3 món ăn xế gọn nhẹ trong ngăn kéo văn phòng.</td>
+        <td>Post + Infographic 3 món ăn xế</td>
+        <td>Lưu lại cho chiều đi tập<br><span class="pill-done">Đã đăng FB #5</span></td>
+      </tr>
+      <tr>
+        <td><strong>06</strong></td>
+        <td>Tuần 2<br>Thứ 6</td>
+        <td>TOF<br>Nhận biết</td>
+        <td><span class="pill-p1">1. Chỉnh dáng</span><br>Chuỗi: 60s cứu cổ vai gáy</td>
+        <td><strong>Nỗi đau / Sai lầm:</strong> Ngồi gõ máy tính làm đầu nhô trước tăng tải 12–18kg lên đốt sống cổ.</td>
+        <td><strong>60 giây Pilates mở vai cứu cổ vai gáy ngay trên ghế làm việc:</strong> Nhịp thở 4-2-6 &amp; Mở lồng ngực chữ W.</td>
+        <td>Bài Bullet tách dòng + Ảnh AI Studio mở vai</td>
+        <td>Thử ngay 5 nhịp thở<br><span class="pill-done">Đã đăng FB #6</span></td>
+      </tr>
+      <tr>
+        <td><strong>07</strong></td>
+        <td>Tuần 3<br>Thứ 2</td>
+        <td>MOF<br>Thay thói quen</td>
+        <td><span class="pill-p2">2. Ăn lành 2-1-1</span><br>Chuỗi: Chiều tỉnh táo</td>
+        <td><strong>So sánh / Thay thế:</strong> Đổi trà sữa nhiều đường sang trà thảo mộc giữ eo, sáng da.</td>
+        <td><strong>2h30 chiều uể oải: Công thức Trà Hoa Cúc – Táo Đỏ – Kỷ Tử + 8 hạt hạnh nhân</strong> cắt cơn thèm ngọt.</td>
+        <td>Bài Bullet tách dòng + Ảnh AI Ly trà thảo mộc</td>
+        <td>Bình luận món uống chiều<br><span class="pill-done">Đã đăng FB #7</span></td>
+      </tr>
+      <tr>
+        <td><strong>08</strong></td>
+        <td>Tuần 3<br>Thứ 4</td>
+        <td>TOF<br>Viral/Share</td>
+        <td><span class="pill-p1">1. Chỉnh dáng</span><br>Chuỗi: Khung chậu chuẩn</td>
+        <td><strong>Phản biện niềm tin cũ:</strong> Bụng dưới nhô không phải do béo mỡ mà do Đổ xương chậu (APT).</td>
+        <td><strong>Vì sao người 47kg mặc váy ôm vẫn lộ bụng dưới?</strong> Bài tập <em>Pelvic Curl</em> khóa khung chậu phẳng eo.</td>
+        <td>Bài Bullet tách dòng + Ảnh AI Tư thế Pelvic Curl</td>
+        <td>Tag cô bạn cùng tập tối nay<br><span class="pill-done">Đã đăng FB #8</span></td>
+      </tr>
+      <tr>
+        <td><strong>09</strong></td>
+        <td>Tuần 3<br>Thứ 6</td>
+        <td>MOF<br>Lưu bài</td>
+        <td><span class="pill-p2">2. Ăn lành 2-1-1</span><br>Chuỗi: Bữa trưa nhẹ bụng</td>
+        <td><strong>Bằng chứng / Công thức:</strong> Đảo thứ tự gắp thức ăn để chặn đỉnh đường huyết sau bữa trưa.</td>
+        <td><strong>Quy tắc Đĩa ăn 2–1–1 &amp; Thứ tự gắp thức ăn:</strong> Rau xanh → Đạm → Tinh bột giúp eo gọn, chiều tỉnh táo.</td>
+        <td>Bài Bullet tách dòng + Ảnh AI Đĩa ăn 2-1-1 cá hồi</td>
+        <td>Áp dụng ngay trưa mai<br><span class="pill-done">Đã đăng FB #9</span></td>
+      </tr>
+      <tr>
+        <td><strong>10</strong></td>
+        <td>Tuần 4<br>Thứ 2</td>
+        <td>TOF<br>Cảnh tỉnh</td>
+        <td><span class="pill-p1">1. Chỉnh dáng</span><br>Chuỗi: Khung chậu chuẩn</td>
+        <td><strong>Nỗi đau / Sai lầm:</strong> Thói quen ngồi vắt chéo chân 8 tiếng làm lệch khung chậu &amp; lộ hõm hông.</td>
+        <td><strong>Đang ngồi vắt chéo chân?</strong> Hạ chân xuống và tập 3 phút Pilates Cánh Bướm (<em>Butterfly Hip Opener</em>).</td>
+        <td>Bài Bullet tách dòng + Ảnh AI Tư thế Butterfly</td>
+        <td>Bình luận bên chân hay vắt<br><span class="pill-done">Đã đăng FB #10</span></td>
+      </tr>
+      <tr>
+        <td><strong>11</strong></td>
+        <td>Tuần 4<br>Thứ 4</td>
+        <td>MOF<br>Thực hành</td>
+        <td><span class="pill-p2">2. Ăn lành 2-1-1</span><br>Chuỗi: Ăn xế trước tập</td>
+        <td><strong>Bằng chứng / Công thức:</strong> Nạp 150 calo chuẩn tỷ lệ Carb chậm + Đạm trước ca tập 18h00.</td>
+        <td><strong>Bữa phụ 4h chiều trước ca tập Pilates:</strong> Sữa chua Hy Lạp + 1/2 quả chuối + hạt chia không lo tụt huyết áp.</td>
+        <td>Bài Bullet tách dòng + Ảnh AI Bát sữa chua hạt</td>
+        <td>Lưu công thức bữa xế<br>Đã nghiệm thu ảnh</td>
+      </tr>
+      <tr>
+        <td><strong>12</strong></td>
+        <td>Tuần 4<br>Thứ 6</td>
+        <td>BOF<br>Chuyển đổi</td>
+        <td><span class="pill-p1">1. Chỉnh dáng</span><br>Chuỗi: Giãn cơ tối</td>
+        <td><strong>Hướng dẫn từng bước:</strong> 5 nhịp cuộn từng đốt sống trên thảm giúp ngủ sâu và mềm lưng.</td>
+        <td><strong>Giải phóng 10 đốt sống lưng cứng đờ trước khi ngủ:</strong> Bài tập Pilates <em>Cat-Cow</em> (Mèo – Bò) tại nhà.</td>
+        <td>Bài Bullet tách dòng + Ảnh AI Tư thế Cat-Cow</td>
+        <td>Inbox nhận lộ trình tập<br>Đã nghiệm thu ảnh</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>PHẦN B. CONTENT PLAN 1 THÁNG — KÊNH 2: TIKTOK "HÀO QUANG MÀU TÍM" (@daizy.purple.aura — 14 BÀI ĐÃ ĐĂNG)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 4%;">STT</th>
+        <th style="width: 6%;">Lịch</th>
+        <th style="width: 8%;">Mục tiêu</th>
+        <th style="width: 14%;">Trụ cột &amp; Chuỗi</th>
+        <th style="width: 15%;">Nhóm góc &amp; Angle cụ thể</th>
+        <th style="width: 27%;">Tiêu đề bìa trên TikTok Photo Mode</th>
+        <th style="width: 13%;">Định dạng &amp; Visual</th>
+        <th style="width: 13%;">Chỉ số thực tế</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>01</strong></td>
+        <td>Tuần 1</td>
+        <td>TOF</td>
+        <td><span class="pill-p1">1. Tủ đồ con nhộng</span><br>Chuỗi: Tiết kiệm năng lượng</td>
+        <td><strong>Tuyên ngôn giải pháp:</strong> Tủ đồ tối giản giải phóng năng lượng mỗi sáng.</td>
+        <td><strong>Hào quang màu tím — New Style, New Life:</strong> Tủ đồ tối giản, dễ ứng dụng mà không bao giờ lỗi mốt dành cho các cô nàng muốn "tiết kiệm năng lượng".</td>
+        <td>TikTok Photo Mode (Lookbook)</td>
+        <td><span class="pill-done">Đã đăng công khai</span></td>
+      </tr>
+      <tr>
+        <td><strong>02</strong></td>
+        <td>Tuần 1</td>
+        <td>TOF</td>
+        <td><span class="pill-p2">3. Old Money &amp; 90s</span><br>Chuỗi: Thanh lịch vượt thời gian</td>
+        <td><strong>Phản biện xu hướng ngắn hạn:</strong> Vẻ đẹp tối giản thập niên 90s vẫn sang trọng năm 2026.</td>
+        <td><strong>Xu hướng thập niên 90s</strong> với phong cách tối giản và thanh lịch "tiết kiệm năng lượng" cho chị em.</td>
+        <td>TikTok Photo Mode (90s Board)</td>
+        <td><span class="pill-done">Đã đăng công khai</span></td>
+      </tr>
+      <tr>
+        <td><strong>03</strong></td>
+        <td>Tuần 1</td>
+        <td>MOF</td>
+        <td><span class="pill-p3">2. Phối theo Item</span><br>Chuỗi: 1 Item – Đa phong cách</td>
+        <td><strong>Hướng dẫn từng bước:</strong> Biến hóa chiếc quần jeans quen thuộc thành 6 bộ đi làm &amp; dạo phố.</td>
+        <td><strong>Phối đồ với quần jeans</strong> cùng các cô nàng sành điệu (Sơ mi trắng, tanktop đen, blazer).</td>
+        <td>TikTok Photo Mode (Denim Lookbook)</td>
+        <td><span class="pill-done">Đã đăng công khai</span></td>
+      </tr>
+      <tr>
+        <td><strong>04</strong></td>
+        <td>Tuần 1</td>
+        <td>TOF</td>
+        <td><span class="pill-p3">2. Phối theo Item</span><br>Chuỗi: Mặc đẹp 30 giây</td>
+        <td><strong>So sánh / Phân loại:</strong> 6 dáng váy liền thân mặc 1 món là bước ra đường được ngay.</td>
+        <td><strong>Những em váy liền thân không thể thiếu</strong> trong tủ hè của các cô nàng sành điệu (Babydoll, Caro, Floral, Slip dress, Polka dot).</td>
+        <td>TikTok Photo Mode (6-Grid Dress)</td>
+        <td><span class="pill-viral">🔥 1.674 Views</span></td>
+      </tr>
+      <tr>
+        <td><strong>05</strong></td>
+        <td>Tuần 2</td>
+        <td>TOF</td>
+        <td><span class="pill-p3">2. Phối theo Item</span><br>Chuỗi: Summer Lookbook</td>
+        <td><strong>Tình huống thực tế:</strong> Chuẩn bị vali đi biển gọn nhẹ mà lên hình nổi bật.</td>
+        <td><strong>Chào hè với những bộ ảnh đi biển siêu slay</strong> dành cho hội summer girl.</td>
+        <td>TikTok Photo Mode (Polaroid)</td>
+        <td><span class="pill-done">160 Views</span></td>
+      </tr>
+      <tr>
+        <td><strong>06</strong></td>
+        <td>Tuần 2</td>
+        <td>MOF</td>
+        <td><span class="pill-p3">2. Phối theo Item</span><br>Chuỗi: 1 Item – Đa phong cách</td>
+        <td><strong>Hướng dẫn từng bước:</strong> Công thức diện chân váy tôn eo, che khuyết điểm hông.</td>
+        <td><strong>Phong cách mặc chân váy đẹp mê ly</strong> dễ ứng dụng cho các nàng (Part 1).</td>
+        <td>TikTok Photo Mode (Skirt Guide)</td>
+        <td><span class="pill-viral">🔥 1.048 Views</span></td>
+      </tr>
+      <tr>
+        <td><strong>07</strong></td>
+        <td>Tuần 2</td>
+        <td>TOF</td>
+        <td><span class="pill-p1">1. Tủ đồ con nhộng</span><br>Chuỗi: Tiết kiệm năng lượng</td>
+        <td><strong>Nỗi đau / Giải pháp:</strong> Xóa bỏ câu hỏi "Hôm nay mặc gì" bằng 6 công thức con nhộng cơ bản.</td>
+        <td><strong>Xây dựng tủ đồ con nhộng tiết kiệm năng lượng,</strong> dễ ứng dụng lại không bao giờ lỗi mốt (Part 1).</td>
+        <td>TikTok Photo Mode (Capsule P1)</td>
+        <td><span class="pill-viral">🔥 1.485 Views</span></td>
+      </tr>
+      <tr>
+        <td><strong>08</strong></td>
+        <td>Tuần 3</td>
+        <td>MOF</td>
+        <td><span class="pill-p1">1. Tủ đồ con nhộng</span><br>Chuỗi: Casual Chic</td>
+        <td><strong>Tình huống thực tế:</strong> Mặc thoải mái đi cà phê cuối tuần nhưng vẫn giữ thần thái chỉn chu.</td>
+        <td><strong>Những gợi ý trang phục casual dạo phố hàng ngày</strong> cùng các cô nàng sành điệu.</td>
+        <td>TikTok Photo Mode (Casual Chic)</td>
+        <td><span class="pill-done">992 Views</span></td>
+      </tr>
+      <tr>
+        <td><strong>09</strong></td>
+        <td>Tuần 3</td>
+        <td>TOF</td>
+        <td><span class="pill-p2">3. Old Money &amp; 90s</span><br>Chuỗi: Key Items 2026</td>
+        <td><strong>Bằng chứng / Chọn lọc:</strong> Chỉ cần đầu tư 3 phụ kiện chủ chốt để nâng tầm cả bộ đồ cơ bản.</td>
+        <td><strong>Fashion — Những món đồ hot hit</strong> dẫn đầu xu hướng thời trang 2026 (Túi nâu, kính gọng mảnh).</td>
+        <td>TikTok Photo Mode (Key Items)</td>
+        <td><span class="pill-viral">🔥 1.498 Views</span></td>
+      </tr>
+      <tr>
+        <td><strong>10</strong></td>
+        <td>Tuần 3</td>
+        <td>MOF</td>
+        <td><span class="pill-p2">3. Old Money &amp; 90s</span><br>Chuỗi: Thanh lịch vượt thời gian</td>
+        <td><strong>Hướng dẫn phối màu:</strong> Cách phối gam màu trắng Monochrome sang trọng, không bị đơn điệu.</td>
+        <td><strong>Old money aesthetic — Chinh phục gam màu trắng cơ bản</strong> sang trọng, đơn giản và bền vững.</td>
+        <td>TikTok Photo Mode (White Aesthetic)</td>
+        <td><span class="pill-done">563 Views</span></td>
+      </tr>
+      <tr>
+        <td><strong>11</strong></td>
+        <td>Tuần 3</td>
+        <td>BOF</td>
+        <td><span class="pill-p1">1. Tủ đồ con nhộng</span><br>Chuỗi: Tiết kiệm năng lượng</td>
+        <td><strong>Bằng chứng / Ma trận đầy đủ:</strong> Mở rộng bảng ghép 15 bộ đồ công sở từ 8 món đồ lõi.</td>
+        <td><strong>Xây dựng tủ đồ con nhộng tiết kiệm năng lượng,</strong> dễ ứng dụng lại không bao giờ lỗi mốt (Part 2).</td>
+        <td>TikTok Photo Mode (Full Matrix P2)</td>
+        <td><span class="pill-viral">🏆 3.215 Views (Top 1)</span></td>
+      </tr>
+      <tr>
+        <td><strong>12</strong></td>
+        <td>Tuần 4</td>
+        <td>MOF</td>
+        <td><span class="pill-p1">1. Tủ đồ con nhộng</span><br>Chuỗi: Key Items 2026</td>
+        <td><strong>So sánh / Chọn lọc:</strong> Điểm danh những items quốc dân dễ mặc cho mọi dáng người.</td>
+        <td><strong>Daily Essentials — Những items quốc dân không thể thiếu hè 2026</strong> (Modern Lines).</td>
+        <td>TikTok Photo Mode (Editorial Cover)</td>
+        <td><span class="pill-viral">🔥 1.121 Views</span></td>
+      </tr>
+      <tr>
+        <td><strong>13</strong></td>
+        <td>Tuần 4</td>
+        <td>MOF</td>
+        <td><span class="pill-p2">3. Old Money &amp; 90s</span><br>Chuỗi: Chất liệu biết thở</td>
+        <td><strong>Nỗi đau thời tiết hè:</strong> Giải nhiệt mùa hè công sở bằng chất liệu Linen thoáng mát, lịch lãm.</td>
+        <td><strong>Chinh phục thời trang chất liệu linen</strong> phóng khoáng và lịch lãm cho mùa hè 2026 năng động.</td>
+        <td>TikTok Photo Mode (Linen Lookbook)</td>
+        <td><span class="pill-viral">🔥 1.149 Views</span></td>
+      </tr>
+      <tr>
+        <td><strong>14</strong></td>
+        <td>Tuần 4</td>
+        <td>BOF</td>
+        <td><span class="pill-p3">2. Phối theo Item</span><br>Chuỗi: 1 Item – Đa phong cách</td>
+        <td><strong>Hướng dẫn tôn dáng:</strong> Bí quyết phối chân váy midi giúp kéo dài chân và tôn vòng eo gọn.</td>
+        <td><strong>Chinh phục chân váy hot nhất hè 2026 — Chân váy midi</strong> cho các quý cô sang chảnh.</td>
+        <td>TikTok Photo Mode (Midi Editorial)</td>
+        <td><span class="pill-viral">🏆 2.062 Views (Top 2)</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="teal">PHẦN C. MA TRẬN REPURPOSE CONTENT (TÁI SỬ DỤNG &amp; BIÊN TẬP PHÙ HỢP GIỮA 2 NỀN TẢNG)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 24%;">Chủ đề / Insight gốc của Nữ văn phòng</th>
+        <th style="width: 38%;">Bản triển khai trên Kênh 1: Facebook "Daizy Pilates"<br>(Định dạng: Bài viết phân tích sâu + Ảnh Studio/Infographic)</th>
+        <th style="width: 38%;">Bản Repurpose &amp; Phối hợp trên Kênh 2: TikTok "Hào quang màu tím"<br>(Định dạng: TikTok Photo Mode lướt nhanh + Bìa tạp chí)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1. Vòng eo phẳng &amp; Diện đồ ôm / Váy liền thân tự tin</strong></td>
+        <td><strong>Bài FB #8:</strong> Giải quyết gốc rễ cơ sinh học — Chỉnh hội chứng Đổ xương chậu về trước (APT) bằng bài tập <em>Pelvic Curl</em> giúp thu gọn bụng dưới cho người 47kg.</td>
+        <td><strong>Bài TikTok #4 (1.674 views) &amp; #14 (2.062 views):</strong> Khi khung chậu đã chuẩn và eo gọn, tự tin diện <em>Váy liền thân mùa hè (Slip dress, Babydoll)</em> &amp; <em>Chân váy Midi sang chảnh</em>.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Khớp hông cân đối &amp; Mặc đẹp Quần Jeans / Chân váy</strong></td>
+        <td><strong>Bài FB #10:</strong> Bỏ thói quen ngồi vắt chéo chân và tập 3 phút <em>Pilates Cánh Bướm (Butterfly Hip Opener)</em> để làm đầy hõm hông (Hip Dips).</td>
+        <td><strong>Bài TikTok #3 &amp; #6 (1.048 views):</strong> Bảng phối <em>Quần Jeans ống đứng/ống suông</em> và <em>Chân váy Part 1</em> giúp tôn đường cong hông thanh thoát.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Tiết kiệm năng lượng quyết định mỗi ngày (Decision Fatigue)</strong></td>
+        <td><strong>Bài FB #3, #4, #5 (Chuỗi Infographic):</strong> Đóng gói sẵn thực đơn trưa văn phòng (1 đạm + 1 rau + cơm) và 3 món ăn xế để không phải nghĩ "Trưa nay ăn gì?".</td>
+        <td><strong>Bài TikTok #1, #7 (1.485 views) &amp; #11 (3.215 views):</strong> Đóng gói sẵn <em>Tủ đồ con nhộng "tiết kiệm năng lượng" Part 1 &amp; Part 2</em> để không phải nghĩ "Sáng nay mặc gì?".</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+  <div class="page-break">
+
+  <div class="header">
+    <div>
+      <h1>3. ẢNH CHỤP KẾT QUẢ 2 KÊNH &amp; CHỈ SỐ SAU QUÁ TRÌNH TRIỂN KHAI</h1>
+      <div class="sub">Học viên: <strong>Hoàng Thị Hạnh Dung</strong> | Lớp: AICO01 — Học viện Kstudy</div>
+    </div>
+    <div class="badge">PHẦN 3 / 4</div>
+  </div>
+
+  <div class="link-box">
+    <strong>🔗 LINK KÊNH ĐÃ XÂY (CÔNG KHAI, TRUY CẬP ĐƯỢC NGAY):</strong>
+    <ul style="margin: 5px 0 0 0; padding-left: 20px;">
+      <li><strong>Kênh 1 (Facebook Fanpage — Daizy Pilates):</strong> <a href="https://www.facebook.com/profile.php?id=61596228457366">https://www.facebook.com/profile.php?id=61596228457366</a> — <em>Đã đăng công khai 10/10 bài viết chuẩn chỉnh kèm bộ ảnh Studio &amp; Infographic độc quyền.</em></li>
+      <li><strong>Kênh 2 (TikTok — Hào quang màu tím):</strong> <a href="https://www.tiktok.com/@daizy.purple.aura">https://www.tiktok.com/@daizy.purple.aura</a> — <em>Đã đăng công khai 14/10 bài Photo Mode, đạt <strong>15 Followers</strong>, <strong>971 Lượt thích</strong>, nhiều bài nổ view tự nhiên <strong>1.048 – 3.215 views</strong> (Đạt tiêu chí cộng +1 điểm kênh có content viral / chỉ số tốt).</em></li>
+    </ul>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="num">24 Content</div>
+      <div class="label">Tổng số bài đăng công khai trên 2 kênh (Vượt chuẩn ≥ 20 bài)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="num">3.215 Views</div>
+      <div class="label">Top 1 bài Viral trên TikTok (Tủ đồ con nhộng Part 2)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="num">971 Likes</div>
+      <div class="label">Tổng lượt Thích tự nhiên trên kênh TikTok (@daizy.purple.aura)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="num">&gt;14.500 Views</div>
+      <div class="label">Tổng lượt xem tích lũy toàn kênh sau quá trình triển khai</div>
+    </div>
+  </div>
+
+  <h2>PHẦN A. ẢNH SCREENSHOT &amp; CHỈ SỐ KÊNH 2: TIKTOK "HÀO QUANG MÀU TÍM" (@daizy.purple.aura)</h2>
+  <div class="diag-box">
+    <strong>📊 Chẩn đoán hiệu quả 5 dòng (Theo chuẩn Kstudy AICO01 Buổi 7A — Đo lường AI Content):</strong><br>
+    1. <strong>Nhóm bài thắng (Winners):</strong> <em>Tủ đồ con nhộng tiết kiệm năng lượng Part 2</em> (<strong>3.215 views</strong>), <em>Chân váy midi hè 2026</em> (<strong>2.062 views</strong>), <em>Váy liền thân mùa hè</em> (<strong>1.674 views</strong>), <em>Xu hướng 2026</em> (<strong>1.498 views</strong>), <em>Tủ đồ con nhộng Part 1</em> (<strong>1.485 views</strong>).<br>
+    2. <strong>Nguyên nhân thắng (Winning Pattern):</strong> Tiêu đề bìa đánh trúng tâm lý muốn <em>"tiết kiệm năng lượng, dễ ứng dụng, không bao giờ lỗi mốt"</em> kết hợp bố cục ghép nhiều bộ trang phục (Collage Matrix) khiến người xem dừng lại lâu để soi từng món đồ (tăng Completion Rate &amp; Save Rate).<br>
+    3. <strong>Nhóm bài thấp hơn trung bình:</strong> <em>Ảnh đi biển summer girl</em> (160 views) và <em>Old money gam trắng</em> (563 views) do ngách hẹp hơn nhu cầu mặc đi làm hàng ngày.<br>
+    4. <strong>Giả thuyết tối ưu (Optimization Hypothesis):</strong> Khán giả nữ văn phòng phản ứng mạnh nhất với các <strong>bảng công thức ghép sẵn nhiều bộ (Part 1, Part 2)</strong> và <strong>1 item quốc dân dễ mặc đi làm (Chân váy midi, Váy liền, Linen)</strong>.<br>
+    5. <strong>Hành động vòng tiếp theo:</strong> Nhân bản chuỗi <em>"Tủ đồ con nhộng tiết kiệm năng lượng Part 3 (Phối đồ đi làm 5 ngày từ Thứ 2 đến Thứ 6)"</em>.
+  </div>
+
+  <div class="screenshot-grid-2">
+    <div class="screenshot-box">
+      <img src="./3-Anh-Chup-Ket-Qua-Kenh/TikTok-1-Tong-Quan-Kenh-Hao-Quang-Mau-Tim.jpg" alt="Tổng quan kênh TikTok Hào quang màu tím">
+      <div class="cap">Hình 1. Giao diện Mobile kênh TikTok "Hào quang màu tím" (@daizy.purple.aura): 15 Follower, 971 Thích, các bài đạt 1.121 – 2.062 – 3.215 views.</div>
+    </div>
+    <div class="screenshot-box">
+      <img src="./3-Anh-Chup-Ket-Qua-Kenh/TikTok-2-Chi-So-View-Va-Bai-Dang.jpg" alt="Lưới 14 bài đăng và chỉ số view TikTok">
+      <div class="cap">Hình 2. Lưới 14 bài đăng công khai trên TikTok với 7 bài vượt mốc 1.000 – 3.215 lượt xem tự nhiên.</div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 14px;">
+    <div class="screenshot-box">
+      <img src="./3-Anh-Chup-Ket-Qua-Kenh/TikTok-3-Giao-Dien-May-Tinh.jpg" alt="Giao diện máy tính kênh TikTok Hào quang màu tím" style="max-height: 340px;">
+      <div class="cap">Hình 3. Giao diện kênh TikTok "Hào quang màu tím" (@daizy.purple.aura) trên máy tính: hiển thị rõ 15 Follower, 971 Lượt thích và các bài đạt 2.104 views, 3.219 views, 1.498 views.</div>
+    </div>
+  </div>
+
+  <h2 class="green">PHẦN B. ẢNH SCREENSHOT &amp; CHỈ SỐ KÊNH 1: FACEBOOK "DAIZY PILATES" (10 BÀI CÔNG KHAI)</h2>
+  <p style="margin: 0 0 8px 0;">Kênh Fanpage <strong>Daizy Pilates</strong> đã xuất bản đủ <strong>10 bài đăng công khai</strong>: mỗi bài viết đều được trình bày ngắt dòng theo từng ý chấm đầu dòng (bullet-point) thoáng mắt, được Meta đánh dấu <strong>"Nội dung chất lượng cao"</strong> trong Thư viện nội dung và đi kèm 1 hình ảnh minh họa riêng biệt (5 ảnh AI Studio thực tế + 5 ảnh Infographic cẩm nang người mới).</p>
+
+  <div class="screenshot-grid-2">
+    <div class="screenshot-box">
+      <img src="./3-Anh-Chup-Ket-Qua-Kenh/Facebook-1-Trang-Chu-Daizy-Pilates.png" alt="Trang chủ Facebook Daizy Pilates">
+      <div class="cap">Hình 4. Giao diện Trang chủ Fanpage "Daizy Pilates" (Sống khỏe cùng Daizy - Pilates &amp; Dưỡng sinh) và thông tin liên hệ đầy đủ.</div>
+    </div>
+    <div class="screenshot-box">
+      <img src="./3-Anh-Chup-Ket-Qua-Kenh/Facebook-5-Thu-Vien-Noi-Dung-Chat-Luong-Cao.jpg" alt="Thư viện nội dung và chỉ số Facebook Daizy Pilates">
+      <div class="cap">Hình 5. Thư viện nội dung trong Bảng điều khiển doanh nghiệp: ghi nhận chỉ số Lượt xem, Lượt tương tác và huy hiệu "Nội dung chất lượng cao" của bài đăng tự động từ Antigravity.</div>
+    </div>
+  </div>
+
+  <div class="screenshot-grid-2">
+    <div class="screenshot-box">
+      <img src="./3-Anh-Chup-Ket-Qua-Kenh/Facebook-2-Bang-Dieu-Khien-10-Bai-Dang.png" alt="Bảng điều khiển chuyên nghiệp Facebook Daizy Pilates">
+      <div class="cap">Hình 6. Bảng điều khiển doanh nghiệp (Professional Dashboard) xác nhận đầy đủ 10 bài đăng công khai (3 bài hiển thị + 7 bài viết khác).</div>
+    </div>
+    <div class="screenshot-box">
+      <img src="./3-Anh-Chup-Ket-Qua-Kenh/Facebook-3-Chi-Tiet-Bai-Viet-So-1.png" alt="Lưới 9 ảnh đa dạng và bài viết trên Facebook Daizy Pilates">
+      <div class="cap">Hình 7. Lưới 9 hình ảnh bài đăng hoàn toàn khác biệt (5 ảnh AI Studio + 4 ảnh Infographic) và bài viết hiển thị trên tường Fanpage.</div>
+    </div>
+  </div>
+
+</div>
+  <div class="page-break">
+
+  <div class="header">
+    <div>
+      <h1>4. WORKFLOW TỰ ĐỘNG HÓA SẢN XUẤT CONTENT &amp; THỰC HIỆN TRÊN ANTIGRAVITY</h1>
+      <div class="sub">Học viên: <strong>Hoàng Thị Hạnh Dung</strong> | Lớp: AICO01 — Học viện Kstudy | Hệ điều hành AI Content OS v0 trên Antigravity</div>
+    </div>
+    <div class="badge">PHẦN 4 / 4</div>
+  </div>
+
+  <h2>I. GÓI BỐI CẢNH THƯƠNG HIỆU (BRAND CONTEXT PACK) NẠP VÀO ANTIGRAVITY</h2>
+  <p style="margin: 0 0 8px 0;">Trước khi cho AI sinh bất kỳ nội dung hay hình ảnh nào, toàn bộ hệ thống Antigravity được nạp <strong>Gói bối cảnh thương hiệu (Brand Memory)</strong> làm ranh giới kiểm soát chất lượng:</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 20%;">Thành phần Bộ nhớ</th>
+        <th style="width: 40%;">Kênh 1: Facebook "Daizy Pilates"</th>
+        <th style="width: 40%;">Kênh 2: TikTok "Hào quang màu tím" (@daizy.purple.aura)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Chân dung &amp; Insight gốc</strong></td>
+        <td>Nữ văn phòng 22–35 tuổi ngồi 8 tiếng/ngày; muốn hết đau cổ vai gáy, thu gọn bụng dưới do đổ xương chậu mà không cần tập nặng hay nhịn ăn.</td>
+        <td>Nữ văn phòng 20–35 tuổi bận rộn; muốn mặc đẹp thanh lịch, sang chảnh mỗi sáng mà không tốn năng lượng suy nghĩ "Hôm nay mặc gì?".</td>
+      </tr>
+      <tr>
+        <td><strong>Giọng văn &amp; Quy tắc trình bày</strong></td>
+        <td>Chuyên gia ấm áp, súc tích. <strong>Bắt buộc:</strong> Mỗi ý chấm đầu dòng (<code>•</code>) phải xuống dòng riêng biệt (<code>Enter</code>), độ dài vừa phải (120–160 chữ), đọc lướt 15 giây nắm trọn ý.</td>
+        <td>Sành điệu, hiện đại, chuẩn tạp chí thời trang (Fashion Editorial). <strong>Bắt buộc:</strong> Tiêu đề bìa rõ nét, nhấn mạnh từ khóa <em>"tiết kiệm năng lượng, dễ ứng dụng"</em>.</td>
+      </tr>
+      <tr>
+        <td><strong>Quy chuẩn Hình ảnh (Visual Rules)</strong></td>
+        <td>Mỗi bài viết phải đi kèm <strong>1 hình ảnh độc bản khác nhau hoàn toàn</strong> (Ảnh AI Studio ánh sáng tự nhiên hoặc Infographic pastel), tuyệt đối không lấy ảnh trùng lặp.</td>
+        <td>Định dạng <strong>TikTok Photo Mode</strong> (Collage 6–12 outfits trên nền trung tính trắng/be/xám nhạt), bố cục tạp chí sạch sẽ, đồng nhất.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>II. WORKFLOW TỰ ĐỘNG HÓA 5 TẦNG THỰC HIỆN TRỰC TIẾP TRÊN ANTIGRAVITY</h2>
+  <div class="step-grid">
+    <div class="step-card">
+      <h3>Bước 1: Hoạch định Chiến lược &amp; Lập Content Plan Đa Kênh (Skills: content-strategy-one-page &amp; xay-content-plan)</h3>
+      <p style="margin:0;">Kích hoạt bộ Skill AICO01 ngay trong workspace Antigravity để phân tích Bản đồ 4D, xác lập 3 trụ cột cho mỗi kênh và xuất tự động bảng <strong>Content Plan 1 tháng (26 bài)</strong> kèm ma trận Repurpose liên nền tảng giữa Facebook và TikTok.</p>
+    </div>
+    <div class="step-card">
+      <h3>Bước 2: Soạn thảo Nội dung &amp; Biên tập Chuẩn Bố Cục Dễ Nhìn (Skill: viet-content)</h3>
+      <p style="margin:0;">Agent tự động viết bài theo cấu trúc 4 khối: <strong>(1) Câu mở bài (Hook) chạm đúng tình huống công sở → (2) Giải thích ngắn gọn nguyên nhân gốc rễ → (3) 3–4 gạch đầu dòng hướng dẫn thực hành tách dòng rõ ràng → (4) Câu hỏi tương tác (CTA)</strong>. Loại bỏ hoàn toàn kiểu viết văn xuôi dài dòng dính liền một cục.</p>
+    </div>
+    <div class="step-card">
+      <h3>Bước 3: Tự động hóa Sản xuất Hình ảnh Độc bản bằng Subagent (Skill: thiet-ke-hinh-anh-content + image-generator)</h3>
+      <p style="margin:0;">Antigravity khởi chạy subagent chuyên biệt <code>image-generator</code> để dựng bộ ảnh Studio độ phân giải cao cho từng bài viết: (1) <em>Nữ văn phòng mở vai tại bàn làm việc</em>, (2) <em>Ly trà hoa cúc – táo đỏ – kỷ tử &amp; hạnh nhân</em>, (3) <em>Tư thế Pilates Pelvic Curl</em>, (4) <em>Đĩa ăn trưa cân bằng 2–1–1</em>, (5) <em>Tư thế Pilates Cánh Bướm mở khớp hông</em>, (6) <em>Bát sữa chua Hy Lạp bữa xế</em>, (7) <em>Tư thế Cat-Cow</em>. Mỗi bài 1 ảnh riêng biệt.</p>
+    </div>
+    <div class="step-card">
+      <h3>Bước 4: Tự động hóa Đăng bài lên Facebook Fanpage qua Trình duyệt (Browser Automation / Puppeteer)</h3>
+      <p style="margin:0;">Antigravity thực thi kịch bản Node.js + <code>puppeteer-core</code> kết nối trực tiếp vào trình duyệt Chrome qua cổng <code>DevToolsActivePort</code>:
+        <br>• Tự động truy cập Fanpage <strong>Daizy Pilates</strong> (<code>id=61596228457366</code>) và mở trình tạo bài viết.
+        <br>• Tự động nạp đúng file ảnh riêng biệt vào thẻ <code>input[type="file"]</code>.
+        <br>• Tự động gõ từng dòng nội dung và gửi phím <code>keyboard.press('Enter')</code> giữa các dòng để trình soạn thảo Lexical của Facebook giữ nguyên bố cục chấm đầu dòng thoáng đẹp.
+        <br>• Tự động nhấn nút <strong>Đăng</strong>, xử lý hộp thoại phụ (<code>Lúc khác</code>) và kiểm tra bài hiển thị trên tường.</p>
+    </div>
+    <div class="step-card">
+      <h3>Bước 5: Tự động Chụp ảnh Nghiệm thu &amp; Kết xuất Hồ sơ Báo cáo PDF (Automated Verification &amp; PDF Export)</h3>
+      <p style="margin:0;">Sau khi bài đăng hoàn tất trên cả 2 kênh, Antigravity tự động cuộn trang, mở rộng bài viết, chụp ảnh màn hình kết quả thực tế (Screenshot Verification) và chạy trình kết xuất Headless Chrome để đóng gói toàn bộ 4 tài liệu + 1 Báo cáo Tổng hợp thành định dạng <strong>PDF chuẩn A4</strong>.</p>
+    </div>
+  </div>
+
+  <h2 class="green">III. CỔNG KIỂM CHẤT LƯỢNG (QUALITY GATE) &amp; BẰNG CHỨNG TỐI ƯU TRƯỚC – SAU (BEFORE / AFTER)</h2>
+  <div class="gate-box">
+    <strong>✅ Checklist 5 Cổng kiểm chất lượng (Quality Gate) của Học viên trước khi xuất bản:</strong><br>
+    1. <strong>Đúng Insight &amp; Chuyên môn:</strong> Bài viết giải quyết đúng nỗi đau thực tế của nữ văn phòng (cổ vai gáy, đổ xương chậu, tủ đồ tiết kiệm năng lượng).<br>
+    2. <strong>Đúng Bố cục Trình bày:</strong> Mỗi chấm đầu dòng (<code>•</code>) bắt buộc xuống dòng riêng; câu văn gọn gàng, không viết liền một khối chữ dày đặc.<br>
+    3. <strong>Không trùng lặp Hình ảnh:</strong> Kiểm tra chéo toàn bộ bài đăng — 10 bài trên Facebook là 10 hình ảnh hoàn toàn khác nhau; 14 bài trên TikTok là 14 bộ Lookbook riêng biệt.<br>
+    4. <strong>Không bịa đặt thông tin / ưu đãi:</strong> Không tự ý thêm cam kết giảm cân thần tốc hay chương trình khuyến mãi ngoài gói bối cảnh.<br>
+    5. <strong>Nghiệm thu hiển thị thực tế:</strong> Kiểm tra trực tiếp trên giao diện Facebook và TikTok sau khi đăng (Bằng chứng Before/After: Phát hiện trình soạn thảo Facebook làm mất dấu xuống dòng ở bản nháp đầu → Đã lập trình lại cơ chế gõ phím <code>Enter</code> từng dòng và thay mới 100% bộ 5 bài + 5 ảnh riêng biệt đạt chuẩn chuyên nghiệp).
+  </div>
+
+</div>
+</body>
+</html>

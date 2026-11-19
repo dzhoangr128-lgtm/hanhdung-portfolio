@@ -1,0 +1,28 @@
+HỒ SƠ BÀI TẬP CUỐI MÔN: XÂY KÊNH SOCIAL (MÔN AI CONTENT - AICO01)
+Học viên thực hiện: Hoàng Thị Hạnh Dung
+Công cụ thực thi & Tự động hóa: Antigravity
+
+======================================================================
+1. LINK 2 KÊNH ĐÃ XÂY (CÔNG KHAI, TRUY CẬP ĐƯỢC NGAY)
+======================================================================
+• Kênh 1 (Facebook Fanpage — Daizy Pilates — 10 bài công khai):
+  https://www.facebook.com/profile.php?id=61596228457366
+
+• Kênh 2 (TikTok — Hào quang màu tím — 14 bài công khai, 971 Thích, Viral 3.215 Views):
+  https://www.tiktok.com/@daizy.purple.aura
+
+======================================================================
+2. CẤU TRÚC THƯ MỤC NỘP BÀI (ĐÚNG YÊU CẦU ĐỀ BÀI)
+======================================================================
+• File tổng hợp ngoài cùng:
+  - 00-BAO-CAO-TONG-HOP-CUOI-MON-HOANG-THI-HANH-DUNG.pdf (Bản báo cáo PDF Tổng hợp 12 trang gồm đầy đủ cả 4 phần + Link 2 kênh + Ảnh chụp kênh & chỉ số).
+
+• 4 Thư mục thành phần:
+  1. Bản định hướng chiến lược nội dung xây kênh
+     -> Chứa file PDF & HTML Chiến lược nội dung 12 chặng (Content Strategy One-Page) cho cả 2 kênh Facebook Daizy Pilates & TikTok Hào quang màu tím.
+  2. Content plan 1 tháng
+     -> Chứa file PDF & HTML Kế hoạch nội dung 1 tháng của cả 2 kênh (26 bài) kèm Ma trận Repurpose Content liên nền tảng.
+  3. Ảnh chụp kết quả kênh
+     -> Chứa file PDF tổng hợp chỉ số + Chẩn đoán hiệu quả 5 dòng và trọn bộ 8 ảnh chụp màn hình thực tế của 2 kênh (Giao diện kênh, Thư viện nội dung chất lượng cao, Bảng điều khiển 10 bài đăng Facebook, Lưới 14 bài đăng TikTok 971 Thích & 3.215 Views).
+  4. Workflow tự động hóa sản xuất content & thực hiện trên Antigravity
+     -> Chứa file PDF & HTML thiết kế hệ thống AI Content OS + Quy trình 5 bước tự động hóa trên Antigravity, kèm thư mục Minh-Chung-Anh-Va-Code-Antigravity (chứa bản thảo Markdown, kịch bản Puppeteer tự động đăng 5 bài lên Facebook và bộ 8 ảnh AI Studio gốc tạo trên Antigravity).

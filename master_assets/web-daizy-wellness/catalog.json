@@ -1,0 +1,269 @@
+[
+  {
+    "id": "halter-bra",
+    "name": "Áo Bra Cổ Halter Tôn Dáng",
+    "category": "bras",
+    "categoryLabel": "Áo Bra Tập Pilates · Nâng Đỡ Tối Ưu",
+    "listPriceVnd": 290000,
+    "badges": [
+      "Thiết Kế Độc Quyền",
+      "Bán Chạy Nhất"
+    ],
+    "rating": "5.0",
+    "reviewCount": 148,
+    "desc": "Chế tác từ chất liệu thun lạnh Micro-Nylon 6.6 mát mịn như bơ độc quyền. Đường cắt cổ vuông cúp tim tôn bờ vai thon và xương quai xanh quyến rũ, dây halter êm ái triệt tiêu áp lực đốt sống cổ. Mút đệm nâng ngực siêu thoáng khí có thể tháo rời tiện lợi.",
+    "colors": [
+      {
+        "name": "Hồng Phấn",
+        "enName": "Ballet Pink",
+        "hex": "#F6E2DF",
+        "img": "assets/images/bra_pink.jpg",
+        "hoverImg": "assets/images/bra_vanilla.jpg"
+      },
+      {
+        "name": "Trắng Kem",
+        "enName": "Vanilla Cream",
+        "hex": "#FAF7F2",
+        "img": "assets/images/bra_vanilla.jpg",
+        "hoverImg": "assets/images/bra_pink.jpg"
+      },
+      {
+        "name": "Vàng Bơ",
+        "enName": "Butter Yellow",
+        "hex": "#FCF4D9",
+        "img": "assets/images/bra_yellow.jpg",
+        "hoverImg": "assets/images/bra_pink.jpg"
+      },
+      {
+        "name": "Xám Xi Măng",
+        "enName": "Pale Cement",
+        "hex": "#E3DFDA",
+        "img": "assets/images/bra_cement.jpg",
+        "hoverImg": "assets/images/bra_mocha.jpg"
+      },
+      {
+        "name": "Nâu Mocha",
+        "enName": "Mocha Brown",
+        "hex": "#543E34",
+        "img": "assets/images/bra_mocha.jpg",
+        "hoverImg": "assets/images/bra_cement.jpg"
+      }
+    ],
+    "defaultImg": "assets/images/bra_pink.jpg",
+    "hoverImg": "assets/images/bra_vanilla.jpg"
+  },
+  {
+    "id": "flared-pants",
+    "name": "Quần Loe Cạp Gập Pilates Tôn Dáng",
+    "category": "bottoms",
+    "categoryLabel": "Quần Tập Pilates · Từ Phòng Tập Ra Phố",
+    "listPriceVnd": 350000,
+    "badges": [
+      "Cạp Gập Tôn Dáng",
+      "Ống Loe Chạm Gót"
+    ],
+    "rating": "4.9",
+    "reviewCount": 182,
+    "desc": "Thiết kế quần loe kinh điển lấy cảm hứng từ nghệ thuật ballet. Đai cạp gập siêu mềm mại kiến tạo đường cong đồng hồ cát, ôm trọn hông và đùi trước khi buông rũ thanh thoát theo từng nhịp kéo giãn trên khung máy Reformer.",
+    "colors": [
+      {
+        "name": "Hồng Phấn",
+        "enName": "Ballet Pink",
+        "hex": "#F6E2DF",
+        "img": "assets/images/pants_pink.jpg",
+        "hoverImg": "assets/images/pants_vanilla.jpg"
+      },
+      {
+        "name": "Trắng Kem",
+        "enName": "Vanilla Cream",
+        "hex": "#FAF7F2",
+        "img": "assets/images/pants_vanilla.jpg",
+        "hoverImg": "assets/images/pants_pink.jpg"
+      },
+      {
+        "name": "Vàng Bơ",
+        "enName": "Butter Yellow",
+        "hex": "#FCF4D9",
+        "img": "assets/images/pants_yellow.jpg",
+        "hoverImg": "assets/images/pants_pink.jpg"
+      },
+      {
+        "name": "Xám Xi Măng",
+        "enName": "Pale Cement",
+        "hex": "#E3DFDA",
+        "img": "assets/images/pants_cement.jpg",
+        "hoverImg": "assets/images/pants_mocha.jpg"
+      },
+      {
+        "name": "Nâu Mocha",
+        "enName": "Mocha Brown",
+        "hex": "#543E34",
+        "img": "assets/images/pants_mocha.jpg",
+        "hoverImg": "assets/images/pants_cement.jpg"
+      }
+    ],
+    "defaultImg": "assets/images/pants_pink.jpg",
+    "hoverImg": "assets/images/pants_vanilla.jpg"
+  },
+  {
+    "id": "ballet-wrap",
+    "name": "Áo Khoác Wrap Crossover Kiểu Ballet",
+    "category": "outerwear",
+    "categoryLabel": "Áo Wrap Pilates · Khoác Ngoài Studio",
+    "listPriceVnd": 350000,
+    "salePriceVnd": 280000,
+    "badges": [
+      "Đang Sale -20%",
+      "Dây Buộc Tùy Chỉnh"
+    ],
+    "rating": "4.9",
+    "reviewCount": 126,
+    "desc": "Áo wrap với bề mặt vải mịn, mỏng nhẹ và rủ mềm, lấy cảm hứng từ trang phục của mẫu đại diện DAIZY. Tay áo hơi xuyên nhẹ, phối cùng áo bra bên trong. Vạt đắp chéo và dây buộc eo linh hoạt tạo dáng ballet thanh thoát.",
+    "colors": [
+      {
+        "name": "Trắng Kem",
+        "enName": "Vanilla Cream",
+        "hex": "#FAF7F2",
+        "img": "assets/images/wrap_vanilla_light.jpg",
+        "hoverImg": "assets/images/wrap_pink_light.jpg"
+      },
+      {
+        "name": "Hồng Phấn",
+        "enName": "Ballet Pink",
+        "hex": "#F6E2DF",
+        "img": "assets/images/wrap_pink_light.jpg",
+        "hoverImg": "assets/images/wrap_vanilla_light.jpg"
+      },
+      {
+        "name": "Vàng Bơ",
+        "enName": "Butter Yellow",
+        "hex": "#FCF4D9",
+        "img": "assets/images/wrap_yellow_light.jpg",
+        "hoverImg": "assets/images/wrap_vanilla_light.jpg"
+      },
+      {
+        "name": "Xám Xi Măng",
+        "enName": "Pale Cement",
+        "hex": "#E3DFDA",
+        "img": "assets/images/wrap_cement_light.jpg",
+        "hoverImg": "assets/images/wrap_mocha_light.jpg"
+      },
+      {
+        "name": "Nâu Mocha",
+        "enName": "Mocha Brown",
+        "hex": "#543E34",
+        "img": "assets/images/wrap_mocha_light.jpg",
+        "hoverImg": "assets/images/wrap_cement_light.jpg"
+      }
+    ],
+    "defaultImg": "assets/images/wrap_vanilla_light.jpg",
+    "hoverImg": "assets/images/wrap_pink_light.jpg"
+  },
+  {
+    "id": "grip-socks",
+    "name": "Tất Pilates Hở Mu Nâng Vòm Chống Trượt",
+    "category": "socks",
+    "categoryLabel": "Phụ Kiện Pilates · Chống Trượt Tuyệt Đối",
+    "listPriceVnd": 80000,
+    "badges": [
+      "Hở Mu Thoáng Khí",
+      "Đế Bám Silicon Tổ Ong"
+    ],
+    "rating": "5.0",
+    "reviewCount": 240,
+    "desc": "Thiết kế chuyên biệt cho máy Reformer, Cadillac và Barrel. Khoét hở mu chân thanh thoát, dải thun nén trợ lực nâng đỡ vòm chân và hàng trăm hạt silicon gel tổ ong bám chặt bề mặt đệm lò xo, chống trượt 100% trong mọi bài tập giữ thăng bằng.",
+    "colors": [
+      {
+        "name": "Hồng Phấn",
+        "enName": "Ballet Pink",
+        "hex": "#F6E2DF",
+        "img": "assets/images/socks_pink.png",
+        "hoverImg": "assets/images/socks_vanilla.jpg"
+      },
+      {
+        "name": "Trắng Kem",
+        "enName": "Vanilla Cream",
+        "hex": "#FAF7F2",
+        "img": "assets/images/socks_vanilla.jpg",
+        "hoverImg": "assets/images/socks_pink.png"
+      },
+      {
+        "name": "Vàng Bơ",
+        "enName": "Butter Yellow",
+        "hex": "#FCF4D9",
+        "img": "assets/images/socks_yellow.jpg",
+        "hoverImg": "assets/images/socks_pink.png"
+      },
+      {
+        "name": "Xám Xi Măng",
+        "enName": "Pale Cement",
+        "hex": "#E3DFDA",
+        "img": "assets/images/socks_cement.jpg",
+        "hoverImg": "assets/images/socks_mocha.jpg"
+      },
+      {
+        "name": "Nâu Mocha",
+        "enName": "Mocha Brown",
+        "hex": "#543E34",
+        "img": "assets/images/socks_mocha.jpg",
+        "hoverImg": "assets/images/socks_cement.jpg"
+      }
+    ],
+    "defaultImg": "assets/images/socks_pink.png",
+    "hoverImg": "assets/images/socks_vanilla.jpg"
+  },
+  {
+    "id": "cloud-headband",
+    "name": "Băng Đô Dệt Gân Co Giãn Êm Ái",
+    "category": "headband",
+    "categoryLabel": "Phụ Kiện Pilates · Không Đau Đầu",
+    "listPriceVnd": 60000,
+    "salePriceVnd": 45000,
+    "badges": [
+      "Đang Sale -25%",
+      "Viền Silicon Bám Tóc"
+    ],
+    "rating": "4.9",
+    "reviewCount": 94,
+    "desc": "Bản rộng 7cm dệt gân co giãn với viền sợi silicon siêu mỏng ẩn bên trong. Giữ nếp tóc gọn gàng tuyệt đối trong các tư thế dốc ngược mà không gây cảm giác bó thắt da đầu hay làm gãy nếp tóc.",
+    "colors": [
+      {
+        "name": "Trắng Kem",
+        "enName": "Vanilla Cream",
+        "hex": "#FAF7F2",
+        "img": "assets/images/headband_vanilla.jpg",
+        "hoverImg": "assets/images/headband_pink.jpg"
+      },
+      {
+        "name": "Hồng Phấn",
+        "enName": "Ballet Pink",
+        "hex": "#F6E2DF",
+        "img": "assets/images/headband_pink.jpg",
+        "hoverImg": "assets/images/headband_vanilla.jpg"
+      },
+      {
+        "name": "Vàng Bơ",
+        "enName": "Butter Yellow",
+        "hex": "#FCF4D9",
+        "img": "assets/images/headband_yellow.jpg",
+        "hoverImg": "assets/images/headband_pink.jpg"
+      },
+      {
+        "name": "Xám Xi Măng",
+        "enName": "Pale Cement",
+        "hex": "#E3DFDA",
+        "img": "assets/images/headband_cement.jpg",
+        "hoverImg": "assets/images/headband_mocha.jpg"
+      },
+      {
+        "name": "Nâu Mocha",
+        "enName": "Mocha Brown",
+        "hex": "#543E34",
+        "img": "assets/images/headband_mocha.jpg",
+        "hoverImg": "assets/images/headband_cement.jpg"
+      }
+    ],
+    "defaultImg": "assets/images/headband_vanilla.jpg",
+    "hoverImg": "assets/images/headband_pink.jpg"
+  }
+]

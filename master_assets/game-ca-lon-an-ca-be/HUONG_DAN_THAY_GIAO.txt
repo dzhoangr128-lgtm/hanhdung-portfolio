@@ -1,0 +1,77 @@
+================================================================================
+          BÁO CÁO BÀI TẬP: ĐẠI DƯƠNG SĂN MỒI (OCEAN FEEDING FRENZY)
+                      MÔN HỌC: VIBE CODING - BÀI 0
+================================================================================
+
+Kính gửi: Thầy giáo / Giảng viên bộ môn
+Em xin phép gửi sản phẩm bài tập game hoàn chỉnh: "Đại Dương Săn Mồi - Ocean Frenzy".
+
+--------------------------------------------------------------------------------
+1. HƯỚNG DẪN MỞ VÀ TRẢI NGHIỆM GAME
+--------------------------------------------------------------------------------
+Thầy có thể trải nghiệm game theo bất kỳ cách nào dưới đây:
+
+- CÁCH 1 (Khuyên dùng - Nhanh nhất):
+  Click đúp chuột vào file "CHOI_NGAY.bat" hoặc mở trực tiếp "index.html".
+  Game sẽ tự động chạy mượt mà trên trình duyệt (Chrome, Edge, Cốc Cốc, Firefox...).
+
+- CÁCH 2 (Bản gói gọn 1 file duy nhất):
+  Click đúp mở file "game_single_file.html".
+  Toàn bộ mã nguồn HTML, CSS, JavaScript đồ họa và âm thanh đã được tích hợp
+  thành 1 file duy nhất, không lo thiếu file, chạy được trên mọi thiết bị offline.
+
+--------------------------------------------------------------------------------
+2. CÁCH ĐIỀU KHIỂN & CƠ CHẾ CHƠI
+--------------------------------------------------------------------------------
+* Điều khiển:
+  - Di chuyển: Di chuột theo hướng muốn bơi, HOẶC dùng cụm phím W-A-S-D / 4 Phím Mũi Tên.
+  - Tăng tốc (Dash): Nhấn giữ Chuột Trái hoặc Phím Space (tiêu hao thanh Thể Lực).
+  - Tạm dừng: Phím P hoặc Phím ESC.
+
+* Mục tiêu & Quy luật sinh tồn:
+  - Cá bé ăn sinh vật nhỏ hơn để tích lũy điểm kinh nghiệm và tiến hóa lớn dần.
+  - Tránh xa các loài săn mồi to hơn (có radar cảnh báo mũi tên đỏ trên màn hình).
+  - Cẩn thận cá nóc (Pufferfish) khi đang xù gai độc!
+  - Ăn cá liên tục để kích hoạt chuỗi COMBO x2, x3... x10 và bước vào trạng thái 
+    "CUỒNG NỘ FRENZY": Người chơi hóa thần, tốc độ cực đại và có thể nuốt trọn mọi kẻ thù!
+  - Thu thập bùa bổ trợ trôi nổi: Khiên bảo vệ, Nam châm hút mồi, Siêu tốc độ, Ngọc bội.
+  - Gặp gỡ "Nàng Tiên Cá huyền thoại" lướt qua để nhận lời chúc phúc (+1,000 điểm).
+
+--------------------------------------------------------------------------------
+3. ĐIỂM NỔI BẬT VỀ CÔNG NGHỆ VÀ LẬP TRÌNH
+--------------------------------------------------------------------------------
+1. Đồ họa Canvas 2D Thuần (Zero Dependency):
+   - Tự vẽ toàn bộ 100% bằng HTML5 Canvas API với gradient đa tầng, bóng phát quang,
+     hiệu ứng khúc xạ ánh sáng đại dương (Caustics), bụi nước, bọt khí và rạn san hô nhiệt đới.
+   - 9 loài sinh vật biển với chuyển động uốn lượn tự nhiên theo hàm sin thời gian:
+     Cá Hề, Cá Thần Tiên Moorish, Rùa Biển, Cá Lồng Đèn Anglerfish, Cá Nóc, Cá Ngừ,
+     Cá Kiếm, Cá Nhám Búa, Cá Mập Trắng Đại Dương và Nàng Tiên Cá huyền thoại.
+
+2. Động cơ Âm thanh Tổng hợp Tự động (Procedural Web Audio API):
+   - Không cần tải bất kỳ file mp3 bên ngoài nào (dung lượng nhẹ, tải tức thì).
+   - Tự tổng hợp sóng âm thanh chân thực: tiếng đớp mồi vui nhộn, tiếng bọt khí,
+     tiếng va chạm, tiếng xé gió tăng tốc và tiếng nhạc nền pentatonic đại dương
+     tự động chuyển nhịp (BPM dồn dập) khi bước vào trạng thái Cuồng Nộ Frenzy.
+
+3. Thuật toán & Tối ưu hiệu năng:
+   - Hệ thống AI bầy đàn (Flocking / Flee / Chase) thông minh cho từng loài cá.
+   - Xử lý góc xoay O(1) an toàn bằng Math.atan2 chống hiện tượng giật lắc khung hình.
+   - Quản trị ngăn xếp đồ họa (Canvas State Stack) chuẩn xác 100%, khóa bảo vệ vòng lặp
+     bằng try-catch đảm bảo ổn định 60 FPS liên tục không bao giờ bị đơ/lag.
+
+--------------------------------------------------------------------------------
+4. CẤU TRÚC TỆP TIN TRONG GÓI
+--------------------------------------------------------------------------------
+- index.html            : Trang chủ trò chơi (chạy bằng trình duyệt)
+- game_single_file.html : Bản đóng gói 1 file độc lập hoàn chỉnh
+- CHOI_NGAY.bat         : Phím tắt click đúp là mở chơi ngay
+- game.js               : Vòng lặp chính, logic va chạm, tiến hóa, HUD và bùa bổ trợ
+- fish.js               : Định nghĩa các loài cá, AI di chuyển và Nàng Tiên Cá
+- effects.js            : Động cơ hiệu ứng hạt, ánh sáng caustics, bọt khí, sóng xung kích
+- audio.js              : Động cơ âm thanh tổng hợp Web Audio API
+- style.css             : Giao diện HUD hiện đại phong cách game arcade
+- HUONG_DAN_THAY_GIAO.txt: Hướng dẫn này dành cho Thầy
+- README.md             : Tài liệu kỹ thuật chi tiết
+
+Em rất mong nhận được những góp ý quý báu của Thầy để hoàn thiện sản phẩm tốt hơn nữa ạ!
+Em xin chân thành cảm ơn Thầy!

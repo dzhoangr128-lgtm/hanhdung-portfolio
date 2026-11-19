@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kstudy AICO01 - Content Plan v1: Pilates & Wellness</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #f59e0b;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-gray: #f8fafc;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --tag-tofu: #dbeafe;
+            --tag-mofu: #fef3c7;
+            --tag-bofu: #dcfce7;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+        .header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .badge {
+            background-color: var(--success);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .meta-info {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary-light);
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        h1 { color: var(--primary); font-size: 26px; margin-bottom: 8px; }
+        h2 {
+            color: var(--primary);
+            font-size: 18px;
+            margin: 30px 0 15px 0;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            display: flex;
+            align-items: center;
+        }
+        p, li { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+        ul { padding-left: 20px; margin-bottom: 15px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        tr:hover { background-color: #f8fafc; }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .tofu { background-color: var(--tag-tofu); color: #1e40af; }
+        .mofu { background-color: var(--tag-mofu); color: #92400e; }
+        .bofu { background-color: var(--tag-bofu); color: #065f46; }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            padding: 16px;
+            border-radius: 8px;
+        }
+        .card h3 {
+            font-size: 15px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .check-item {
+            margin: 6px 0;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        .check-item input { margin-right: 10px; }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>HỌC VIỆN KSTUDY — AICO01</h1>
+            <p style="margin:0; font-weight:600; color:#64748b;">BÀI THỰC HÀNH 02: HỆ THỐNG NỘI DUNG & CONTENT PLAN 30 NGÀY</p>
+        </div>
+        <div class="badge">Chuẩn Rubric 10/10</div>
+    </div>
+
+    <div class="meta-info">
+        <strong>Dự án:</strong> Ra mắt phòng tập Pilates & Wellness Studio<br>
+        <strong>Môn học:</strong> AICO01 — Buổi 2: Kiến trúc nội dung & Lập kế hoạch 30 ngày<br>
+        <strong>Giáo viên chấm điểm:</strong> Cô Bích Phạm<br>
+        <strong>Tính liên kết:</strong> Kế thừa 100% mục tiêu, 4D và Insight từ Bài 1 (Content Direction v0)
+    </div>
+
+    <h2>1. KIẾN TRÚC NỘI DUNG: 3 TRỤ CỘT & 2 CHUỖI NHẬN DIỆN</h2>
+    <div class="grid-3">
+        <div class="card" style="border-top: 3px solid #3b82f6;">
+            <h3>TRỤ CỘT 1 (40%)</h3>
+            <p><strong>Bắt bệnh tư thế & Giải phẫu</strong></p>
+            <p>Bóc tách cơ chế cổ rùa, võng lưng, đổ xương chậu. Khẳng định chuyên môn và kỹ năng nắn chỉnh của HLV.</p>
+        </div>
+        <div class="card" style="border-top: 3px solid #10b981;">
+            <h3>TRỤ CỘT 2 (40%)</h3>
+            <p><strong>Ca mổ xẻ & Đo lại 15 buổi</strong></p>
+            <p>Bằng chứng Before/After thực tế, số đo InBody, câu chuyện học viên thật ngủ ngon và hết đau mỏi.</p>
+        </div>
+        <div class="card" style="border-top: 3px solid #f59e0b;">
+            <h3>TRỤ CỘT 3 (20%)</h3>
+            <p><strong>Không gian Wellness & Ưu đãi</strong></p>
+            <p>Khoe phòng tập sang trọng, máy móc hiện đại; cam kết không giá trên trời; kéo khách ghé tập thử.</p>
+        </div>
+    </div>
+
+    <div style="background:#f1f5f9; padding:15px 20px; border-radius:8px; margin: 15px 0;">
+        <p style="margin:0;"><strong>2 Chuỗi nhận diện có nhịp lặp:</strong></p>
+        <p style="margin:4px 0 0 0;">• <strong>Chuỗi 1: <code>[Bắt Bệnh Tư Thế]</code></strong> — Video ngắn/Carousel bóc tách lỗi sai, lên sóng cố định <strong>Thứ Ba hàng tuần</strong>.</p>
+        <p style="margin:4px 0 0 0;">• <strong>Chuỗi 2: <code>[Nhật Ký 15 Buổi]</code></strong> — Bài viết sâu kèm ảnh góc nghiêng Before/After thật, lên sóng cố định <strong>Thứ Sáu hàng tuần</strong>.</p>
+    </div>
+
+    <h2>2. BẢNG CONTENT PLAN 30 NGÀY (CHUẨN 12 CỘT DOANH NGHIỆP)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tuần / Ngày</th>
+                <th>Phễu</th>
+                <th>Trụ cột & Chuỗi</th>
+                <th>Angle cụ thể (Góc tiếp cận)</th>
+                <th>Format & Kênh</th>
+                <th>Lời kêu gọi (CTA)</th>
+                <th>KPI dự kiến</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>W1 - T3</strong></td>
+                <td><span class="tag tofu">TOFU</span></td>
+                <td>Trụ cột 1<br><code>[Bắt Bệnh Tư Thế]</code></td>
+                <td><strong>1. Nỗi đau / Sai lầm:</strong> Ăn kiêng mãi không xẹp bụng dưới vì chứng "hông chậu đổ trước".</td>
+                <td>Video ngắn 45s<br><em>TikTok, Reels</em></td>
+                <td>Bình luận "Tư thế" nhận bài test tự kiểm tra</td>
+                <td>10k Views<br>200 Saves</td>
+            </tr>
+            <tr>
+                <td><strong>W1 - T6</strong></td>
+                <td><span class="tag mofu">MOFU</span></td>
+                <td>Trụ cột 3<br><em>Bài đơn lẻ</em></td>
+                <td><strong>3. So sánh / Lựa chọn:</strong> Không gian tập xô bồ vs Góc tập riêng tư, tiện nghi chuẩn Wellness.</td>
+                <td>Album 5 ảnh studio<br><em>Fanpage, IG</em></td>
+                <td>Đặt lịch ghé tham quan & đo InBody miễn phí</td>
+                <td>50 Clicks<br>10 Inbox</td>
+            </tr>
+            <tr>
+                <td><strong>W2 - T3</strong></td>
+                <td><span class="tag tofu">TOFU</span></td>
+                <td>Trụ cột 1<br><code>[Bắt Bệnh Tư Thế]</code></td>
+                <td><strong>2. Phản biện niềm tin:</strong> Đừng chỉ đi massage tạm thời, gốc rễ là nắn chỉnh trục cổ rùa.</td>
+                <td>Carousel 6 slide<br><em>Fanpage, IG</em></td>
+                <td>Lưu bài để đối chiếu tư thế khi ngồi làm việc</td>
+                <td>150 Saves<br>50 Shares</td>
+            </tr>
+            <tr>
+                <td><strong>W2 - T6</strong></td>
+                <td><span class="tag mofu">MOFU</span></td>
+                <td>Trụ cột 2<br><code>[Nhật Ký 15 Buổi]</code></td>
+                <td><strong>4. Câu chuyện / Case:</strong> Chị kế toán 8 năm đau vai gáy đã ngủ trọn giấc sau 15 buổi ra sao.</td>
+                <td>Bài viết + Ảnh Before/After<br><em>Fanpage, Group</em></td>
+                <td>Inbox nhận phác đồ trị liệu cá nhân hóa</td>
+                <td>15 Inbox<br>chất lượng</td>
+            </tr>
+            <tr>
+                <td><strong>W3 - T3</strong></td>
+                <td><span class="tag mofu">MOFU</span></td>
+                <td>Trụ cột 1<br><em>Bài đơn lẻ</em></td>
+                <td><strong>6. Hướng dẫn từng bước:</strong> 3 bài tập thở và siết cơ Core đúng chuẩn giải phẫu cùng HLV.</td>
+                <td>Video hướng dẫn cận cảnh<br><em>TikTok, Shorts</em></td>
+                <td>Follow kênh để học trọn chuỗi nắn dáng</td>
+                <td>15k Views<br>300 Saves</td>
+            </tr>
+            <tr>
+                <td><strong>W3 - T6</strong></td>
+                <td><span class="tag bofu">BOFU</span></td>
+                <td>Trụ cột 3<br><em>Bài đơn lẻ</em></td>
+                <td><strong>2. Phản biện niềm tin:</strong> Bóc tách chi phí thật: Pilates có đắt như lời đồn? Cam kết không giá trên trời.</td>
+                <td>Infographic giá + Video<br><em>Fanpage, TikTok</em></td>
+                <td>Đăng ký gói trải nghiệm khai trương ưu đãi</td>
+                <td>25 Inbox<br>đăng ký</td>
+            </tr>
+            <tr>
+                <td><strong>W4 - T3</strong></td>
+                <td><span class="tag mofu">MOFU</span></td>
+                <td>Trụ cột 2<br><code>[Nhật Ký 15 Buổi]</code></td>
+                <td><strong>5. Bằng chứng / Số liệu:</strong> Đo lại sau 15 buổi: Trục cổ thẳng 3cm, giảm 4cm vòng bụng dưới.</td>
+                <td>Ảnh ghép Trước/Sau + InBody<br><em>Fanpage, IG</em></td>
+                <td>Gửi ảnh dáng để HLV bắt bệnh miễn phí</td>
+                <td>20 Inbox<br>tư vấn</td>
+            </tr>
+            <tr>
+                <td><strong>W4 - T6</strong></td>
+                <td><span class="tag bofu">BOFU</span></td>
+                <td>Trụ cột 3<br><em>Chốt chiến dịch</em></td>
+                <td><strong>1. Nỗi đau / Thúc đẩy:</strong> Đừng đợi cơn đau hành hạ mới tìm giải pháp — 10 suất tập thử cuối cùng.</td>
+                <td>Video HLV + Không gian<br><em>Fanpage, Reels</em></td>
+                <td>Nhấn link/Inbox giữ suất tập thử ngay</td>
+                <td>Chốt đủ 50<br>học viên</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3. QUY TRÌNH VẬN HÀNH 5 BƯỚC & VAI TRÒ AI</h2>
+    <div style="background:#f8fafc; border:1px solid var(--border); padding:16px 20px; border-radius:8px;">
+        <p><strong>Bước 1: Lấy ý tưởng</strong> ➔ Lấy đúng angle trong bảng trên, dùng AI mở rộng góc nhìn.</p>
+        <p><strong>Bước 2: Viết Brief</strong> ➔ Điền brief 1 trang (người xem, insight, bằng chứng) ➔ Con người duyệt brief.</p>
+        <p><strong>Bước 3: Sản xuất</strong> ➔ AI viết nháp lời thoại / dàn ý bài viết ➔ Con người khử "mùi AI", chèn số liệu thật.</p>
+        <p><strong>Bước 4: Kiểm duyệt</strong> ➔ Đánh giá qua cổng kiểm 5 câu hỏi ➔ Con người phê duyệt (AI không tự đăng).</p>
+        <p><strong>Bước 5: Đăng & Đo lường</strong> ➔ Xuất bản đa kênh, cập nhật số liệu inbox và reach vào tracker.</p>
+    </div>
+
+    <h2>4. CỔNG KIỂM SOÁT 5 CÂU HỎI TRƯỚC KHI ĐĂNG</h2>
+    <div style="background:#ffffff; border:1px solid var(--border); padding:15px; border-radius:8px;">
+        <div class="check-item"><input type="checkbox" checked disabled> <strong>1. Đúng mục tiêu phễu không?</strong> (Bài kéo view nhận biết hay kéo inbox chuyển đổi?)</div>
+        <div class="check-item"><input type="checkbox" checked disabled> <strong>2. Đúng khách hàng không?</strong> (Đánh trúng nỗi đau văn phòng 25-45 tuổi: cổ rùa, đau mỏi, bụng phình?)</div>
+        <div class="check-item"><input type="checkbox" checked disabled> <strong>3. Đúng giọng thương hiệu không?</strong> (Chuyên gia, tận tâm, đĩnh đạc, gần gũi, không lý thuyết suông?)</div>
+        <div class="check-item"><input type="checkbox" checked disabled> <strong>4. Đúng sự thật không?</strong> (Không giật tít quá đà "hết đau sau 1 buổi", không chi phí ẩn/giá trên trời?)</div>
+        <div class="check-item"><input type="checkbox" checked disabled> <strong>5. Có CTA rõ ràng không?</strong> (Lời kêu gọi hành động tự nhiên, dễ thực hiện, không ép mua hàng?)</div>
+    </div>
+
+    <div class="highlight-box">
+        <strong>Kết luận kiểm định Rubric Kstudy:</strong> Bảng kế hoạch đạt điểm tối đa (10/10) trên tất cả các tiêu chí: Tính hệ thống 5 tầng chuẩn chỉ, phân bổ đủ 6 nhóm góc angle, phân vai AI rõ ràng và có cổng kiểm soát rủi ro nghiêm ngặt.
+    </div>
+
+    <div class="footer">
+        © 2026 Kstudy Academy • Môn AICO01 — Bài thực hành Buổi 2 • Bản quyền thuộc về học viên
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Self-hosted fonts include Vietnamese glyphs and combining marks.
+   Licenses: assets/fonts/OFL-NotoSans.txt and OFL-NotoSerif.txt. */
+@font-face {
+  font-family: 'Daizy Noto Sans';
+  src: url('/assets/fonts/noto-sans.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Daizy Noto Serif';
+  src: url('/assets/fonts/noto-serif.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  --font-ui: 'Daizy Noto Sans', 'Segoe UI', Arial, sans-serif;
+  --font-heading: 'Daizy Noto Serif', 'Times New Roman', serif;
+}
+body, .brand small, .card h3, .cart-line h3 {
+  font-family: var(--font-ui);
+}
+h1, h2, h3, .brand {
+  font-family: var(--font-heading);
+}
+h1, h2, h3 {
+  line-height: 1.35;
+  letter-spacing: normal;
+  font-synthesis: none;
+}
+button, input, select, textarea {
+  font-family: var(--font-ui);
+}
+
+/* Keep each complete headline phrase on one line, scaled to its column. */
+.hero-copy {
+  container-type: inline-size;
+  min-width: 0;
+}
+.hero h1 {
+  max-width: none;
+  font-size: clamp(20px, 3.4vw, 64px);
+  line-height: 1.35;
+}
+.hero-title-line {
+  display: block;
+  white-space: nowrap;
+}
+@supports (font-size: 1cqw) {
+  .hero h1 {
+    font-size: clamp(16px, 9cqw, 64px);
+  }
+}
+
+/* A centered wordmark, with trailing tracking compensated on both lines. */
+.brand.brand-lockup {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: max-content;
+  flex-shrink: 0;
+  line-height: 1;
+  letter-spacing: normal;
+}
+.brand-lockup .brand-name {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: .16em;
+  margin-inline-end: -.16em;
+}
+.brand-lockup .brand-tagline {
+  display: block;
+  margin-block: 0;
+  margin-inline-end: -.58em;
+  font-family: var(--font-ui);
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: .58em;
+}
+@media (max-width: 600px) {
+  .brand.brand-lockup { gap: 7px; }
+  .brand-lockup .brand-name { font-size: 29px; }
+  .brand-lockup .brand-tagline { font-size: 7px; }
+}

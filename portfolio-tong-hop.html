@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoàng Thị Hạnh Dung — Digital Marketing, AI Creative & Vibe Coding Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portfolio-tong-hop.css" />
+</head>
+<body>
+
+  <!-- Thanh thông báo & chuyển đổi nhanh giữa 2 bản Portfolio -->
+  <div class="top-notice">
+    <span>🌟 <strong>Hoàng Thị Hạnh Dung — Portfolio tổng hợp:</strong> Gồm 09 hạng mục dự án thực tế (Web, Game, TVC VF6, Phim 3D, 8 Skills Daizy, Kênh TikTok, Slide & Poster)</span>
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+      <a href="index.html">← Xem bản Portfolio #1</a>
+      <button type="button" id="toggle-inline-edit">✎ Bật sửa chữ trực tiếp trên trang</button>
+    </div>
+  </div>
+
+  <!-- Thanh điều hướng chính -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <span class="brand-badge">HD</span>
+        <span class="editable">Hoàng Thị Hạnh Dung</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#sec-videos">1. TVC VF6 & Phim 3D</a></li>
+        <li><a href="#sec-coding">2. Web Daizy & Game</a></li>
+        <li><a href="#sec-8skills">3. Trọn bộ 8 Skills</a></li>
+        <li><a href="#sec-channels">4. Kênh Hào quang màu tím</a></li>
+        <li><a href="#sec-slides">5. Slide thuyết trình</a></li>
+        <li><a href="#sec-design">6. Banner & Poster</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="mode-switch" role="tablist">
+          <button type="button" class="mode-btn active" id="btn-mode-portfolio">🌐 Portfolio</button>
+          <button type="button" class="mode-btn" id="btn-mode-cv">📄 Xem CV A4</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm trigger-print-cv">
+          ⬇ Xuất CV PDF
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       PHẦN 1: GIAO DIỆN PORTFOLIO TỔNG HỢP
+       ======================================================================== -->
+  <main class="portfolio-view-wrapper" id="top">
+
+    <!-- HERO SECTION VỚI KEY BANNER DAIZY PILATES -->
+    <section class="hero">
+      <div class="container">
+
+        <!-- Key Banner Daizy Pilates đặt nổi bật mở màn -->
+        <div class="hero-banner-frame" onclick="openLightbox('Banner daizy pilates.png', 'Banner thương hiệu: Daizy Wellness & Pilates — Find your flow (Thiết kế: Hoàng Thị Hạnh Dung)')">
+          <img src="Banner daizy pilates.png" alt="Banner Daizy Pilates — Find your flow" />
+          <span class="hero-banner-tag">🔍 Banner chủ đạo: Daizy Wellness & Pilates (Bấm để phóng to 8K)</span>
+        </div>
+
+        <div class="hero-grid">
+          <div>
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span class="editable">Hồ sơ năng lực cá nhân • Sẵn sàng nhận việc ngay</span>
+            </div>
+            <div class="hero-eyebrow editable">
+              Digital Marketing • AI Content & Workflow • 3D/TVC Video • Vibe Coding
+            </div>
+            <h1 class="hero-title editable">
+              Hoàng Thị Hạnh Dung — Tư duy chiến lược bài bản, năng lực thực thi đa nhiệm từ nội dung, hình ảnh, video 3D/TVC đến lập trình web và tự động hóa AI.
+            </h1>
+            <p class="hero-bio editable">
+              Tốt nghiệp Cử nhân Luật kết hợp đào tạo thực chiến chuyên sâu về Digital Marketing, AI Content OS, thiết kế video 3D/TVC và Vibe Coding tại Học viện Kstudy. Sở hữu danh mục <strong>09 nhóm sản phẩm thực tế đã vận hành</strong>: từ website thương mại điện tử Daizy Wellness, game tương tác HTML5 "Cá lớn ăn cá bé", TVC 3D quảng cáo đèn xe VinFast VF6, phim ngắn hoạt hình 3D "Bữa cơm với bà", trọn bộ 8 skills chiến dịch, bộ slide thuyết trình chiến lược đến kênh TikTok đạt 3.215+ lượt xem.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#sec-videos" class="btn btn-primary">🎬 Xem TVC VF6 & phim 3D ↓</a>
+              <a href="#sec-coding" class="btn btn-navy">💻 Chạy thử web Daizy & game ↓</a>
+              <a href="#sec-8skills" class="btn btn-outline">📦 Mở trọn bộ 8 skills chiến dịch ↓</a>
+              <button type="button" class="btn btn-outline" id="hero-open-cv">
+                📄 Xem bản CV A4 & tải PDF
+              </button>
+            </div>
+          </div>
+
+          <!-- Thẻ Hồ sơ ứng viên -->
+          <aside class="profile-card">
+            <div class="profile-top">
+              <img src="Daizy Pilates - Avatar.png" alt="Hoàng Thị Hạnh Dung" class="profile-avatar" />
+              <div>
+                <h3 style="font-size: 1.22rem;" class="editable">Hoàng Thị Hạnh Dung</h3>
+                <div style="font-size: 0.83rem; color: var(--primary); font-weight: 700;" class="editable">
+                  Digital Marketing & AI Creative Specialist
+                </div>
+                <div style="font-size: 0.78rem; color: var(--text-muted);" class="editable">
+                  Cử nhân Luật • Marketing • Pilates Trainer
+                </div>
+              </div>
+            </div>
+            <ul class="contact-list">
+              <li><span>✉️</span> <span class="editable">hanhdunghoang128@gmail.com</span></li>
+              <li><span>📞</span> <span class="editable">0868327384</span></li>
+              <li><span>🌐</span> <a href="https://daizypilates.vercel.app" target="_blank" rel="noopener">Website: daizypilates.vercel.app ↗</a></li>
+              <li><span>🎵</span> <a href="https://www.tiktok.com/@daizy.purple.aura" target="_blank" rel="noopener">TikTok: @daizy.purple.aura (3.2K views) ↗</a></li>
+              <li><span>📘</span> <a href="https://www.facebook.com/profile.php?id=61596228457366" target="_blank" rel="noopener">Fanpage: Daizy Pilates (10+ bài) ↗</a></li>
+              <li><span>💻</span> <a href="https://github.com/dzhoangr128-lgtm/Daizy-Wellness" target="_blank" rel="noopener">GitHub: Daizy-Wellness ↗</a></li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- 6 Con số Thực chứng -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num editable">02 video</div>
+            <div class="stat-label editable">TVC VF6 & phim 3D</div>
+            <div class="stat-desc editable">TVC K3D đèn xe VinFast VF6 & phim hoạt hình 3D "Bữa cơm với bà"</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num editable">02 dự án</div>
+            <div class="stat-label editable">Web TMĐT & game</div>
+            <div class="stat-desc editable">Web Daizy Wellness (Vercel/Supabase) & game "Cá lớn ăn cá bé"</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num editable">08 skills</div>
+            <div class="stat-label editable">Đóng gói chiến dịch</div>
+            <div class="stat-desc editable">Trọn bộ B01 → B08 & AI Agent Workflow cho Daizy Wellness</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num editable">3.215+</div>
+            <div class="stat-label editable">Lượt xem & 971 thích</div>
+            <div class="stat-desc editable">Kênh TikTok "Hào quang màu tím" & fanpage Daizy Pilates</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num editable">11 slides</div>
+            <div class="stat-label editable">& 13 hồ sơ IMC</div>
+            <div class="stat-desc editable">Slide lật trang HTML/PPTX & video bảo vệ chiến lược 20 phút</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num editable">Ấn phẩm</div>
+            <div class="stat-label editable">Banner & poster</div>
+            <div class="stat-desc editable">Banner Daizy Pilates & poster khai trương "Bún đậu Hạnh Dung"</div>
+          </div>
+        </div>
+
+        <!-- Sơ đồ Danh mục Khoa học 9 Sản phẩm -->
+        <div class="directory-bar">
+          <div class="directory-title">🧭 Mục lục điều hướng nhanh 09 hạng mục sản phẩm trong hồ sơ:</div>
+          <div class="directory-pills">
+            <a href="#item-tvc-vf6" class="dir-pill">1️⃣ TVC quảng cáo đèn xe VF6</a>
+            <a href="#item-phim-3d" class="dir-pill">2️⃣ Phim hoạt hình 3D "Bữa cơm với bà"</a>
+            <a href="#item-web-daizy" class="dir-pill">3️⃣ Website "Daizy Wellness"</a>
+            <a href="#item-game-fish" class="dir-pill">4️⃣ Game "Cá lớn ăn cá bé"</a>
+            <a href="#sec-8skills" class="dir-pill">5️⃣ Trọn bộ 8 skills chiến dịch Daizy Wellness</a>
+            <a href="#sec-channels" class="dir-pill">6️⃣ Kênh TikTok "Hào quang màu tím" & fanpage</a>
+            <a href="#sec-slides" class="dir-pill">7️⃣ Bộ slide thuyết trình & hồ sơ chiến lược</a>
+            <a href="#item-banner-daizy" class="dir-pill">8️⃣ Banner "Daizy Pilates"</a>
+            <a href="#item-poster-bundau" class="dir-pill">9️⃣ Poster "Bún đậu Hạnh Dung"</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CHUYÊN KHU 1: SẢN XUẤT VIDEO QUẢNG CÁO TVC & PHIM HOẠT HÌNH 3D
+         ====================================================================== -->
+    <section class="section" id="sec-videos">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Chuyên khu 01 • Sản xuất video quảng cáo & phim hoạt hình 3D</div>
+            <h2 class="section-title">TVC quảng cáo đèn xe VF6 & phim hoạt hình 3D “Bữa cơm với bà”</h2>
+          </div>
+          <p class="section-subtitle">
+            Năng lực đạo diễn hình ảnh ở cả hai thể loại: <strong>TVC kỹ xảo 3D công nghệ – ô tô</strong> mạnh mẽ, hiện đại và <strong>phim hoạt hình 3D kể chuyện cảm xúc gia đình</strong> sâu lắng.
+          </p>
+        </div>
+
+        <div class="video-grid">
+          <!-- 1. TVC Đèn xe VF6 -->
+          <article class="video-card" id="item-tvc-vf6">
+            <div>
+              <span class="video-badge">★ Hạng mục 01 • TVC quảng cáo 3D/VFX</span>
+              <h3 class="editable">TVC quảng cáo: “Đèn xe VinFast VF6 — Ánh sáng đánh thức mọi cung đường”</h3>
+              <p class="editable">
+                Video TVC quảng cáo kỹ xảo 3D (K3D) làm nổi bật thiết kế dải đèn LED cánh chim đặc trưng và cụm đèn pha sắc sảo của dòng xe điện VinFast VF6. Kết hợp góc máy chuyển động tốc độ cao, hiệu ứng ánh sáng ban đêm ấn tượng và âm thanh (SFX) giàu năng lượng.
+              </p>
+              <div class="video-player-wrap">
+                <video controls preload="metadata">
+                  <source src="master_assets/TVC-VF6-web.mp4" type="video/mp4" />
+                  Trình duyệt của bạn không hỗ trợ phát video.
+                </video>
+              </div>
+            </div>
+            <div>
+              <div class="video-meta-tags" style="margin-bottom: 0.85rem;">
+                <span class="video-tag">TVC ô tô</span>
+                <span class="video-tag">Đèn xe VinFast VF6</span>
+                <span class="video-tag">Kỹ xảo 3D & chuyển động</span>
+                <span class="video-tag">Thiết kế âm thanh</span>
+              </div>
+              <a href="master_assets/TVC-VF6-web.mp4" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                ↗ Mở xem video TVC VF6 toàn màn hình
+              </a>
+            </div>
+          </article>
+
+          <!-- 2. Phim hoạt hình 3D Bữa cơm với bà -->
+          <article class="video-card" id="item-phim-3d">
+            <div>
+              <span class="video-badge">★ Hạng mục 02 • Phim ngắn hoạt hình 3D (02:15)</span>
+              <h3 class="editable">Phim hoạt hình 3D: “Bữa cơm với bà” (Về nhà ăn cơm cùng bà)</h3>
+              <p class="editable">
+                Bộ phim ngắn hoạt hình 3D dài 02 phút 15 giây kể câu chuyện về cô gái trẻ ngủ thiếp đi bên bàn làm việc đêm khuya và trở về trong giấc mơ ấm áp bên mâm cơm của bà. Tự thực hiện trọn gói từ kịch bản, thiết kế nhân vật, bối cảnh nhà Việt 3D đến dựng phim.
+              </p>
+              <div class="video-player-wrap">
+                <video controls preload="metadata" poster="assets/ba-va-hanh.png">
+                  <source src="master_assets/Phim-3D-Bua-Com-Voi-Ba-web.mp4" type="video/mp4" />
+                  Trình duyệt của bạn không hỗ trợ phát video.
+                </video>
+              </div>
+            </div>
+            <div>
+              <div class="video-meta-tags" style="margin-bottom: 0.85rem;">
+                <span class="video-tag">Phim hoạt hình 3D (02:15)</span>
+                <span class="video-tag">Đồng nhất nhân vật</span>
+                <span class="video-tag">Bối cảnh thuần Việt</span>
+                <span class="video-tag">Bảng màu 3 hồi</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button type="button" class="btn btn-primary btn-sm" onclick="openGalleryModal('film3d')">
+                  🖼️ Xem 5 bước hậu trường thiết kế nhân vật & bối cảnh 3D
+                </button>
+                <a href="master_assets/Phim-3D-Bua-Com-Voi-Ba-web.mp4" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="background: transparent; color: #fff; border-color: rgba(255,255,255,0.3);">
+                  ↗ Mở video toàn màn hình
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CHUYÊN KHU 2: LẬP TRÌNH VIBE CODING — WEBSITE TMĐT & GAME TƯƠNG TÁC
+         ====================================================================== -->
+    <section class="section" id="sec-coding">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Chuyên khu 02 • Vibe Coding, phát triển website & game tương tác</div>
+            <h2 class="section-title">Website thương mại điện tử “Daizy Wellness” & game “Cá lớn ăn cá bé”</h2>
+          </div>
+          <p class="section-subtitle">
+            Ứng dụng tư duy Vibe Coding để tự xây dựng và triển khai hoàn chỉnh sản phẩm phần mềm chạy thật: từ website bán hàng có AI Chatbot, trang quản trị Admin CMS, thanh toán SePay đến game HTML5 Canvas & Web Audio API.
+          </p>
+        </div>
+
+        <div class="coding-grid">
+          <!-- 3. Website Daizy Wellness -->
+          <article class="project-card" id="item-web-daizy">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem;">
+                <span class="cat-pill">Hạng mục 03 • Website thương mại điện tử</span>
+                <span style="font-size: 0.78rem; color: var(--teal); font-weight: 800;">● Đã triển khai trên Vercel & Supabase</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem;" class="editable">
+                Website thương mại điện tử: “Daizy Wellness — Thời trang & phụ kiện Pilates”
+              </h3>
+              <p style="font-size: 0.91rem; color: var(--text-sub);" class="editable">
+                Hệ thống website bán hàng thời trang và phụ kiện tập Pilates phong cách Quiet Luxury / Balletcore. Tích hợp đầy đủ giỏ hàng, bộ chọn 5 màu sắc sản phẩm, trợ lý tư vấn AI Chatbot, trang quản trị Admin CMS (`/admin`) kết nối Supabase và luồng thanh toán QR SePay.
+              </p>
+
+              <a href="https://daizypilates.vercel.app/" target="_blank" rel="noopener" class="project-preview-box" style="display: block; text-decoration: none;">
+                <img src="master_assets/web-daizy-wellness/ecommerce-preview.png" alt="Giao diện website Daizy Wellness" />
+                <span class="zoom-hint">🌐 Bấm để mở website: https://daizypilates.vercel.app/ ↗</span>
+              </a>
+
+              <ul class="bullet-list">
+                <li class="editable"><strong>Link website hoạt động trực tuyến:</strong> <a href="https://daizypilates.vercel.app/" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 800;">https://daizypilates.vercel.app/ ↗</a></li>
+                <li class="editable"><strong>Giao diện bán hàng 6 chuyên mục:</strong> Sản phẩm mới, Trang phục (quần loe, áo bra, áo wrap 5 màu), Phụ kiện (tất chống trượt, băng đô), Combo bán chạy, Cẩm nang bài viết và Tra cứu đơn hàng.</li>
+                <li class="editable"><strong>AI Chatbot & Admin CMS:</strong> Tích hợp khung chat AI tư vấn sản phẩm trực tiếp; trang Admin quản lý tồn kho, bài viết và sản phẩm có phân quyền bảo mật RLS trên Supabase.</li>
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <a href="https://daizypilates.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                🌐 Mở website: daizypilates.vercel.app ↗
+              </a>
+              <button type="button" class="btn btn-navy btn-sm" onclick="openInteractiveSandbox('master_assets/web-daizy-wellness/daizy_wellness_single_file.html', 'Trải nghiệm nhanh giao diện Daizy Wellness ngay trên trang')">
+                💻 Xem thử ngay trong khung này
+              </button>
+              <a href="https://daizypilates.vercel.app/admin" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                🛠️ Mở trang Admin CMS ↗
+              </a>
+              <button type="button" class="btn btn-outline btn-sm" onclick="openGalleryModal('daizyWeb')">
+                🖼️ Xem 8 ảnh chụp hệ thống & SePay
+              </button>
+              <a href="master_assets/web-daizy-wellness/video-demo-daizy-wellness.mp4" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                ▶ Xem video demo web
+              </a>
+            </div>
+          </article>
+
+          <!-- 4. Game Cá Lớn Ăn Cá Bé -->
+          <article class="project-card" id="item-game-fish">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem;">
+                <span class="cat-pill">Hạng mục 04 • Game HTML5 Canvas & Web Audio</span>
+                <span style="font-size: 0.78rem; color: var(--primary); font-weight: 800;">● 60 FPS • Chơi trực tiếp ngay</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem;" class="editable">
+                Game tương tác: “Cá lớn ăn cá bé — Đại dương săn mồi (Ocean Feeding Frenzy)”
+              </h3>
+              <p style="font-size: 0.91rem; color: var(--text-sub);" class="editable">
+                Trò chơi hành động sinh tồn dưới đáy đại dương được lập trình hoàn toàn bằng HTML5 Canvas, Three.js và Procedural Web Audio API (tự tổng hợp nhạc nền và hiệu ứng âm thanh thời gian thực bằng sóng dao động toán học mà không cần tải file âm thanh ngoài).
+              </p>
+
+              <div class="project-preview-box" onclick="openInteractiveSandbox('master_assets/game-ca-lon-an-ca-be/game_single_file.html', 'Chơi trực tiếp game: Cá lớn ăn cá bé (Di chuột hoặc phím WASD để bơi, giữ chuột trái/Space để lướt nhanh)')">
+                <iframe src="master_assets/game-ca-lon-an-ca-be/game_single_file.html" title="Game Cá lớn ăn cá bé" style="width: 100%; height: 100%; border: none; pointer-events: none;"></iframe>
+                <span class="zoom-hint" style="background: var(--primary); font-weight: 800; font-size: 0.8rem; padding: 0.35rem 0.8rem;">
+                  🎮 Bấm vào đây để chơi thử game ngay
+                </span>
+              </div>
+
+              <ul class="bullet-list">
+                <li class="editable"><strong>Chuỗi tiến hóa 4 cấp & chế độ Cuồng nộ:</strong> Tiến hóa từ Cá hề sơ sinh → Cá thần tiên → Cá ngừ hoàng gia → Cá mập trắng. Tích lũy combo x2 → x10 để kích hoạt trạng thái Cuồng nộ hóa vàng rực cháy.</li>
+                <li class="editable"><strong>Hệ thống vật phẩm & sự kiện:</strong> 4 vật phẩm bổ trợ (Khiên bảo vệ, Nam châm đại dương, Siêu tốc độ, Ngọc bội +500 điểm) và sự kiện Nàng tiên cá huyền thoại (+1.000 điểm).</li>
+                <li class="editable"><strong>Kỹ thuật đồ họa & âm thanh 60 FPS:</strong> Thuật toán AI bầy đàn, hiệu ứng tia nắng khúc xạ dưới nước và âm thanh tổng hợp trực tiếp sống động.</li>
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <button type="button" class="btn btn-primary btn-sm" onclick="openInteractiveSandbox('master_assets/game-ca-lon-an-ca-be/game_single_file.html', '🎮 Chơi game Cá lớn ăn cá bé (Di chuột hoặc WASD để điều khiển)')">
+                🎮 Chơi ngay trên trang này
+              </button>
+              <a href="master_assets/game-ca-lon-an-ca-be/game_single_file.html" target="_blank" rel="noopener" class="btn btn-navy btn-sm">
+                ↗ Mở game toàn màn hình ở tab mới
+              </a>
+              <a href="master_assets/game-ca-lon-an-ca-be/README.md" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                📄 Xem tài liệu kỹ thuật game
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CHUYÊN KHU 3: TRỌN BỘ 8 SKILLS ĐÓNG GÓI CHIẾN DỊCH CHO DAIZY WELLNESS
+         ====================================================================== -->
+    <section class="section" id="sec-8skills">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Chuyên khu 03 • Hệ thống 8 skills đóng gói chiến dịch AI Content Marketing</div>
+            <h2 class="section-title">Trọn bộ 08 skills đóng gói chiến dịch cho Daizy Wellness (B01 → B08)</h2>
+          </div>
+          <p class="section-subtitle">
+            Hệ thống 08 bộ hồ sơ thực chiến liên hoàn từ nghiên cứu chiến lược 12 chặng, lập kế hoạch nội dung 30 ngày, kho sáng tạo, viết bài & visual brief, kịch bản video 7 cột, kế hoạch kênh, hệ điều hành AI Content OS đến hồ sơ tổng kết hoàn chỉnh.
+          </p>
+        </div>
+
+        <!-- Banner Tổng quan Hệ thống Skill & Báo cáo Tổng hợp -->
+        <div class="skills-package-banner">
+          <div style="max-width: 720px;">
+            <span style="display: inline-block; background: rgba(255,255,255,0.16); padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.76rem; font-weight: 700; margin-bottom: 0.5rem;">
+              ★ Hạng mục 05 • Hệ sinh thái AI Agent Skills & hồ sơ chiến dịch chuẩn Kstudy
+            </span>
+            <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.4rem;" class="editable">
+              Đóng gói quy trình marketing thành 08 bộ tài liệu chiến dịch và gói AI skill tái sử dụng
+            </h3>
+            <p style="font-size: 0.88rem; color: #E4E4E7;" class="editable">
+              Mỗi bước dưới đây đều có <strong>bản web HTML trình bày trực quan</strong> và <strong>file Microsoft Word (.docx)</strong> chuẩn thể thức để bấm mở xem ngay. Kèm theo gói skill AI Agent <code>wellness-pilates-script</code> giúp rút ngắn thời gian viết kịch bản từ 120 phút xuống còn 15 phút.
+            </p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.55rem;">
+            <a href="bài tập cuối môn AI Content - Hoàng thị Hạnh Dung (antigravity)/00-BAO-CAO-TONG-HOP-CUOI-MON-HOANG-THI-HANH-DUNG.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              📘 Mở báo cáo tổng hợp 12 trang (HTML) ↗
+            </a>
+            <a href="master_assets/enter-ai-package/Bao-cao-cuoi-mon-Enter-AI-Hoang-Thi-Hanh-Dung.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.3);">
+              🤖 Mở báo cáo đóng gói AI skill (PDF) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Lưới 8 Skills Chiến dịch B01 -> B08 -->
+        <div class="skills-8-grid">
+          <!-- Skill 01 -->
+          <div class="skill-step-card">
+            <div>
+              <span class="skill-num-badge">Skill 01 • Buổi 01</span>
+              <span class="skill-code-tag">content-strategy-one-page</span>
+              <h4 class="editable">Định hướng chiến lược nội dung 12 chặng (One-page strategy)</h4>
+              <p class="editable">Phân tích bối cảnh thương hiệu Daizy Wellness, mục tiêu kinh doanh, nghiên cứu khách hàng 4D, tìm insight cốt lõi, định vị sứ mệnh nội dung, giọng văn và 3 trụ cột nội dung.</p>
+            </div>
+            <div class="skill-actions">
+              <a href="master_assets/8-skills-daizy-wellness/B01_Content_Direction_Pilates_Wellness.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Xem bản HTML ↗</a>
+              <a href="master_assets/8-skills-daizy-wellness/B01_Content_Direction_Pilates_Wellness.docx" class="btn btn-outline btn-sm">📥 Tải file Word</a>
+            </div>
+          </div>
+
+          <!-- Skill 02 -->
+          <div class="skill-step-card">
+            <div>
+              <span class="skill-num-badge">Skill 02 • Buổi 02</span>
+              <span class="skill-code-tag">xay-content-plan</span>
+              <h4 class="editable">Kiến trúc nội dung & lịch Content Plan 30 ngày</h4>
+              <p class="editable">Chuyển hóa chiến lược thành bảng kế hoạch đăng bài 1 tháng (26–30 bài) phân bổ theo tỷ lệ phễu, quy định rõ 6 nhóm góc tiếp cận và quy trình vận hành 5 bước.</p>
+            </div>
+            <div class="skill-actions">
+              <a href="master_assets/8-skills-daizy-wellness/B02_Content_Plan_30_Ngay_Pilates.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Xem bản HTML ↗</a>
+              <a href="master_assets/8-skills-daizy-wellness/B02_Content_Plan_30_Ngay_Pilates.docx" class="btn btn-outline btn-sm">📥 Tải file Word</a>
+            </div>
+          </div>
+
+          <!-- Skill 03 -->
+          <div class="skill-step-card">
+            <div>
+              <span class="skill-num-badge">Skill 03 • Buổi 03</span>
+              <span class="skill-code-tag">xay-kho-sang-tao</span>
+              <h4 class="editable">Kho sáng tạo (Creative Bank) & ma trận góc tiếp cận</h4>
+              <p class="editable">Mở rộng thành ma trận biến thể góc tiếp cận, bảng chấm điểm sáng tạo 6 tiêu chí (chủ đề "Hông chậu đổ trước" đạt tuyệt đối 18/18 điểm), kho 20+ câu mở bài và dàn ý chi tiết.</p>
+            </div>
+            <div class="skill-actions">
+              <a href="master_assets/8-skills-daizy-wellness/B03_Creative_Bank_Kho_Sang_Tao_Pilates.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Xem bản HTML ↗</a>
+              <a href="master_assets/8-skills-daizy-wellness/B03_Creative_Bank_Kho_Sang_Tao_Pilates.docx" class="btn btn-outline btn-sm">📥 Tải file Word</a>
+            </div>
+          </div>
+
+          <!-- Skill 04 -->
+          <div class="skill-step-card">
+            <div>
+              <span class="skill-num-badge">Skill 04 • Buổi 04</span>
+              <span class="skill-code-tag">viet-content & thiet-ke-hinh-anh</span>
+              <h4 class="editable">Sản xuất bài viết PAS, khử mùi AI & Visual Brief 10 ô</h4>
+              <p class="editable">Lập Content Brief 11 tiêu chí, viết câu lệnh CRAFT-F, hoàn thiện bài viết hoàn chỉnh kèm bảng kiểm 9 điểm khử mùi AI và thiết kế ảnh Before/After 4:5 theo nguyên tắc 2 giây.</p>
+            </div>
+            <div class="skill-actions">
+              <a href="master_assets/8-skills-daizy-wellness/B04_San_Xuat_Bai_Viet_Va_Visual_Brief_Pilates.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Xem bản HTML ↗</a>
+              <a href="master_assets/8-skills-daizy-wellness/B04_San_Xuat_Bai_Viet_Va_Visual_Brief_Pilates.docx" class="btn btn-outline btn-sm">📥 Tải file Word</a>
+            </div>
+          </div>
+
+          <!-- Skill 05 -->
+          <div class="skill-step-card">
+            <div>
+              <span class="skill-num-badge">Skill 05 • Buổi 05</span>
+              <span class="skill-code-tag">kich-ban-video-content</span>
+              <h4 class="editable">Kịch bản video 7 cột & Storyboard Shot List 8 cột</h4>
+              <p class="editable">Xây dựng kịch bản Reels/TikTok 50 giây "Chị ơi, không phải béo bụng!" đồng bộ giữa lời thoại nói tự nhiên – cảnh quay – chữ hiển thị – âm thanh kèm bảng Shot List 8 cột.</p>
+            </div>
+            <div class="skill-actions">
+              <a href="master_assets/8-skills-daizy-wellness/B05_Kich_Ban_Video_Content_Pilates.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Xem bản HTML ↗</a>
+              <a href="master_assets/8-skills-daizy-wellness/B05_Kich_Ban_Video_Content_Pilates.docx" class="btn btn-outline btn-sm">📥 Tải file Word</a>
+            </div>
+          </div>
+
+          <!-- Skill 06 -->
+          <div class="skill-step-card">
+            <div>
+              <span class="skill-num-badge">Skill 06 • Buổi 06</span>
+              <span class="skill-code-tag">xay-ke-hoach-kenh</span>
+              <h4 class="editable">Chiến lược chọn kênh & kế hoạch tăng trưởng kênh</h4>
+              <p class="editable">Đánh giá lựa chọn kênh chính/phụ theo 4 tiêu chí, thiết lập bộ nhận diện và chuỗi nội dung định kỳ, lập kế hoạch xây dựng cộng đồng và seeding có trách nhiệm.</p>
+            </div>
+            <div class="skill-actions">
+              <a href="master_assets/8-skills-daizy-wellness/B06_Xay_Ke_Hoach_Kenh_Pilates.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Xem bản HTML ↗</a>
+              <a href="master_assets/8-skills-daizy-wellness/B06_Xay_Ke_Hoach_Kenh_Pilates.docx" class="btn btn-outline btn-sm">📥 Tải file Word</a>
+            </div>
+          </div>
+
+          <!-- Skill 07 -->
+          <div class="skill-step-card">
+            <div>
+              <span class="skill-num-badge">Skill 07 • Buổi 07</span>
+              <span class="skill-code-tag">do-luong & ai-content-os</span>
+              <h4 class="editable">Đo lường hiệu quả KPI & hệ điều hành AI Content OS</h4>
+              <p class="editable">Thiết lập bảng đo KPI theo 3 tầng phễu, đọc quy luật bài thắng/thua, viết chẩn đoán 5 dòng; thiết kế gói bối cảnh thương hiệu, cổng kiểm chất lượng và chuyển hóa 1 nội dung ra 3 định dạng.</p>
+            </div>
+            <div class="skill-actions">
+              <a href="master_assets/8-skills-daizy-wellness/B07_Do_Luong_Va_He_Dieu_Hanh_AI_Content_OS_Pilates.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Xem bản HTML ↗</a>
+              <a href="master_assets/8-skills-daizy-wellness/B07_Do_Luong_Va_He_Dieu_Hanh_AI_Content_OS_Pilates.docx" class="btn btn-outline btn-sm">📥 Tải file Word</a>
+            </div>
+          </div>
+
+          <!-- Skill 08 -->
+          <div class="skill-step-card">
+            <div>
+              <span class="skill-num-badge">Skill 08 • Buổi 08 (Final)</span>
+              <span class="skill-code-tag">chua-du-an-content-os</span>
+              <h4 class="editable">Rà soát 6 lớp năng lực & hồ sơ tốt nghiệp hoàn chỉnh</h4>
+              <p class="editable">Tổng kiểm tra toàn bộ dự án theo 6 lớp năng lực cốt lõi, phân loại hạng mục tối ưu Must/Should/Could, kế hoạch nâng cấp 7 ngày và đóng gói hồ sơ bàn giao bản cuối.</p>
+            </div>
+            <div class="skill-actions">
+              <a href="master_assets/8-skills-daizy-wellness/B08_Chua_Du_An_Va_Ho_So_Tot_Nghiep_FINAL_Pilates.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">🌐 Xem bản HTML ↗</a>
+              <a href="master_assets/8-skills-daizy-wellness/B08_Chua_Du_An_Va_Ho_So_Tot_Nghiep_FINAL_Pilates.docx" class="btn btn-outline btn-sm">📥 Tải file Word</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CHUYÊN KHU 4: KÊNH TIKTOK "HÀO QUANG MÀU TÍM" & FANPAGE DAIZY PILATES
+         ====================================================================== -->
+    <section class="section" id="sec-channels">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Chuyên khu 04 • Xây dựng kênh mạng xã hội thực tế & tăng trưởng tự nhiên</div>
+            <h2 class="section-title">Kênh TikTok “Hào quang màu tím” & fanpage “Daizy Pilates”</h2>
+          </div>
+          <p class="section-subtitle">
+            Minh chứng thực tế bằng kênh đang hoạt động công khai: tự tay xây dựng định vị, sản xuất 24+ ấn phẩm video/bài viết và đạt <strong>3.215+ lượt xem, 971 lượt thích tự nhiên</strong>.
+          </p>
+        </div>
+
+        <div class="coding-grid">
+          <!-- Kênh TikTok Hào Quang Màu Tím -->
+          <article class="project-card">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem;">
+                <span class="cat-pill" style="background: rgba(109, 40, 217, 0.1); color: #6D28D9;">Hạng mục 06A • Kênh TikTok (@daizy.purple.aura)</span>
+                <span style="font-size: 0.78rem; color: var(--accent); font-weight: 800;">🔥 3.215 lượt xem • 971 lượt thích</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem;" class="editable">
+                Kênh TikTok: “Hào quang màu tím” (@daizy.purple.aura)
+              </h3>
+              <p style="font-size: 0.91rem; color: var(--text-sub);" class="editable">
+                Kênh TikTok xây dựng theo định vị thẩm mỹ tím pastel và năng lượng tích cực, chữa lành. Xuất bản 14 video công khai với cấu trúc mở đầu thu hút thị giác đồng bộ, đạt 971 lượt yêu thích và video nổi bật cán mốc 3.215 lượt xem tự nhiên.
+              </p>
+
+              <div class="project-preview-box" onclick="openLightbox('bài tập cuối môn AI Content - Hoàng thị Hạnh Dung (antigravity)/3. Ảnh chụp kết quả kênh/TikTok-2-Chi-So-View-Va-Bai-Dang.jpg', 'Minh chứng chỉ số kênh TikTok Hào quang màu tím: 14 video, 971 thích, 3.215 lượt xem')">
+                <img src="bài tập cuối môn AI Content - Hoàng thị Hạnh Dung (antigravity)/3. Ảnh chụp kết quả kênh/TikTok-2-Chi-So-View-Va-Bai-Dang.jpg" alt="Kênh TikTok Hào quang màu tím" />
+                <span class="zoom-hint">🔍 Bấm để phóng to ảnh chụp chỉ số kênh TikTok</span>
+              </div>
+
+              <ul class="bullet-list">
+                <li class="editable"><strong>14 video xuất bản công khai:</strong> Lưới hiển thị ảnh bìa đồng bộ tông màu tím đặc trưng giúp tăng tỷ lệ chuyển đổi khi người xem ghé thăm kênh.</li>
+                <li class="editable"><strong>Tăng trưởng tự nhiên 100%:</strong> Đạt 3.215 lượt xem cho video nổi bật nhất và 971 tổng lượt thích ngay trong giai đoạn đầu xây kênh.</li>
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <a href="https://www.tiktok.com/@daizy.purple.aura" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                🎵 Mở kênh TikTok thực tế (@daizy.purple.aura) ↗
+              </a>
+              <button type="button" class="btn btn-outline btn-sm" onclick="openGalleryModal('purpleAura')">
+                📊 Xem bộ 6 ảnh chụp chỉ số kênh
+              </button>
+            </div>
+          </article>
+
+          <!-- Fanpage Daizy Pilates & Tự động hóa Antigravity -->
+          <article class="project-card">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem;">
+                <span class="cat-pill">Hạng mục 06B • Fanpage Facebook & tự động hóa Antigravity</span>
+                <span style="font-size: 0.78rem; color: var(--teal); font-weight: 800;">● 10 bài chuyên sâu + đăng tự động</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.4rem;" class="editable">
+                Fanpage “Daizy Pilates” & quy trình tự động hóa trên Antigravity
+              </h3>
+              <p style="font-size: 0.91rem; color: var(--text-sub);" class="editable">
+                Fanpage chính thức chia sẻ kiến thức Pilates trị liệu tư thế và dinh dưỡng cân bằng (đĩa ăn 2:1:1). Ứng dụng kịch bản tự động hóa viết bằng JavaScript/Puppeteer trên Antigravity để tự động tạo 8 ảnh minh họa AI Studio và tự động đăng 5 bài liên hoàn lên fanpage.
+              </p>
+
+              <div class="project-preview-box" onclick="openLightbox('bài tập cuối môn AI Content - Hoàng thị Hạnh Dung (antigravity)/3. Ảnh chụp kết quả kênh/Facebook-1-Trang-Chu-Daizy-Pilates.png', 'Trang chủ fanpage Facebook Daizy Pilates')">
+                <img src="bài tập cuối môn AI Content - Hoàng thị Hạnh Dung (antigravity)/3. Ảnh chụp kết quả kênh/Facebook-1-Trang-Chu-Daizy-Pilates.png" alt="Fanpage Daizy Pilates" />
+                <span class="zoom-hint">🔍 Bấm để phóng to giao diện fanpage Daizy Pilates</span>
+              </div>
+
+              <ul class="bullet-list">
+                <li class="editable"><strong>10 bài viết chuyên sâu công khai:</strong> Kết hợp hài hòa giữa tuyến bài hướng dẫn tư thế (Pelvic Curl, Cat-Cow, mở vai công sở) và dinh dưỡng lành mạnh.</li>
+                <li class="editable"><strong>Kịch bản code tự động hóa (<code>02-Code-Tu-Dong-Dang-5-Bai-Facebook.js</code>):</strong> Tự động hóa khâu xuất bản giúp tiết kiệm 70% thời gian vận hành fanpage.</li>
+              </ul>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+              <a href="https://www.facebook.com/profile.php?id=61596228457366" target="_blank" rel="noopener" class="btn btn-navy btn-sm">
+                📘 Mở fanpage Daizy Pilates thực tế ↗
+              </a>
+              <a href="bài tập cuối môn AI Content - Hoàng thị Hạnh Dung (antigravity)/4. Workflow tự động hóa sản xuất content & thực hiện trên Antigravity/4-Workflow-Tu-Dong-Hoa-San-Xuat-Content-Antigravity.html" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                ⚙️ Xem hồ sơ quy trình tự động hóa ↗
+              </a>
+              <a href="bài tập cuối môn AI Content - Hoàng thị Hạnh Dung (antigravity)/4. Workflow tự động hóa sản xuất content & thực hiện trên Antigravity/Minh-Chung-Anh-Va-Code-Antigravity/02-Code-Tu-Dong-Dang-5-Bai-Facebook.js" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                💻 Xem code đăng bài tự động
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CHUYÊN KHU 5: BỘ SLIDE THUYẾT TRÌNH TƯƠNG TÁC & HỒ SƠ CHIẾN LƯỢC IMC
+         ====================================================================== -->
+    <section class="section" id="sec-slides">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Chuyên khu 05 • Bộ slide thuyết trình chiến lược & hồ sơ kế hoạch IMC</div>
+            <h2 class="section-title">Bộ slide thuyết trình chiến lược (tương tác lật trang trực tiếp)</h2>
+          </div>
+          <p class="section-subtitle">
+            Đề tài bảo vệ cuối môn: <em>“Chiến lược marketing số thu hút và phát triển khách hàng cho Daizy Pilates Cầu Giấy giai đoạn 2026–2027”</em>. Bạn có thể <strong>bấm nút qua lại để lật từng trang slide ngay trong khung bên dưới</strong>.
+          </p>
+        </div>
+
+        <div class="slide-showcase-wrap">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="cat-pill">Hạng mục 07 • Bộ slide HTML 16:9 & PowerPoint</span>
+              <h3 style="font-size: 1.28rem; margin-top: 0.45rem;" class="editable">
+                Trình chiếu trực tiếp: 11 slide chiến lược marketing số Daizy Pilates (chuẩn Kstudy Design System)
+              </h3>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="master_assets/slides-enter-digital/11-SLIDE-THUYET-TRINH-LAT-TRANG.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                🖥️ Mở slide toàn màn hình (Full HD) ↗
+              </a>
+              <a href="master_assets/slides-enter-digital/11-slide-thuyet-trinh.pptx" class="btn btn-navy btn-sm">
+                📥 Tải file PowerPoint (.pptx)
+              </a>
+              <a href="master_assets/slides-enter-digital/Kstudy_Slide_Bai_7_Do_luong_Chan_doan_AI_Content_OS_v2.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                📊 Xem slide bài 7: AI Content OS (PDF) ↗
+              </a>
+              <a href="https://youtu.be/idhe9KRF6PI" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                ▶ Xem video thuyết trình bảo vệ (YouTube 20:41) ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Khung nhúng trực tiếp Bộ Slide Lật Trang -->
+          <div class="slide-iframe-container">
+            <iframe src="master_assets/slides-enter-digital/11-SLIDE-THUYET-TRINH-LAT-TRANG.html" title="Bộ slide thuyết trình chiến lược marketing số Daizy Pilates"></iframe>
+          </div>
+
+          <!-- Trọn bộ 12 Tài liệu Chiến lược IMC đi kèm bộ Slide -->
+          <div style="margin-top: 1.25rem;">
+            <div style="font-size: 0.84rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">
+              📂 Trọn bộ 12 tài liệu nghiên cứu và kế hoạch Digital Marketing 1 năm đi kèm bộ slide (bấm để tải file Word .docx):
+            </div>
+            <div class="imc-docs-grid">
+              <a href="master_assets/slides-enter-digital/01-brief-doanh-nghiep.docx" class="imc-doc-item">
+                <span>01 • Brief doanh nghiệp & 3 sự thật</span> <span>⬇</span>
+              </a>
+              <a href="master_assets/slides-enter-digital/02-muc-tieu-va-thi-truong.docx" class="imc-doc-item">
+                <span>02 • Mục tiêu SMART & thị trường</span> <span>⬇</span>
+              </a>
+              <a href="master_assets/slides-enter-digital/03-khach-hang-5w1h.docx" class="imc-doc-item">
+                <span>03 • Chân dung khách hàng 5W1H</span> <span>⬇</span>
+              </a>
+              <a href="master_assets/slides-enter-digital/04-thi-truong-doi-thu.docx" class="imc-doc-item">
+                <span>04 • Phân tích đối thủ cạnh tranh</span> <span>⬇</span>
+              </a>
+              <a href="master_assets/slides-enter-digital/05-bmc-4p-swot-usp.docx" class="imc-doc-item">
+                <span>05 • Mô hình BMC, 7P, SWOT & USP</span> <span>⬇</span>
+              </a>
+              <a href="master_assets/slides-enter-digital/06-poe-va-funnel.docx" class="imc-doc-item">
+                <span>06 • Ngân sách POE & phễu 4 tầng</span> <span>⬇</span>
+              </a>
+              <a href="master_assets/slides-enter-digital/07-ke-hoach-hanh-dong-kpi.docx" class="imc-doc-item">
+                <span>07 • Kế hoạch 4 quý & 5 KPI cốt lõi</span> <span>⬇</span>
+              </a>
+              <a href="master_assets/slides-enter-digital/08-facebook-ads.docx" class="imc-doc-item">
+                <span>08 • Kỹ thuật setup Facebook Ads</span> <span>⬇</span>
+              </a>
+              <a href="master_assets/slides-enter-digital/09-tiktok-ads.docx" class="imc-doc-item">
+                <span>09 • Kỹ thuật setup TikTok Lead Ads</span> <span>⬇</span>
+              </a>
+              <a href="master_assets/slides-enter-digital/10-outline-bao-cao.docx" class="imc-doc-item">
+                <span>10 • Báo cáo tổng hợp Master Report</span> <span>⬇</span>
+              </a>
+              <a href="master_assets/slides-enter-digital/11-outline-slide.docx" class="imc-doc-item">
+                <span>11 • Kịch bản nội dung 11 slide</span> <span>⬇</span>
+              </a>
+              <a href="https://youtu.be/idhe9KRF6PI" target="_blank" rel="noopener" class="imc-doc-item" style="background: var(--primary-soft); color: var(--primary); border-color: var(--primary);">
+                <span>12 • Xem video bảo vệ dự án (YouTube 20:41)</span> <span>▶</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CHUYÊN KHU 6: THIẾT KẾ BANNER THƯƠNG HIỆU & POSTER QUẢNG CÁO F&B
+         ====================================================================== -->
+    <section class="section" id="sec-design">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Chuyên khu 06 • Thiết kế đồ họa thương mại, banner & poster quảng cáo</div>
+            <h2 class="section-title">Banner “Daizy Pilates” & poster quảng cáo “Bún đậu Hạnh Dung”</h2>
+          </div>
+          <p class="section-subtitle">
+            Khả năng biến hóa linh hoạt phong cách thiết kế đồ họa: từ <strong>Quiet Luxury thanh lịch, tối giản (ngành Wellness/thời trang)</strong> đến <strong>ấn phẩm khai trương F&B rực rỡ, kích thích vị giác và thúc đẩy chuyển đổi tại điểm bán</strong>.
+          </p>
+        </div>
+
+        <div class="design-grid">
+          <!-- 8. Banner Daizy Pilates -->
+          <article class="project-card" id="item-banner-daizy">
+            <div>
+              <span class="cat-pill">Hạng mục 08 • Banner nhận diện thương hiệu</span>
+              <h3 style="font-size: 1.25rem; margin: 0.45rem 0;" class="editable">
+                Thiết kế banner chủ đạo: “Daizy Wellness & Pilates — Find your flow”
+              </h3>
+              <p style="font-size: 0.91rem; color: var(--text-sub);" class="editable">
+                Banner ngang chuẩn trang chủ website và ảnh bìa fanpage, kết hợp giữa nhiếp ảnh nhân vật 8K bên máy tập Pilates Reformer ngập nắng và nghệ thuật sắp đặt chữ (typography) cùng đường nét vòm kiến trúc tinh tế.
+              </p>
+
+              <div class="design-thumb" onclick="openLightbox('Banner daizy pilates.png', 'Banner Daizy Pilates — Find your flow (File gốc PNG & SVG vector)')">
+                <img src="Banner daizy pilates.png" alt="Banner Daizy Pilates" />
+                <span class="zoom-hint">🔍 Bấm để phóng to banner Daizy Pilates</span>
+              </div>
+
+              <ul class="bullet-list">
+                <li class="editable"><strong>Bố cục cân bằng bất đối xứng (50/50):</strong> Nửa trái là không gian âm màu kem ấm giúp tôn vinh hệ thống chữ phân cấp rõ ràng; nửa phải là hình ảnh nhân vật 8K tạo cảm xúc chuyển động.</li>
+                <li class="editable"><strong>Định dạng xuất bản:</strong> Hoàn thiện cả bản ảnh độ phân giải cao (<code>.png</code>) và bản vector chuẩn in ấn/web (<code>Banner daizy pilates.svg</code>).</li>
+              </ul>
+            </div>
+
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button type="button" class="btn btn-primary btn-sm" onclick="openLightbox('Banner daizy pilates.png', 'Banner Daizy Pilates — Find your flow')">
+                🔍 Xem ảnh lớn toàn màn hình
+              </button>
+              <a href="Banner daizy pilates.svg" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                📐 Mở file vector gốc (.svg) ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- 9. Poster Bún đậu Hạnh Dung -->
+          <article class="project-card" id="item-poster-bundau">
+            <div>
+              <span class="cat-pill" style="background: var(--accent-soft); color: var(--accent);">Hạng mục 09 • Poster quảng cáo khai trương F&B</span>
+              <h3 style="font-size: 1.25rem; margin: 0.45rem 0;" class="editable">
+                Poster quảng cáo F&B: “Mừng khai trương — Bún đậu Hạnh Dung (Giảm ngay 20%)”
+              </h3>
+              <p style="font-size: 0.91rem; color: var(--text-sub);" class="editable">
+                Thiết kế poster truyền thông sự kiện khai trương quán ẩm thực truyền thống Bún đậu Hạnh Dung. Ứng dụng bố cục 3 khung cảnh kể chuyện kết hợp điểm hút thị giác tập trung vào ưu đãi "Giảm ngay 20%" và mẹt bún đậu mắm tôm hấp dẫn.
+              </p>
+
+              <div class="design-thumb" onclick="openLightbox('master_assets/poster-bun-dau-hanh-dung.jpg', 'Poster quảng cáo F&B: Mừng khai trương Bún đậu Hạnh Dung — Giảm ngay 20%')">
+                <img src="master_assets/poster-bun-dau-hanh-dung.jpg" alt="Poster Bún đậu Hạnh Dung" />
+                <span class="zoom-hint">🔍 Bấm để phóng to poster Bún đậu Hạnh Dung</span>
+              </div>
+
+              <ul class="bullet-list">
+                <li class="editable"><strong>Nguyên tắc thị giác 2 giây:</strong> Cấp 1 là con số ưu đãi <strong>"GIẢM NGAY 20%"</strong> trên dải băng đỏ và mẹt bún đậu đầy đặn ở chính giữa; Cấp 2 là tiêu đề vàng nổi bật <em>"MỪNG KHAI TRƯƠNG! BÚN ĐẬU HẠNH DUNG"</em>.</li>
+                <li class="editable"><strong>Bố cục kể chuyện 3 khung:</strong> Khung trái khoe mặt tiền phố cổ đèn lồng và standee nhận diện; khung giữa là hình ảnh món ăn chủ đạo và thực đơn; khung phải thể hiện trải nghiệm thực khách vui vẻ thưởng thức tại quán.</li>
+              </ul>
+            </div>
+
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button type="button" class="btn btn-primary btn-sm" onclick="openLightbox('master_assets/poster-bun-dau-hanh-dung.jpg', 'Poster quảng cáo F&B: Mừng khai trương Bún đậu Hạnh Dung')">
+                🔍 Phóng to poster độ phân giải cao
+              </button>
+              <a href="master_assets/poster-bun-dau-hanh-dung.jpg" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                ↗ Mở file ảnh gốc ở tab mới
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       PHẦN 2: CHẾ ĐỘ BẢN CV CHUẨN KHỔ GIẤY A4 (TỔNG HỢP ĐẦY ĐỦ 9 MỤC)
+       ======================================================================== -->
+  <section class="cv-view-wrapper" id="cv-view">
+    <div class="container">
+      <div class="cv-actions-bar">
+        <div>
+          <strong>📄 Bản CV chuẩn khổ A4 — Hoàng Thị Hạnh Dung</strong>
+          <p style="font-size: 0.84rem; color: var(--text-sub);">
+            Tổng hợp đầy đủ 09 dự án thực chiến (Web Daizy, Game Cá lớn ăn cá bé, TVC VF6, Phim 3D, 8 Skills, Kênh TikTok, Slide & Poster). Nhấn nút bên phải để lưu thành file PDF A4.
+          </p>
+        </div>
+        <div style="display: flex; gap: 0.6rem;">
+          <button type="button" class="btn btn-outline btn-sm" id="btn-back-portfolio">
+            ← Quay lại Portfolio
+          </button>
+          <button type="button" class="btn btn-primary btn-sm trigger-print-cv">
+            🖨️ In / Lưu thành file PDF (chuẩn A4)
+          </button>
+        </div>
+      </div>
+
+      <!-- Trang giấy A4 -->
+      <div class="cv-paper">
+        <header class="cv-header">
+          <div>
+            <div class="cv-name editable">HOÀNG THỊ HẠNH DUNG</div>
+            <div class="cv-role editable">Digital Marketing • AI Content & Video Creator • Vibe Coding</div>
+            <div style="font-size: 8.5pt; color: #52525B; font-weight: 600; margin-top: 2px;" class="editable">
+              Nền tảng: Cử nhân Luật • Chuyên viên chiến lược nội dung AI, sản xuất video 3D/TVC & phát triển web
+            </div>
+          </div>
+          <div class="cv-contact-grid">
+            <div class="editable">📍 Hà Nội / TP.HCM, Việt Nam</div>
+            <div class="editable">✉️ hanhdunghoang128@gmail.com</div>
+            <div class="editable">📞 0868327384</div>
+            <div class="editable">🌐 Web: daizypilates.vercel.app</div>
+            <div class="editable">🎵 TikTok: @daizy.purple.aura (3.2K views)</div>
+          </div>
+        </header>
+
+        <section class="cv-section">
+          <div class="cv-section-title">Tóm tắt năng lực</div>
+          <p class="cv-summary-text editable">
+            Chuyên viên Digital Marketing & AI Creative đa nhiệm với nền tảng tư duy logic chặt chẽ của Cử nhân Luật kết hợp năng lực thực thi toàn diện từ hoạch định chiến lược marketing số (IMC), đóng gói hệ thống 8 skills AI Content OS, sản xuất video 3D & TVC thương mại đến lập trình Vibe Coding (website thương mại điện tử & game HTML5). Đã chứng minh năng lực qua 09 nhóm sản phẩm thực tế có link vận hành trực tuyến và chỉ số đo lường minh bạch.
+          </p>
+        </section>
+
+        <section class="cv-section">
+          <div class="cv-section-title">09 dự án & sản phẩm thực chiến tiêu biểu</div>
+
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="editable">1. Hệ sinh thái chiến dịch Daizy Wellness: Trọn bộ 08 skills AI Content OS & 02 kênh social thực tế</span>
+              <span class="editable">09/2026 – 11/2026</span>
+            </div>
+            <div class="cv-item-sub editable">Vai trò: Content Strategist, AI Workflow Architect & Channel Builder (Kstudy AICO01 & Enter AI)</div>
+            <ul class="cv-bullets">
+              <li class="editable"><strong>Đóng gói trọn bộ 08 skills chiến dịch (B01 → B08):</strong> Hoàn thiện chuỗi 8 hồ sơ từ chiến lược 12 chặng, kế hoạch nội dung 30 ngày, kho sáng tạo (góc tiếp cận "Hông chậu đổ trước" đạt 18/18 điểm), bài viết PAS & Visual Brief 10 ô, kịch bản video 7 cột, kế hoạch kênh, hệ điều hành AI Content OS đến hồ sơ tổng kết; đồng thời đóng gói AI Agent Skill <code>wellness-pilates-script</code> và kịch bản tự động hóa đăng bài với Antigravity.</li>
+              <li class="editable"><strong>Xây dựng kênh TikTok "Hào quang màu tím" (@daizy.purple.aura) & fanpage "Daizy Pilates":</strong> Xuất bản 14 video TikTok (đạt <strong>3.215+ lượt xem, 971 lượt thích</strong> tự nhiên) và 10 bài chuyên sâu trên fanpage Facebook.</li>
+            </ul>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="editable">2. Sản xuất video quảng cáo TVC "Đèn xe VinFast VF6" & phim ngắn hoạt hình 3D "Bữa cơm với bà"</span>
+              <span class="editable">10/2026 – 11/2026</span>
+            </div>
+            <div class="cv-item-sub editable">Vai trò: Director, 3D Character/Environment Designer, VFX & Video Editor</div>
+            <ul class="cv-bullets">
+              <li class="editable"><strong>TVC quảng cáo 3D/VFX "Đèn xe VinFast VF6":</strong> Thiết kế chuyển động ống kính tốc độ cao, hiệu ứng ánh sáng LED cánh chim đặc trưng và âm thanh hiện đại tôn vinh thiết kế dòng xe điện VF6.</li>
+              <li class="editable"><strong>Phim ngắn hoạt hình 3D "Bữa cơm với bà" (02:15):</strong> Tự thực hiện 100% từ kịch bản, thiết kế nhân vật, dựng bối cảnh phòng ăn thuần Việt, giữ đồng nhất nhân vật qua 25+ cảnh quay và hậu kỳ theo bảng màu 3 hồi.</li>
+            </ul>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="editable">3. Lập trình Vibe Coding: Website thương mại điện tử "Daizy Wellness" & game "Cá lớn ăn cá bé"</span>
+              <span class="editable">10/2026 – 11/2026</span>
+            </div>
+            <div class="cv-item-sub editable">Vai trò: Full-Stack Vibe Coder & UI/UX Designer (HTML5, CSS3, JS ES6+, Three.js, Supabase, Vercel)</div>
+            <ul class="cv-bullets">
+              <li class="editable"><strong>Website thương mại điện tử "Daizy Wellness" (daizypilates.vercel.app):</strong> Xây dựng giao diện bán hàng nhiều trang với 25+ biến thể sản phẩm (5 món × 5 màu), tích hợp trợ lý AI Chatbot, trang quản trị Admin CMS bảo mật RLS trên Supabase và thanh toán QR SePay.</li>
+              <li class="editable"><strong>Game "Cá lớn ăn cá bé — Ocean Feeding Frenzy":</strong> Lập trình game 60 FPS bằng HTML5 Canvas & Procedural Web Audio API (tự tổng hợp âm thanh thời gian thực), chuỗi tiến hóa 4 cấp, chế độ Cuồng nộ và hệ thống 4 vật phẩm bổ trợ.</li>
+            </ul>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <span class="editable">4. Bộ slide thuyết trình chiến lược IMC (11 slides) & thiết kế ấn phẩm banner / poster quảng cáo</span>
+              <span class="editable">09/2026 – 11/2026</span>
+            </div>
+            <div class="cv-item-sub editable">Vai trò: Digital Marketing Planner, Slide Designer & Graphic Designer (Enter Digital K082026)</div>
+            <ul class="cv-bullets">
+              <li class="editable"><strong>Bộ slide thuyết trình lật trang (HTML/PPTX) & 12 hồ sơ chiến lược 1 năm:</strong> Lập kế hoạch IMC toàn diện (Brief, 5W1H, đối thủ, BMC/7P/SWOT, phễu POE, KPI, setup Facebook Ads & TikTok Lead Ads) kèm video bảo vệ 20 phút.</li>
+              <li class="editable"><strong>Thiết kế banner "Daizy Pilates" & poster F&B "Mừng khai trương Bún đậu Hạnh Dung":</strong> Thiết kế banner chủ đạo phong cách Quiet Luxury (PNG/SVG) và poster khuyến mãi F&B bố cục 3 khung cảnh đạt chuẩn nguyên tắc thị giác 2 giây.</li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="cv-two-col">
+          <section class="cv-section">
+            <div class="cv-section-title">Bộ kỹ năng chuyên môn</div>
+            <ul class="cv-bullets">
+              <li class="editable"><strong>Chiến lược & Content Marketing:</strong> Nghiên cứu insight 4D/5W1H, BMC/7P/SWOT, phễu POE, kế hoạch nội dung 30 ngày, viết bài PAS, khử mùi AI.</li>
+              <li class="editable"><strong>Sản xuất video 3D & TVC:</strong> Kịch bản 7 cột, Shot List 8 cột, giữ đồng nhất nhân vật/bối cảnh 3D, Google Flow (Veo), VFX, CapCut/Premiere.</li>
+              <li class="editable"><strong>Thiết kế đồ họa & slide:</strong> Banner/poster thương mại (nguyên tắc thị giác 2 giây), slide thuyết trình HTML/PPTX chuẩn nhận diện, Canva/SVG.</li>
+              <li class="editable"><strong>AI Agent & Vibe Coding:</strong> Đóng gói AI Skill (YAML/Markdown), tự động hóa Antigravity/Puppeteer, phát triển web (JS/Supabase/Vercel), game HTML5.</li>
+            </ul>
+          </section>
+
+          <section class="cv-section">
+            <div class="cv-section-title">Học vấn & chứng nhận</div>
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <span class="editable">Cử nhân chuyên ngành Luật</span>
+              </div>
+              <div class="cv-item-sub editable">Nền tảng tư duy phản biện, lập luận logic & kiểm soát rủi ro pháp lý/thương hiệu</div>
+            </div>
+            <div class="cv-item">
+              <div class="cv-item-header">
+                <span class="editable">Học viện Đào tạo Kstudy (2026)</span>
+              </div>
+              <div class="cv-item-sub editable">Hoàn thành xuất sắc 04 chương trình thực chiến:</div>
+              <ul class="cv-bullets">
+                <li class="editable"><strong>AI Content Marketing (AICO01):</strong> Trọn bộ 8 skills & xây 2 kênh thật.</li>
+                <li class="editable"><strong>Enter Digital (K082026):</strong> Kế hoạch IMC 1 năm, Ads & slide bảo vệ.</li>
+                <li class="editable"><strong>Enter AI:</strong> Thiết kế AI Agent Workflow & đóng gói skill tái sử dụng.</li>
+                <li class="editable"><strong>Vibe Coding:</strong> Phát triển web TMĐT Daizy Wellness & game HTML5.</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL ĐA NĂNG (LIGHTBOX ẢNH / CHƠI GAME / TRẢI NGHIỆM WEB) -->
+  <div class="modal-backdrop" id="master-modal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="modal-close" id="master-modal-close" aria-label="Đóng">✕</button>
+      <div id="master-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <h3 style="font-family: var(--font-sans); font-weight: 800; font-size: 1.45rem; margin-bottom: 0.35rem;" class="editable">
+          Hoàng Thị Hạnh Dung — Digital Marketing & AI Creative Portfolio
+        </h3>
+        <p style="color: #A1A1AA; font-size: 0.9rem;">
+          Email: <strong style="color:#fff;" class="editable">hanhdunghoang128@gmail.com</strong> • SĐT: <strong style="color:#fff;" class="editable">0868327384</strong> • Website: <a href="https://daizypilates.vercel.app" target="_blank" rel="noopener" style="color: #F4C27F;">daizypilates.vercel.app</a> • TikTok: <a href="https://www.tiktok.com/@daizy.purple.aura" target="_blank" rel="noopener" style="color: #F4C27F;">@daizy.purple.aura</a>
+        </p>
+      </div>
+      <div style="display: flex; gap: 0.65rem; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-outline" style="background: transparent; color: #fff; border-color: rgba(255,255,255,0.3);">
+          ← Xem bản Portfolio #1
+        </a>
+        <button type="button" class="btn btn-primary trigger-print-cv">
+          ⬇ Xuất CV (PDF chuẩn A4)
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="portfolio-tong-hop.js"></script>
+</body>
+</html>

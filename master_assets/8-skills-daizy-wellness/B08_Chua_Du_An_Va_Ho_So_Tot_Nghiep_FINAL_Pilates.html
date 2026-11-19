@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kstudy AICO01 - Bài 08 (FINAL): Chữa Dự Án Cuối Môn & Hồ Sơ Tốt Nghiệp</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #f59e0b;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-gray: #f8fafc;
+            --border: #e2e8f0;
+            --success: #10b981;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+        .header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .badge {
+            background-color: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .meta-info {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary-light);
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        h1 { color: var(--primary); font-size: 26px; margin-bottom: 8px; }
+        h2 {
+            color: var(--primary);
+            font-size: 18px;
+            margin: 30px 0 15px 0;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            display: flex;
+            align-items: center;
+        }
+        h3 { font-size: 15px; color: var(--primary); margin: 18px 0 8px 0; }
+        p, li { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+        ul, ol { padding-left: 20px; margin-bottom: 15px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 11px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        tr:hover { background-color: #f8fafc; }
+        .card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        .highlight-box {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #92400e;
+            line-height: 1.7;
+        }
+        .quote-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid var(--success);
+            padding: 14px 18px;
+            border-radius: 6px;
+            margin: 12px 0;
+            font-size: 13.5px;
+            color: #166534;
+            line-height: 1.7;
+        }
+        .tag-win {
+            background: #dcfce7;
+            color: #15803d;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .tag-must {
+            background: #fee2e2;
+            color: #b91c1c;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .tag-should {
+            background: #fef3c7;
+            color: #b45309;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .tag-could {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>HỌC VIỆN KSTUDY — AICO01</h1>
+            <p style="margin:0; font-weight:600; color:#64748b;">BÀI THỰC HÀNH 08 (FINAL): CHỮA DỰ ÁN CUỐI MÔN & HỒ SƠ TỐT NGHIỆP TOÀN HỆ THỐNG</p>
+        </div>
+        <div class="badge">Hoàn Thành 100%</div>
+    </div>
+
+    <div class="meta-info">
+        <strong>Dự án:</strong> Pilates & Wellness Studio (Nắn chỉnh vóc dáng & Trị liệu tư thế)<br>
+        <strong>Môn học:</strong> AICO01 — Buổi 8: Chữa dự án cuối môn & Đóng gói bản cuối (chua-du-an-content-os)<br>
+        <strong>Giáo viên chấm điểm:</strong> Cô Bích Phạm<br>
+        <strong>Đầu ra:</strong> Phiếu rà soát 6 lớp năng lực, Phiếu góp ý 5 dòng, Bảng phân loại việc sửa Must/Should/Could & Top 3 ưu tiên, Kịch bản Auto-Reply 3 bước, Bộ 5 bằng chứng thực nghiệm (Before/After Revision Log), Kế hoạch 7 ngày, Checklist nộp FINAL & Bản phản tư 5 điểm.
+    </div>
+
+    <!-- ========================================== -->
+    <!-- BƯỚC 1: RÀ SOÁT 6 LỚP NĂNG LỰC            -->
+    <!-- ========================================== -->
+    <h2>1. BƯỚC 1: RÀ SOÁT HỆ THỐNG THEO CHECKLIST 6 LỚP NĂNG LỰC (6-LAYER AUDIT)</h2>
+    <p>Rà soát toàn bộ dự án từ Buổi 1 đến Buổi 7 như một hệ thống vận hành khép kín, đánh giá sự liên kết chặt chẽ giữa chiến lược, sản xuất tài sản, kênh phân phối, đo lường KPI và quy trình AI Content OS:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 17%;">Lớp năng lực</th>
+                <th style="width: 25%;">Hồ sơ thành phần</th>
+                <th style="width: 15%;">Trạng thái</th>
+                <th style="width: 43%;">Căn cứ & Đánh giá liên kết hệ thống</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Lớp 1: Chiến lược</strong></td>
+                <td><code>B01_Content_Direction_Pilates_Wellness</code></td>
+                <td><span class="tag-win">Đủ bằng chứng (100%)</span></td>
+                <td>Mục tiêu rõ ràng (thu hút khách trải nghiệm đo trục 1:1); Tệp khách hàng cụ thể (Nữ văn phòng 25–35 tuổi); Insight kép sắc bén (<em>"Người không béo nhưng góc nghiêng lệch trục: cổ rùa, lưng võng, bụng dưới nhô + Sợ phòng tập hét giá mập mờ"</em>).</td>
+            </tr>
+            <tr>
+                <td><strong>Lớp 2: Hệ thống</strong></td>
+                <td><code>B02_Content_Plan_30_Ngay_Pilates</code><br><code>B03_Creative_Bank_Kho_Sang_Tao_Pilates</code></td>
+                <td><span class="tag-win">Đủ bằng chứng (100%)</span></td>
+                <td>3 Trụ cột nội dung (40% Bắt bệnh chỉnh dáng – 35% Trải nghiệm & Bằng chứng – 25% Minh bạch giá & Phá rào cản); Lịch 30 ngày cân đối 3 tầng phễu; Creative Bank chấm điểm 6 tiêu chí và Quy trình vận hành 5 bước.</td>
+            </tr>
+            <tr>
+                <td><strong>Lớp 3: Kênh & Tăng trưởng</strong></td>
+                <td><code>B06_Xay_Ke_Hoach_Kenh_Pilates</code></td>
+                <td><span class="tag-win">Đủ bằng chứng (100%)</span></td>
+                <td>Kênh chính TikTok (60%) + Kênh phụ Facebook Fanpage (40%); Chuỗi nhận diện 5 ô <strong>"RESET — NẮN TRỤC CHỈNH DÁNG"</strong>; Seeding có trách nhiệm tập trung <strong>70% nhóm Làm đẹp/Healthy/Pilates</strong> & <strong>30% nhóm Văn phòng</strong>; Local SEO & Ads bán kính 3–5km.</td>
+            </tr>
+            <tr>
+                <td><strong>Lớp 4: Tài sản sáng tạo & Sản xuất</strong></td>
+                <td><code>B04_San_Xuat_Bai_Viet_Va_Visual_Brief_Pilates</code><br><code>B05_Kich_Ban_Video_Content_Pilates</code></td>
+                <td><span class="tag-win">Đủ bằng chứng (95%)</span></td>
+                <td>Bài viết PAS đã khử mùi AI; Ấn phẩm AI 4:5 (<code>pilates_before_after.jpg</code>) & Ảnh bìa 9:16 (<code>pilates_video_cover.jpg</code>); Kịch bản video 50s 7 cột + Storyboard 8 cột mô tả chuẩn cơ học trên máy Reformer, không hứa hẹn phóng đại.</td>
+            </tr>
+            <tr>
+                <td><strong>Lớp 5: Đo lường & Tối ưu</strong></td>
+                <td><code>B07_Do_Luong_Va_He_Dieu_Hanh_AI_Content_OS_Pilates</code> (Phần 7A)</td>
+                <td><span class="tag-win">Đủ bằng chứng (95%)</span></td>
+                <td>Bộ KPI 3 tầng phễu (TOF – MOF – BOF); Mini Dashboard 5 bài mẫu; Chẩn đoán 5 dòng chỉ rõ "nút thắt" giữa bình luận <code>"TƯ THẾ"</code> và hành động đặt lịch do tâm lý e ngại hỏi giá.</td>
+            </tr>
+            <tr>
+                <td><strong>Lớp 6: AI Content OS</strong></td>
+                <td><code>B07_Do_Luong_Va_He_Dieu_Hanh_AI_Content_OS_Pilates</code> (Phần 7B)</td>
+                <td><span class="tag-win">Đủ bằng chứng (100%)</span></td>
+                <td>Brand Context Pack cố định; Ma trận phân vai AI – Người (Human-in-the-loop) 5 bước; Cổng kiểm chất lượng (Quality Gate) 5 tiêu chí; Demo Repurpose 1 nội dung gốc thành 3 định dạng đa kênh.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="highlight-box">
+        <strong>PHIẾU GÓP Ý 5 DÒNG (TỐI ƯU HỆ THỐNG TRƯỚC KHI VẬN HÀNH THỰC TẾ):</strong><br>
+        <strong>1. Vị trí:</strong> Khâu chuyển đổi đáy phễu tại Lớp 5 (từ bình luận từ khóa <code>"TƯ THẾ"</code> sang Đặt lịch đo trục 1:1 ở Buổi 7) và khâu chuẩn bị tư liệu quay thực tế tại Lớp 4 (Buổi 4 & Buổi 5).<br>
+        <strong>2. Vấn đề:</strong> Giả thuyết dùng Chatbot tự động gửi bài tập kèm bảng giá minh bạch đã được xác lập ở Buổi 7 nhưng cần viết sẵn thành <strong>kịch bản tin nhắn mẫu 3 bước</strong> để đội ngũ Sale/Admin dùng ngay; đồng thời cần checklist quay/chụp thực tế tại Studio khi chạy chiến dịch dài hạn.<br>
+        <strong>3. Lý do ảnh hưởng hệ thống:</strong> Nếu khách hàng để lại bình luận <code>"TƯ THẾ"</code> trên TikTok hoặc Facebook mà tin nhắn phản hồi chậm hoặc thiếu bảng giá công khai, khách sẽ lập tức rơi vào tâm lý phòng thủ (sợ bị xin SĐT để chèo kéo) khiến tỷ lệ chuyển đổi (CVR) bị nghẽn.<br>
+        <strong>4. Cách sửa thực thi (Đã tích hợp ngay trong hồ sơ B08 này):</strong> Thiết lập <strong>Kịch bản Auto-Reply 3 bước</strong> gửi tự động trong 30 giây đầu tiên (Tặng checklist bài thở trả khớp chậu + Bảng giá niêm yết 3 gói + Ưu đãi buổi đo trục cơ thể 1:1).<br>
+        <strong>5. Bằng chứng nghiệm thu:</strong> Bảng kịch bản luồng tin nhắn Auto-Reply chi tiết tại Mục 3.2 và Bảng đối chiếu Trước – Sau chỉnh sửa tại Mục 4.1 bên dưới.
+    </div>
+
+    <!-- ========================================== -->
+    <!-- BƯỚC 2: KIỂM NGƯỢC PHẢN BIỆN CỦA AI        -->
+    <!-- ========================================== -->
+    <h2>2. BƯỚC 2: KIỂM NGƯỢC PHẢN BIỆN CỦA AI (HUMAN-IN-THE-LOOP CRITIQUE)</h2>
+    <p>Không phụ thuộc mù quáng vào AI: Mọi gợi ý từ AI đều được kiểm ngược đối chiếu với nguồn lực thực tế (1–2 nhân sự) và định vị thương hiệu Studio Pilates cao cấp, gần gũi:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 30%;">Góp ý ban đầu từ AI</th>
+                <th style="width: 38%;">Kiểm ngược của Con người (Đúng bối cảnh / Khả thi?)</th>
+                <th style="width: 32%;">Quyết định xử lý</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><em>"Nên mở thêm kênh YouTube dài 20 phút và LinkedIn để phủ thương hiệu toàn diện."</em></td>
+                <td><strong>Loại bỏ (Sai bối cảnh nguồn lực):</strong> Đội ngũ hiện tại chỉ có 1–2 nhân sự kết hợp AI (8–10h/tuần). Dàn trải 4–5 kênh sẽ làm loãng chất lượng video ngắn trên TikTok và Facebook.</td>
+                <td>Giữ vững cấu trúc <strong>1 Kênh chính (TikTok) + 1 Kênh phụ (Facebook Fanpage)</strong> theo đúng Buổi 6.</td>
+            </tr>
+            <tr>
+                <td><em>"Nên dùng câu mở đầu thật sốc như: Gầy trơ xương mà bụng như mang bầu 3 tháng, chỉ cần 1 động tác là bụng phẳng lì ngay."</em></td>
+                <td><strong>Loại bỏ & Sửa triệt để (Sai định vị thương hiệu):</strong> Câu nói gây phản cảm, thiếu căn cứ cơ sinh học và làm mất vẻ sang trọng của một Studio Pilates & Wellness.</td>
+                <td>Đã sửa thành mô tả thực tế: <em>"Người không béo nhưng góc nghiêng thắt lưng võng sâu, bụng dưới nhô ra"</em> và trải nghiệm thật trên máy Reformer: <em>"Thắt lưng nhẹ hẳn, cảm nhận cơ bụng dưới tự rút sâu vào trong"</em>.</td>
+            </tr>
+            <tr>
+                <td><em>"Cần có kịch bản tin nhắn tự động kèm bảng giá ngay khi khách bình luận từ khóa để gỡ rào cản sợ bị hét giá."</em></td>
+                <td><strong>Chấp nhận (Đúng điểm nghẽn hệ thống):</strong> Khớp 100% với chẩn đoán KPI ở Buổi 7 (lượng lưu bài và bình luận cao nhưng khách ngại inbox hỏi giá).</td>
+                <td>Đưa vào danh sách <strong>MUST (Ưu tiên số 1)</strong> và thiết kế luôn kịch bản tin nhắn 3 bước tại Mục 3.2.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ========================================== -->
+    <!-- BƯỚC 3: PHÂN LOẠI MUST / SHOULD / COULD    -->
+    <!-- ========================================== -->
+    <h2>3. BƯỚC 3: TỔNG HỢP DANH SÁCH VIỆC SỬA (MUST / SHOULD / COULD) & TOP 3 ƯU TIÊN</h2>
+
+    <h3>3.1. Bảng phân loại toàn bộ hạng mục tối ưu theo 6 lớp</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 16%;">Phân loại</th>
+                <th style="width: 34%;">Hạng mục công việc</th>
+                <th style="width: 18%;">Thuộc lớp</th>
+                <th style="width: 32%;">Lý do & Tác động hệ thống</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="tag-must">MUST (Bắt buộc)</span></td>
+                <td><strong>1. Hoàn thiện Kịch bản Auto-Reply / Chatbot 3 bước</strong> khi khách bình luận từ khóa <code>"TƯ THẾ"</code> hoặc <code>"TRỤC"</code>.</td>
+                <td>Lớp 5 (Đo lường & Tối ưu)</td>
+                <td>Khơi thông trực tiếp nút thắt chuyển đổi từ người xem/bình luận sang khách đặt lịch đo trục 1:1 (mục tiêu tăng CVR từ 2.4% lên &gt; 4.0%).</td>
+            </tr>
+            <tr>
+                <td><span class="tag-must">MUST (Bắt buộc)</span></td>
+                <td><strong>2. Lập Bảng đối chiếu Trước – Sau chỉnh sửa (Before/After Revision Log)</strong> cho toàn bộ các điểm đã tinh chỉnh từ B01 đến B07.</td>
+                <td>Lớp 4 & Lớp 6 (Tài sản & AI OS)</td>
+                <td>Chứng minh năng lực kiểm soát chất lượng của con người (Human-in-the-loop) và hoàn thiện chuẩn bằng chứng nộp bài cuối môn.</td>
+            </tr>
+            <tr>
+                <td><span class="tag-should">SHOULD (Nên làm)</span></td>
+                <td><strong>3. Thiết kế Thẻ ghim "Bảng Giá Niêm Yết & Cam Kết 3 Không"</strong> đặt cố định đầu trang Facebook Fanpage và Bio TikTok.</td>
+                <td>Lớp 3 (Kênh & Tăng trưởng)</td>
+                <td>Giúp khách hàng mới vào trang từ các video xu hướng thấy ngay sự minh bạch, tăng tỷ lệ chuyển đổi tự nhiên.</td>
+            </tr>
+            <tr>
+                <td><span class="tag-could">COULD (Làm thêm)</span></td>
+                <td><strong>4. Quay bổ sung 3 clip ngắn (15–30s) cảnh HLV chỉnh nhịp thở thực tế</strong> cho học viên tại phòng máy Reformer để làm tư liệu B-roll.</td>
+                <td>Lớp 4 (Tài sản sáng tạo)</td>
+                <td>Tăng độ chân thực và bằng chứng xã hội (Social Proof) cho các tuần tiếp theo của lịch đăng bài.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Chốt Top 3 Ưu Tiên Tác Động Cao Nhất:</strong> Hạng mục <strong>#1 (Kịch bản Auto-Reply 3 bước kèm bảng giá)</strong>, Hạng mục <strong>#2 (Bảng bằng chứng Trước – Sau chỉnh sửa)</strong>, và Hạng mục <strong>#3 (Thẻ ghim Bảng giá & Cam kết 3 Không trên đầu kênh)</strong>.</p>
+
+    <h3>3.2. Thực thi ngay Ưu tiên #1: Kịch bản Auto-Reply / Chatbot 3 Bước (Gỡ rào cản giá tại Đáy phễu)</h3>
+    <div class="quote-box">
+        <strong>• Bước 1 (Phản hồi tự động dưới Comment sau 5 giây):</strong><br>
+        <em>"Chào bạn! Studio đã gửi <strong>Video hướng dẫn thở kích hoạt cơ bụng sâu (TVA)</strong> kèm <strong>Bảng giá công khai các gói tập Reformer</strong> vào hộp thư tin nhắn của bạn rồi ạ. Bạn kiểm tra tin nhắn chờ nhé!"</em><br><br>
+        <strong>• Bước 2 (Tin nhắn tự động trong Inbox — Trao giá trị & Minh bạch giá 100%):</strong><br>
+        <em>"Chào bạn, cảm ơn bạn đã quan tâm đến chuỗi <strong>RESET — Nắn Trục Chỉnh Dáng</strong> của Studio! Mình gửi bạn trọn bộ thông tin minh bạch để bạn thoải mái tham khảo trước khi quyết định nhé:<br>
+        1. <strong>Hướng dẫn tự kiểm tra hông chậu đổ trước & bài thở 3 phút tại nhà:</strong> [Đính kèm ảnh/video ngắn].<br>
+        2. <strong>Bảng giá niêm yết công khai tại Studio:</strong> Gói lẻ trải nghiệm / Gói 15 buổi chỉnh dáng có cam kết đo chỉ số trước-sau (tuyệt đối không phát sinh phụ phí, không ép mua hợp đồng dài hạn).<br>
+        3. <strong>Quà tặng dành riêng cho bạn tuần này:</strong> 01 buổi <strong>Đo trục cơ thể 1:1 & Trải nghiệm máy Reformer (45 phút)</strong> với chi phí ưu đãi trải nghiệm chỉ <strong>299.000đ</strong>."</em><br><br>
+        <strong>• Bước 3 (Câu hỏi chốt lịch nhẹ nhàng, không chèo kéo):</strong><br>
+        <em>"Bạn đang gặp tình trạng <strong>võng thắt lưng – bụng dưới nhô</strong> hay <strong>mỏi cổ vai gáy</strong> nhiều hơn ạ? Nhắn cho mình khung giờ bạn rảnh (Trưa 12h00 hoặc Chiều tối sau 17h30) để mình giữ lịch phòng tập riêng tư cho bạn nhé!"</em>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- BƯỚC 4: CHUẨN 5 LOẠI BẰNG CHỨNG FINAL      -->
+    <!-- ========================================== -->
+    <h2>4. BƯỚC 4: CHUẨN HÓA 5 LOẠI BẰNG CHỨNG NỘP BẢN CUỐI (FINAL EVIDENCE PACK)</h2>
+
+    <h3>4.1. Bằng chứng #1: Bảng đối chiếu Trước – Sau góp ý (Before / After Revision Log)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 18%;">Hạng mục & Vị trí</th>
+                <th style="width: 28%;">Bản nháp ban đầu (TRƯỚC — Mùi AI / Chưa sát thực tế)</th>
+                <th style="width: 30%;">Bản hoàn thiện (SAU — Đã tinh chỉnh & Chốt thực thi)</th>
+                <th style="width: 24%;">Lý do chỉnh sửa & Tác động hệ thống</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Câu Hook & Lời thoại trải nghiệm (Buổi 4 & Buổi 5)</strong></td>
+                <td><em>"Nhiều chị em gầy trơ xương mà bụng cứ lùm lùm như bầu 3 tháng... Chỉ cần tập 1 động tác này là bụng dưới phẳng lì ngay lập tức!"</em></td>
+                <td><em>"Nhiều bạn người không béo, tay chân gọn nhưng nhìn góc nghiêng thắt lưng lại võng sâu làm bụng dưới nhô ra... Khi nằm lên máy Reformer trả khớp chậu về trục, thắt lưng nhẹ hẳn và cảm nhận cơ bụng dưới tự rút sâu vào trong."</em></td>
+                <td>Loại bỏ lối nói phóng đại phản cảm và cam kết phi khoa học; giữ đúng chuẩn cơ sinh học và định vị sang trọng, đáng tin cậy của Studio.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Tên chuỗi nội dung chủ đạo (Buổi 6)</strong></td>
+                <td><em>"Bắt bệnh góc nghiêng"</em> (Nghe hơi mơ hồ, mang cảm giác tiêu cực và chưa thấy rõ giải pháp).</td>
+                <td><strong>"RESET — NẮN TRỤC CHỈNH DÁNG"</strong> (Hiện đại, giàu năng lượng, nghe thấy ngay kết quả tái tạo vóc dáng).</td>
+                <td>Tăng sức hút thị giác và tỷ lệ dừng ngón tay (Hook Rate) cho tệp khách hàng nữ trẻ yêu làm đẹp.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Phân bổ tệp Cộng đồng Seeding (Buổi 6)</strong></td>
+                <td>Chia đều hoặc ưu tiên nhóm Dân văn phòng chung chung (dễ bị loãng chủ đề sang chuyện lương thưởng, công sở).</td>
+                <td>Dồn <strong>70% nguồn lực vào Nhóm Làm đẹp, Chăm sóc vóc dáng & Healthy Lifestyle</strong>; <strong>30% vào Nhóm Dân văn phòng</strong>.</td>
+                <td>Đánh trúng tệp khách hàng sẵn sàng chi trả cao cho ngoại hình, độ vừa vặn trang phục và trải nghiệm sống khỏe.</td>
+            </tr>
+            <tr>
+                <td><strong>4. Khâu chuyển đổi Đáy phễu (Buổi 7 & Buổi 8)</strong></td>
+                <td>Kêu gọi <em>"Inbox ngay để nhận tư vấn lộ trình"</em> (khiến khách sợ bị xin SĐT và tư vấn mập mờ).</td>
+                <td>Đổi thành <strong>Comment từ khóa <code>"TƯ THẾ"</code> nhận bài tập + Bảng giá niêm yết công khai</strong> qua kịch bản Auto-Reply 3 bước.</td>
+                <td>Xóa bỏ hoàn toàn rào cản tâm lý ngại hỏi giá, giúp tăng tỷ lệ chuyển đổi từ bình luận sang đặt lịch thật.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>4.2. Bằng chứng #2 đến #5: Danh mục Hồ sơ Tài sản, KPI, Chẩn đoán & Log AI</h3>
+    <div class="card">
+        <ul>
+            <li><strong>Bằng chứng #2 (Trọn bộ File Tài sản B01 – B08):</strong> Đầy đủ <strong>08 file Microsoft Word (<code>.docx</code>)</strong> và <strong>08 file Web Preview (<code>.html</code>)</strong> đồng bộ nhận diện Kstudy Academy, kèm 02 ấn phẩm hình ảnh (<code>pilates_before_after.jpg</code> & <code>pilates_video_cover.jpg</code>).</li>
+            <li><strong>Bằng chứng #3 (Bảng Số liệu KPI 3 Tầng phễu):</strong> Bảng theo dõi Mini Dashboard 5 nội dung tại <code>B07</code> với các chỉ số đo lường thực chất: Hook Rate 3s (38%–44%), Save Rate (6.5%–8.2%), Comment từ khóa và số lượt Đặt lịch.</li>
+            <li><strong>Bằng chứng #4 (Bảng Chẩn đoán 5 dòng & Giả thuyết A/B Testing):</strong> Đã lập tại Phần 7A của <code>B07</code>, chỉ rõ nguyên nhân điểm nghẽn chuyển đổi và quy trình thử nghiệm chèn thông điệp minh bạch giá.</li>
+            <li><strong>Bằng chứng #5 (Log Vận hành AI Content OS):</strong> Bộ Brand Context Pack, Cổng kiểm chất lượng 5 tiêu chí khử mùi AI (Phần 7B của <code>B07</code>), Log sửa bài viết PAS (<code>B04</code>) và Demo Repurpose 1 kịch bản gốc thành 3 định dạng (<code>B07</code>).</li>
+        </ul>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- BƯỚC 5: KẾ HOẠCH CẢI THIỆN 7 NGÀY          -->
+    <!-- ========================================== -->
+    <h2>5. BƯỚC 5: KẾ HOẠCH CẢI THIỆN & TRIỂN KHAI 7 NGÀY (7-DAY SPRINT PLAN)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 11%;">Ngày</th>
+                <th style="width: 24%;">Hạng mục công việc</th>
+                <th style="width: 23%;">Đầu ra cụ thể (Deliverable)</th>
+                <th style="width: 21%;">Bằng chứng nghiệm thu</th>
+                <th style="width: 21%;">Tiêu chí Đạt (Gate)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Ngày 1</strong></td>
+                <td>Khóa Chiến lược & Hệ thống (B01–B03)</td>
+                <td>Bản đồng bộ Insight kép, 3 Trụ cột, Lịch 30 ngày & Creative Bank.</td>
+                <td>File <code>B01</code>, <code>B02</code>, <code>B03</code> (<code>.docx</code> & <code>.html</code>).</td>
+                <td>100% chủ đề trong tháng bám sát nỗi đau lệch trục & minh bạch giá.</td>
+            </tr>
+            <tr>
+                <td><strong>Ngày 2</strong></td>
+                <td>Hoàn thiện Bài viết & Visual Tĩnh (B04)</td>
+                <td>Bài đăng Facebook PAS đã khử mùi AI + Ấn phẩm 4:5 Before/After.</td>
+                <td>File <code>B04</code> + Ảnh <code>pilates_before_after.jpg</code>.</td>
+                <td>Đạt 5/5 tiêu chí Quality Gate, không dùng từ sáo rỗng.</td>
+            </tr>
+            <tr>
+                <td><strong>Ngày 3</strong></td>
+                <td>Khóa Kịch bản Video & Storyboard (B05)</td>
+                <td>Kịch bản 7 cột (50s) + Shot list 8 cột + Ảnh bìa 9:16.</td>
+                <td>File <code>B05</code> + Ảnh <code>pilates_video_cover.jpg</code>.</td>
+                <td>Thoại 3 giây đầu chạm đúng góc nghiêng thực tế, không hứa lố.</td>
+            </tr>
+            <tr>
+                <td><strong>Ngày 4</strong></td>
+                <td>Thiết lập Kênh, Series & Seeding (B06)</td>
+                <td>Định vị 4 ô, Series <em>"RESET — NẮN TRỤC CHỈNH DÁNG"</em>, Seeding 70/30.</td>
+                <td>File <code>B06</code> + Kịch bản thảo luận tự nhiên không gắn link spam.</td>
+                <td>Tối ưu chuẩn Local SEO bán kính 3–5km quanh Studio.</td>
+            </tr>
+            <tr>
+                <td><strong>Ngày 5</strong></td>
+                <td>Cài đặt Dashboard KPI & Chatbot (B07)</td>
+                <td>Bảng theo dõi KPI 3 tầng phễu + Kịch bản Auto-Reply 3 bước kèm giá.</td>
+                <td>File <code>B07</code> (Phần 7A) + Mẫu tin nhắn tự động tại Mục 3.2 <code>B08</code>.</td>
+                <td>Khách bình luận <code>"TƯ THẾ"</code> nhận ngay bài tập + bảng giá trong 30 giây.</td>
+            </tr>
+            <tr>
+                <td><strong>Ngày 6</strong></td>
+                <td>Vận hành AI Content OS & Repurpose (B07)</td>
+                <td>Brand Context Pack + Ma trận AI – Người + Bản Repurpose 1 thành 3.</td>
+                <td>File <code>B07</code> (Phần 7B) + 3 đầu ra (Carousel, Bài thảo luận, Bài SEO).</td>
+                <td>Giữ vững 100% giọng điệu chuyên gia ấm áp, chuẩn cơ sinh học.</td>
+            </tr>
+            <tr>
+                <td><strong>Ngày 7</strong></td>
+                <td>Tổng duyệt & Đóng gói Hồ sơ FINAL (B08)</td>
+                <td>Trọn bộ 08 hồ sơ từ <code>B01</code> đến <code>B08</code> ở cả 2 định dạng <code>.docx</code> và <code>.html</code>.</td>
+                <td>File <code>B08</code> + Checklist FINAL đạt 100% + Bản phản tư 5 điểm.</td>
+                <td>Đầy đủ 8/8 buổi, trình bày đồng bộ, sẵn sàng nộp và chạy thật.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ========================================== -->
+    <!-- BƯỚC 6: CHECKLIST FINAL & PHẢN TƯ 5 ĐIỂM   -->
+    <!-- ========================================== -->
+    <h2>6. BƯỚC 6: CHECKLIST NỘP BẢN CUỐI (FINAL GATE) & BẢN PHẢN TƯ 5 ĐIỂM</h2>
+
+    <h3>6.1. Checklist Tự Kiểm Trước Khi Nộp Bản Cuối (FINAL Gate)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 8%;">STT</th>
+                <th style="width: 48%;">Tiêu chí kiểm định bắt buộc của môn học AICO01</th>
+                <th style="width: 16%;">Trạng thái</th>
+                <th style="width: 28%;">Vị trí đối chiếu trong Hồ sơ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1</strong></td>
+                <td>Đủ trọn vẹn 6 lớp năng lực từ Chiến lược, Hệ thống, Kênh, Tài sản đến Đo lường và AI Content OS.</td>
+                <td><span class="tag-win">ĐẠT 100%</span></td>
+                <td>Toàn bộ 8 file từ <code>B01</code> đến <code>B08</code>.</td>
+            </tr>
+            <tr>
+                <td><strong>2</strong></td>
+                <td>Có bằng chứng sản xuất & chạy thử thực tế (Bài viết hoàn chỉnh, Ảnh minh họa, Kịch bản video, Repurpose 1 ra 3).</td>
+                <td><span class="tag-win">ĐẠT 100%</span></td>
+                <td>Hồ sơ <code>B04</code>, <code>B05</code>, <code>B07</code> và 2 file ảnh <code>.jpg</code>.</td>
+            </tr>
+            <tr>
+                <td><strong>3</strong></td>
+                <td>Có Bảng đối chiếu Trước – Sau khi chỉnh sửa (Before/After Revision Log) rõ vị trí và lý do sửa.</td>
+                <td><span class="tag-win">ĐẠT 100%</span></td>
+                <td>Hồ sơ <code>B04</code> (Mục 5) và Hồ sơ <code>B08</code> (Mục 4.1).</td>
+            </tr>
+            <tr>
+                <td><strong>4</strong></td>
+                <td>Có Bảng số liệu KPI 3 tầng phễu, Chẩn đoán hiệu quả 5 dòng và Giả thuyết thử nghiệm cải thiện.</td>
+                <td><span class="tag-win">ĐẠT 100%</span></td>
+                <td>Hồ sơ <code>B07</code> (Phần 7A) và Hồ sơ <code>B08</code> (Mục 3.2).</td>
+            </tr>
+            <tr>
+                <td><strong>5</strong></td>
+                <td>Có Brand Context Pack, Ma trận phân vai AI – Người và Cổng kiểm chất lượng (Quality Gate).</td>
+                <td><span class="tag-win">ĐẠT 100%</span></td>
+                <td>Hồ sơ <code>B07</code> (Phần 7B).</td>
+            </tr>
+            <tr>
+                <td><strong>6</strong></td>
+                <td>Có Bản phản tư cuối môn (Capstone Reflection) đúc kết bài học hệ thống và vòng lặp tối ưu tiếp theo.</td>
+                <td><span class="tag-win">ĐẠT 100%</span></td>
+                <td>Hồ sơ <code>B08</code> (Mục 6.2 ngay bên dưới).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>6.2. Bản Phản Tư Cuối Môn (5-Point Capstone Reflection)</h3>
+    <div class="card">
+        <p><strong>1. Trước khi rà soát, dự án yếu nhất ở đâu?</strong><br>
+        Khi mới dùng AI sinh nội dung nháp, câu chữ rất dễ rơi vào bẫy "quá kịch tính" (phóng đại khuyết điểm cơ thể hoặc hứa hẹn tập 1 động tác bụng phẳng lì ngay), đồng thời kế hoạch Seeding ban đầu chưa phân bổ đúng tỷ trọng vào tệp khách hàng thực sự chi tiền cho Pilates.</p>
+        <p><strong>2. Góp ý và quyết định điều chỉnh quan trọng nhất là gì?</strong><br>
+        Kiên quyết giữ mọi mô tả triệu chứng và kết quả tập luyện trên máy Reformer ở ngưỡng <strong>chân thực, chuẩn cơ học</strong>; đổi tên chuỗi nội dung thành <strong>"RESET — NẮN TRỤC CHỈNH DÁNG"</strong> hiện đại và thu hút hơn; đồng thời dồn <strong>70% nguồn lực cộng đồng vào nhóm Làm đẹp & Healthy Lifestyle</strong>.</p>
+        <p><strong>3. Đã trực tiếp can thiệp và sửa những phần nào?</strong><br>
+        Trực tiếp viết lại câu Hook 3 giây đầu và lời thoại trải nghiệm trên máy Reformer ở Buổi 5; tái cấu trúc bảng định vị Series và tỷ trọng Seeding cộng đồng ở Buổi 6; thiết kế thêm kịch bản Auto-Reply 3 bước gửi kèm bảng giá công khai ở Buổi 7 & Buổi 8.</p>
+        <p><strong>4. Bằng chứng nào cho thấy bản sau tốt hơn bản trước?</strong><br>
+        Lời thoại mới vừa chạm đúng nỗi đau <em>"người không béo nhưng góc nghiêng thắt lưng võng sâu làm bụng dưới nhô ra"</em> vừa giữ trọn sự tinh tế, đáng tin cậy của thương hiệu Wellness; luồng Auto-Reply kèm bảng giá niêm yết giải quyết tận gốc rào cản sợ bị hét giá ở đáy phễu.</p>
+        <p style="margin-bottom:0;"><strong>5. Vòng tối ưu tiếp theo ngoài thực tế sẽ làm gì?</strong><br>
+        Đưa bộ kịch bản 50s và bài viết PAS vào bấm máy quay/chụp thực tế tại phòng tập Reformer, vận hành thử nghiệm 14 ngày đầu tiên theo đúng lịch 30 ngày, đo lường tỷ lệ chuyển đổi từ tin nhắn Auto-Reply sang khách đến đo trục cơ thể 1:1 để tiếp tục tối ưu trong tháng kế tiếp.</p>
+    </div>
+
+    <div class="footer">
+        Hồ sơ Tốt nghiệp Môn AICO01 (Bản Cuối FINAL — 8/8 Buổi) — Học viện Kstudy — Giảng viên hướng dẫn: Cô Bích Phạm
+    </div>
+</div>
+
+</body>
+</html>

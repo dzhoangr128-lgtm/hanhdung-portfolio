@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kstudy AICO01 - Bài 06: Kế hoạch Kênh, Cộng đồng & Seeding</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #f59e0b;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-gray: #f8fafc;
+            --border: #e2e8f0;
+            --success: #10b981;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+        .header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .badge {
+            background-color: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .meta-info {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary-light);
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        h1 { color: var(--primary); font-size: 26px; margin-bottom: 8px; }
+        h2 {
+            color: var(--primary);
+            font-size: 18px;
+            margin: 30px 0 15px 0;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            display: flex;
+            align-items: center;
+        }
+        h3 { font-size: 15px; color: var(--primary); margin: 18px 0 8px 0; }
+        p, li { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+        ul, ol { padding-left: 20px; margin-bottom: 15px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13.5px;
+        }
+        th, td {
+            padding: 11px 13px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        tr:hover { background-color: #f8fafc; }
+        .card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        .highlight-box {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #92400e;
+            line-height: 1.7;
+        }
+        .quote-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid var(--success);
+            padding: 14px 18px;
+            border-radius: 6px;
+            margin: 12px 0;
+            font-size: 13.5px;
+            color: #166534;
+            line-height: 1.7;
+            font-style: italic;
+        }
+        .tag-primary {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .tag-secondary {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>HỌC VIỆN KSTUDY — AICO01</h1>
+            <p style="margin:0; font-weight:600; color:#64748b;">BÀI THỰC HÀNH 06: KẾ HOẠCH KÊNH, CỘNG ĐỒNG & SEEDING (CHANNEL GROWTH PLAN V0)</p>
+        </div>
+        <div class="badge">Hoàn Thành 100%</div>
+    </div>
+
+    <div class="meta-info">
+        <strong>Dự án:</strong> Pilates & Wellness Studio (Nắn chỉnh vóc dáng & Trị liệu tư thế)<br>
+        <strong>Môn học:</strong> AICO01 — Buổi 6: Kế hoạch kênh & Tăng trưởng (xay-ke-hoach-kenh)<br>
+        <strong>Giáo viên chấm điểm:</strong> Cô Bích Phạm<br>
+        <strong>Đầu ra:</strong> Bảng chấm điểm 5 nền tảng, Quyết định Cặp kênh chủ lực, Khung định vị 4 ô & Chuỗi "RESET — NẮN TRỤC CHỈNH DÁNG", Community & Seeding Plan có trách nhiệm, Đòn bẩy SEO & Local Ads
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 1. ĐÁNH GIÁ 5 NỀN TẢNG                    -->
+    <!-- ========================================== -->
+    <h2>1. ĐÁNH GIÁ & BẢNG CHẤM ĐIỂM 5 NỀN TẢNG THEO 4 TIÊU CHÍ KSTUDY</h2>
+
+    <div class="highlight-box">
+        <strong>Nguyên tắc cốt lõi về Kênh Marketing (Kstudy Standards):</strong><br>
+        <em>"Kênh truyền thông là công cụ phục vụ chiến lược, không phải cuộc chạy đua theo trào lưu nền tảng đang hot. Chọn kênh mạnh nhưng vượt quá năng lực sản xuất thực tế sẽ dẫn tới việc 'bỏ hoang kênh'. Thà tập trung làm thật sâu <strong>1 kênh chính + 1 kênh phụ</strong> còn hơn dàn trải thiếu hiệu quả!"</em>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 150px;">Nền tảng</th>
+                <th>1. Khách hàng mục tiêu ở đâu?</th>
+                <th>2. Phù hợp nhiệm vụ nội dung?</th>
+                <th>3. Phù hợp định dạng sẵn có?</th>
+                <th>4. Nguồn lực thực tế đáp ứng?</th>
+                <th style="width: 100px;">Tổng điểm</th>
+                <th style="width: 140px;">Vai trò đề xuất</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>TikTok</strong></td>
+                <td>5 / 5</td>
+                <td>5 / 5 (Viral nhận thức & Khám phá)</td>
+                <td>5 / 5 (Video ngắn 50s trên máy)</td>
+                <td>4 / 5 (Sản xuất 3 video/tuần)</td>
+                <td><strong style="color: #16a34a;">19 / 20</strong></td>
+                <td><span class="tag-primary">KÊNH CHÍNH (Primary)</span></td>
+            </tr>
+            <tr>
+                <td><strong>Facebook Fanpage</strong></td>
+                <td>5 / 5</td>
+                <td>5 / 5 (Xây niềm tin & Chốt hẹn)</td>
+                <td>4 / 5 (Bài viết PAS + Album 4:5)</td>
+                <td>4 / 5 (Duyệt bài & Quản lý inbox)</td>
+                <td><strong style="color: #16a34a;">18 / 20</strong></td>
+                <td><span class="tag-secondary">KÊNH PHỤ (Secondary)</span></td>
+            </tr>
+            <tr>
+                <td><strong>Instagram</strong></td>
+                <td>4 / 5</td>
+                <td>4 / 5 (Định vị phong cách Wellness)</td>
+                <td>4 / 5 (Visual proof Before/After)</td>
+                <td>3 / 5 (Cần ảnh trau chuốt)</td>
+                <td>15 / 20</td>
+                <td>Kênh vệ tinh (Đồng bộ)</td>
+            </tr>
+            <tr>
+                <td><strong>YouTube Shorts</strong></td>
+                <td>4 / 5</td>
+                <td>3 / 5 (Lưu trữ nội dung bền vững)</td>
+                <td>4 / 5 (Tái sử dụng video 9:16)</td>
+                <td>2 / 5 (Cần thời gian xây kênh)</td>
+                <td>13 / 20</td>
+                <td>Dự bị giai đoạn 2</td>
+            </tr>
+            <tr>
+                <td><strong>Lemon8 / Threads</strong></td>
+                <td>3 / 5</td>
+                <td>3 / 5 (Chia sẻ mẹo vặt cá nhân)</td>
+                <td>3 / 5 (Bài ảnh kèm chữ)</td>
+                <td>2 / 5 (Phân tán nguồn lực)</td>
+                <td>11 / 20</td>
+                <td>Chưa ưu tiên</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ========================================== -->
+    <!-- 2. QUYẾT ĐỊNH CẶP KÊNH CHỦ LỰC           -->
+    <!-- ========================================== -->
+    <h2>2. QUYẾT ĐỊNH LỰA CHỌN CẶP KÊNH CHỦ LỰC</h2>
+
+    <div class="card">
+        <h3>2.1. Kênh chính (Primary Channel): TIKTOK</h3>
+        <p>• <strong>Lý do lựa chọn:</strong> Thuật toán phân phối khám phá dựa trên sở thích giúp video ngắn 50s thực nghiệm khám dáng trên máy Reformer (từ Buổi 5) tiếp cận hàng chục nghìn chị em văn phòng ngay tuần đầu tiên mà không phụ thuộc vào số lượng người theo dõi sẵn có.</p>
+        <p>• <strong>Nhiệm vụ cốt lõi:</strong> Kéo tương tác đầu phễu (TOFU), mở rộng độ phủ thương hiệu và kích hoạt comment từ khóa <em>"DÁNG"</em> để gửi tặng video bài tập tại nhà.</p>
+    </div>
+
+    <div class="card">
+        <h3>2.2. Kênh phụ (Secondary Channel): FACEBOOK FANPAGE</h3>
+        <p>• <strong>Lý do lựa chọn:</strong> Là trung tâm tạo dựng niềm tin và chốt lịch hẹn địa phương. Khách hàng từ TikTok muốn ghé studio sẽ tra cứu Facebook để kiểm tra địa chỉ, cơ sở vật chất, chứng chỉ HLV và bảng giá niêm yết minh bạch.</p>
+        <p>• <strong>Nhiệm vụ cốt lõi:</strong> Triển khai bài viết chuyên sâu PAS (Buổi 4), đăng tải album ảnh Before/After 4:5, chạy quảng cáo bán kính 3–5km quanh phòng tập và chốt lịch hẹn qua Messenger.</p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 3. ĐỊNH VỊ KÊNH & CHUỖI NHẬN DIỆN         -->
+    <!-- ========================================== -->
+    <h2>3. ĐỊNH VỊ KÊNH & CHUỖI NHẬN DIỆN THƯƠNG HIỆU</h2>
+
+    <h3>Khung định vị kênh 4 ô (Brand Positioning Grid):</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 220px;">Ô định vị</th>
+                <th>Nội dung xác lập cho Studio Pilates & Wellness</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Kênh này giúp ai?</strong></td>
+                <td>Nữ giới & dân văn phòng 25 – 35 tuổi ngồi làm việc nhiều, tự ti vì dáng đi gù lưng, cổ rùa, thắt lưng võng và bụng dưới phình dù người không béo.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Bằng nội dung gì?</strong></td>
+                <td>Các ca khám dáng thực tế 1:1, bóc tách lỗi sai tư thế theo cơ chế giải phẫu dễ hiểu và hướng dẫn nắn chỉnh trục cơ thể bằng Pilates trị liệu trên máy Reformer.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Theo giọng điệu nào?</strong></td>
+                <td>Chuyên gia đĩnh đạc, ấm áp, đồng cảm, nói thật 100% khoa học (tuyệt đối không nói quá "phẳng lì ngay", cam kết giá minh bạch "không giá trên trời").</td>
+            </tr>
+            <tr>
+                <td><strong>4. Để đạt hành động gì?</strong></td>
+                <td>Kích thích comment nhận video bài tập tự tập tại nhà và kéo khách đặt lịch hẹn ghé studio đo quét dáng 1:1 miễn phí tuần khai trương.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Chuỗi nhận diện thương hiệu 5 ô (Signature Series):</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 220px;">Tiêu chí chuỗi</th>
+                <th>Nội dung chuẩn hóa Kstudy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Tên chuỗi (Signature Title)</strong></td>
+                <td><strong style="color: #1e3a8a; font-size: 15px;">"RESET — NẮN TRỤC CHỈNH DÁNG"</strong></td>
+            </tr>
+            <tr>
+                <td><strong>2. Mục đích chuỗi</strong></td>
+                <td>Định vị chuyên gia trong tâm trí khách hàng: Giúp người xem nhìn thấy rõ tật sai tư thế của mình qua góc nghiêng và chứng kiến giải pháp nắn chỉnh khoa học ngay trên máy Reformer.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Đối tượng thụ hưởng</strong></td>
+                <td>Nữ nhân viên văn phòng, quản lý trẻ, người làm việc bàn giấy ít vận động tại khu vực xung quanh studio.</td>
+            </tr>
+            <tr>
+                <td><strong>4. Định dạng video</strong></td>
+                <td>Video ngắn 9:16 (Thời lượng 45 – 50s), quay đối thoại tự nhiên giữa HLV và học viên thật tại phòng tập (chuẩn kịch bản Buổi 5).</td>
+            </tr>
+            <tr>
+                <td><strong>5. Nhịp xuất bản (Frequency)</strong></td>
+                <td><strong>3 tập / tuần</strong> (Đăng cố định vào Thứ 2 – Thứ 4 – Thứ 7, khung giờ vàng 11h30 trưa hoặc 20h00 tối).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ========================================== -->
+    <!-- 4. COMMUNITY & SEEDING PLAN               -->
+    <!-- ========================================== -->
+    <h2>4. KẾ HOẠCH CỘNG ĐỒNG & SEEDING CÓ TRÁCH NHIỆM</h2>
+
+    <div class="card">
+        <h3>Phân bổ 2 Nhóm cộng đồng mục tiêu:</h3>
+        <p>• <strong>Cộng đồng Trọng tâm (Primary — 70% nguồn lực):</strong> Các hội nhóm Làm đẹp, Chăm sóc vóc dáng, Hội yêu thích Pilates & Lối sống Healthy (<em>Hội Chị Em Mê Pilates & Wellness, Kinh Nghiệm Nắn Chỉnh Dáng & Cột Sống, Healthy Lifestyle Vietnam</em>). Nơi tập trung tệp khách hàng có sẵn nhận thức và khả năng chi trả cao.</p>
+        <p>• <strong>Cộng đồng Vệ tinh (Secondary — 30% nguồn lực):</strong> Các diễn đàn công sở, hội cư dân các khu đô thị cao cấp xung quanh studio trong bán kính 3 – 5km.</p>
+    </div>
+
+    <h3>Bộ 3 Kịch bản Thảo luận / Bình luận mẫu có giá trị cao:</h3>
+
+    <div class="quote-box">
+        <strong>Mẫu 1 (Mở thảo luận chuyên môn tạo tương tác sâu):</strong><br>
+        "Chị em ở đây có ai ăn thâm hụt calo người thì gầy nhưng bụng dưới cứ bị chìa ra một cục không? Mình chia sẻ một chút từ góc nhìn giải phẫu: Khi cơ gập hông bị co cứng do ngồi máy tính 8 tiếng, khung xương chậu sẽ bị kéo xoay dốc về phía trước (Anterior Pelvic Tilt), đẩy toàn bộ nội tạng trồi ra ngoài. Chị em thử đứng áp sát lưng vào tường: nếu lọt thỏm cả nắm tay qua hõm lưng thì gốc rễ là do lệch xương chậu chứ không phải do mỡ thừa đâu ạ. Càng gập bụng ép cơ lại càng đau lưng thêm thôi!"
+    </div>
+
+    <div class="quote-box">
+        <strong>Mẫu 2 (Bình luận gỡ rối có tâm khi thành viên hỏi cách chữa đau thắt lưng):</strong><br>
+        "Đau thắt lưng ở dân văn phòng đa phần xuất phát từ việc mất cân bằng cơ hông và cơ bụng sâu. Đi massage bấm huyệt chỉ nhả được cơ tạm thời vài tiếng rồi ngày mai ngồi lại co rút tiếp. Muốn dứt điểm bền vững, chị nên tập các bài thở kích hoạt nhóm cơ sàn chậu và cơ ngang bụng (Transverse Abdominis) để đưa khung xương chậu về trục tự nhiên. Em gửi tặng chị video 3 phút hướng dẫn nhả cơ hông tối nay tự tập trên thảm nhé!"
+    </div>
+
+    <div class="quote-box">
+        <strong>Mẫu 3 (Gợi ý thương hiệu khách quan, minh bạch):</strong><br>
+        "Nếu chị em chọn phòng tập Pilates để chỉnh dáng, lời khuyên chân thành là nên tìm những nơi có máy đo quét góc cột sống 1:1, HLV am hiểu giải phẫu trị liệu và đặc biệt là công khai bảng giá rõ ràng ngay từ đầu. Pilates là bộ môn đầu tư cho sức khỏe lâu dài nên không gian tập riêng tư, chuẩn Wellness và giá cả minh bạch không chèo kéo là yếu tố quan trọng nhất để duy trì thói quen tập luyện ạ."
+    </div>
+
+    <div class="card">
+        <h3>Giới hạn đạo đức Seeding không thương lượng (Kstudy Guardrails):</h3>
+        <ul>
+            <li>✅ <strong>Tài khoản định danh minh bạch:</strong> Sử dụng tài khoản thật của HLV hoặc đại diện Studio, xưng danh chuyên môn trung thực.</li>
+            <li>❌ <strong>Không mạo danh học viên:</strong> Tuyệt đối không lập nick ảo giả vờ hỏi đáp khen dạo (seeding bẩn làm mất uy tín thương hiệu).</li>
+            <li>❌ <strong>Không spam liên kết:</strong> Tuyệt đối không rải link landing page hoặc link bán hàng vào các hội nhóm cấm quảng cáo.</li>
+            <li>⏱️ <strong>Tần suất kiểm soát:</strong> Tối đa 2 – 3 bài chia sẻ giá trị/tuần; tập trung vào chất lượng thảo luận và phản hồi giải đáp thắc mắc cho thành viên.</li>
+        </ul>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 5. ĐÒN BẨY SEO & LOCAL ADS                -->
+    <!-- ========================================== -->
+    <h2>5. QUYẾT ĐỊNH ĐÒN BẨY SEO ĐỊA PHƯƠNG & QUẢNG CÁO (ADS) HỖ TRỢ</h2>
+
+    <div class="card">
+        <h3>5.1. Đòn bẩy SEO địa phương (Local Search Discovery):</h3>
+        <p>• <strong>Google Maps & Fanpage:</strong> Tối ưu hóa tên trang và vị trí: <code>[Tên Thương Hiệu] — Pilates & Wellness Studio [Tên Quận/Khu vực]</code>.</p>
+        <p>• <strong>Bộ từ khóa ngách:</strong> <em>Pilates trị liệu đau lưng, Nắn chỉnh dáng cổ rùa, Sửa hông chậu đổ trước, Pilates giá minh bạch</em>.</p>
+        <p>• <strong>Hashtag TikTok & Reels:</strong> <code>#ResetTrucDang #PilatesWellness #GiaiCuuGocNghieng #ChinhDangVanPhong</code></p>
+    </div>
+
+    <div class="card">
+        <h3>5.2. Đòn bẩy Quảng cáo địa phương (Hyper-local Targeted Ads):</h3>
+        <p>• <strong>Mục tiêu & Bán kính:</strong> Nhắm chính xác nữ giới 25 – 35 tuổi, nhân viên văn phòng trong bán kính <strong>3 – 5 km</strong> quanh phòng tập.</p>
+        <p>• <strong>Định dạng quảng cáo:</strong> Dùng chính Video ngắn 50s Buổi 5 (<em>Chị ơi không phải béo bụng — Khám dáng trên máy Reformer</em>) chạy chiến dịch Click-to-Messenger trên Facebook & Instagram.</p>
+        <p>• <strong>Ưu đãi khai trương:</strong> 🎁 <strong>TẶNG 30 SUẤT ĐO INBODY & QUÉT GÓC LỆCH CỘT SỐNG 1:1 CÙNG HLV HOÀN TOÀN MIỄN PHÍ</strong> (Cam kết giá minh bạch, không phát sinh chi phí, không chèo kéo).</p>
+    </div>
+
+    <div class="footer">
+        HỌC VIỆN KSTUDY — CHƯƠNG TRÌNH ĐÀO TẠO THỰC CHIẾN AI CONTENT MARKETING (AICO01)<br>
+        Bản quyền thuộc về Học viện Kstudy & Giảng viên Bích Phạm · Bản chuẩn xuất bản 2026
+    </div>
+</div>
+
+</body>
+</html>

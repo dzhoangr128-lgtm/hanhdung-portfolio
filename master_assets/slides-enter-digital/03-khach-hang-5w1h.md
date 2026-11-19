@@ -1,0 +1,29 @@
+# 03. Phân khúc khách hàng và 5W1H
+
+## Các phân khúc có thể có
+
+| Phân khúc | Nhu cầu/pain chính | Dấu hiệu có thể tiếp cận | Phù hợp nguồn lực hiện tại? | Lý do ưu tiên / không ưu tiên |
+|---|---|---|---|---|
+| **Phân khúc A (Trọng tâm số 1: Nữ văn phòng & Sau sinh 25–45 tuổi)** | Đau mỏi cổ vai gáy, thắt lưng, gù lưng, nghiêng chậu (APT), thoái hóa cột sống do ngồi lâu; cơ sàn chậu suy yếu sau sinh; stress tinh thần kéo dài. | Dân văn phòng, chuyên viên, quản lý, chủ kinh doanh tại Cầu Giấy – Nam Từ Liêm; lướt TikTok, Facebook, Instagram giờ nghỉ trưa hoặc tối. | **Rất phù hợp (100%)**: Mô hình 2 HLV kèm 1:1 trên máy Reformer, gói giá trị cao (800k – 1,5tr/buổi) tạo dòng tiền trụ cột vững chắc. | **ƯU TIÊN SỐ 1**: Nhóm có thu nhập tốt, tự chủ tài chính, nỗi đau cơ thể cấp bách, tự ra quyết định mua nhanh vì mong muốn khỏe đẹp hơn. |
+| **Phân khúc B (Mở rộng: Nam giới chơi thể thao / Golfer 30–50 tuổi)** | Sai lệch trục xoay cột sống, cứng khớp hông, nguy cơ chấn thương thắt lưng khi swing; cần tăng sức mạnh cơ lõi (core) và độ linh hoạt. | Hay lui tới sân tập Golf, câu lạc bộ thể thao, khu đô thị cao cấp (The Manor, Mỹ Đình); quan tâm cải thiện hiệu suất thể thao. | **Phù hợp ở mức vừa phải**: Cần xây dựng giáo án chuyên sâu Athletic/Golf Pilates riêng biệt. | **Ưu tiên giai đoạn 2 (từ tháng 6 trở đi)**: Cần thời gian định vị studio vững chắc trước khi mở rộng gói tập thể thao chuyên biệt. |
+| **Phân khúc C (Mở rộng: Bạn trẻ / Gen Z 20–24 tuổi)** | Chỉnh dáng gù lưng, cổ rùa học đường; yêu thích bộ môn xu hướng "hot trend", muốn tập luyện giữ dáng và có ảnh check-in đẹp. | Hoạt động rất mạnh trên TikTok, Instagram; sinh viên/mới đi làm quanh các trường đại học lớn tại Cầu Giấy; nhạy cảm về giá. | **Phù hợp cho lớp nhóm**: Có thể mở các lớp nhóm nhỏ (Group class 3–4 người) để tối ưu công suất máy. | **Ưu tiên giai đoạn 2 – 3**: Dùng để lấp đầy các khung giờ thấp điểm (off-peak) trong tuần bằng gói tập nhóm giá mềm. |
+
+## Phân khúc trọng tâm
+
+> Tôi chọn phân khúc **Nữ văn phòng & Phụ nữ sau sinh (25–45 tuổi)** vì **đây là nhóm có thu nhập ổn định, tự chủ tài chính, nỗi đau cơ thể và stress rất rõ ràng, sẵn sàng chi trả cho gói 1:1 cao cấp để mang lại dòng tiền chủ lực cho studio**; tôi chưa ưu tiên số 1 các nhóm còn lại vì **nhóm Golfer cần giáo án chuyên sâu riêng, còn nhóm bạn trẻ nhạy cảm về giá cần mở lớp nhóm để tối ưu chi phí sau khi studio đã vận hành ổn định**.
+
+## 5W1H của phân khúc trọng tâm
+
+| Câu hỏi chuẩn đề bài | Câu trả lời của học viên | Bằng chứng / giả định cần kiểm chứng |
+|---|---|---|
+| **Who: Họ là ai trong bối cảnh mua?** | Phụ nữ từ 25 – 45 tuổi, là nhân viên văn phòng, chuyên viên, cấp quản lý, chủ kinh doanh hoặc mẹ sau sinh tại khu vực Cầu Giấy và Nam Từ Liêm. Độc lập tài chính, có ý thức chăm sóc bản thân, thích không gian tập boutique riêng tư, sạch sẽ và yên tĩnh. Đi tập một mình để tập trung hoặc đi cùng bạn thân/đồng nghiệp. | Quan sát cơ cấu nhân khẩu học tại các tòa văn phòng (Keangnam, Duy Tân) và khu chung cư cao cấp lân cận. |
+| **What: Họ cần đạt/giải quyết gì?** | • **Về thể chất**: Giải quyết triệt để cơn đau mỏi cổ vai gáy, thắt lưng, nắn chỉnh lại các sai lệch tư thế (gù lưng, lệch vai, nghiêng chậu APT), phục hồi độ săn chắc cơ sàn chậu.<br>• **Về tinh thần**: Tìm kiếm một khoảng không gian "Mind-Body Reset" chậm rãi, hít thở sâu để giải phóng căng thẳng thần kinh (Fight-or-Flight) sau giờ làm việc. | Khảo sát nhu cầu thực tế của chị em văn phòng khi tìm kiếm các giải pháp chăm sóc sức khỏe. |
+| **Why: Vì sao điều này quan trọng?** | Động lực nội tại lớn nhất là **muốn trở thành phiên bản khỏe mạnh, đẹp đẽ và tràn đầy năng lượng hơn của chính mình**; không muốn cơ thể bị cơn đau nhức hành hạ làm giảm chất lượng cuộc sống và hiệu suất công việc; muốn tự tin khi diện trang phục. | Phỏng vấn sâu tâm lý phụ nữ hiện đại: chi tiền cho bản thân là khoản đầu tư xứng đáng nhất. |
+| **When: Khi nào họ thấy cần quyết định?** | • Khi cơn đau mỏi bắt đầu tái phát liên tục, ảnh hưởng đến giấc ngủ và sinh hoạt hàng ngày mà cao dán hay thuốc không còn tác dụng.<br>• Khung giờ muốn đi tập nhất: **Trưa 12h00 – 13h00** (tranh thủ nghỉ trưa gần cơ quan), **Tối 19h00 – 20h00** (sau giờ làm), và **các ngày cuối tuần** (nhu cầu rất cao, full lịch nhanh). | Thói quen sinh hoạt và lịch làm việc thực tế của khối văn phòng 8 tiếng/ngày. |
+| **Where: Họ tìm thông tin/ra quyết định ở đâu?** | • **Nơi tiếp cận thông tin**: Xem video ngắn trên **TikTok, Facebook Reels, Instagram (IG)**; tìm kiếm địa điểm trên Google Maps.<br>• **Nơi ra quyết định**: Bán kính vàng **3 – 5 km** quanh nơi làm việc hoặc nơi ở; ưu tiên vị trí có chỗ đỗ xe ô tô thuận tiện, có thang máy, đường đi ít tắc. | Thói quen tiêu thụ nội dung số và bán kính di chuyển thực tế của phụ nữ có thu nhập khá. |
+| **How: Họ đang giải quyết/mua như thế nào? Ai ảnh hưởng?** | • **Người ảnh hưởng**: Chính động lực nội tại muốn khỏe đẹp hơn là yếu tố quyết định; ngoài ra có sự rủ rê, khích lệ của bạn bè/đồng nghiệp nữ cùng công ty.<br>• **Rào cản lớn nhất khi đến tập thử**: Lo ngại về **chi phí gói chính thức quá cao** và **hoài nghi chất lượng có thực sự đạt kết quả hết đau mỏi hay không**; sợ bị ép sale chèo kéo.<br>• **Hành vi mua**: Đăng ký nhận **buổi trải nghiệm 0đ (đo InBody + Posture check)** để kiểm chứng tận mắt cơ thể mình sai lệch ở đâu trước khi quyết định quẹt thẻ mua gói 10 – 30 buổi. | Tâm lý e ngại bị "hớ" hoặc bị ép mua hàng khi tham gia các chương trình miễn phí. |
+
+## Hệ quả cho marketing
+
+> Để phục vụ phân khúc này, thương hiệu cần làm rõ **bằng chứng kết quả trị liệu thực tế (ảnh so sánh Posture Before – After trực quan, video phân tích chuyển động)**, xuất hiện tại **TikTok, Facebook và Instagram qua các video ngắn giải thích nguyên nhân đau mỏi và bài tập chỉnh dáng dễ hiểu**, và giảm rào cản **ngại chi phí đắt đỏ / sợ bị ép sale bằng cam kết buổi trải nghiệm 0đ hoàn toàn không chèo kéo, chỉ tập trung đo đạc và tư vấn đúng vấn đề cơ thể**.
+

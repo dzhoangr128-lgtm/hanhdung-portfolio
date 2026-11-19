@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio & CV Thực Tập: AI Content Marketing, 3D Animation & TVC — Hoàng Thị Hạnh Dung</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Thanh công cụ hỗ trợ chỉnh sửa nhanh & hướng dẫn -->
+  <div class="edit-toolbar">
+    <span>✨ <strong>Portfolio Thực Tập Chuyên Nghiệp — Hoàng Thị Hạnh Dung:</strong> Tích hợp 02 Kênh Social thật, 04 Dự án Chiến dịch/TVC/3D & Bản CV chuẩn A4!</span>
+    <button id="toggle-inline-edit" type="button">✎ Bật sửa chữ trực tiếp trên trang</button>
+  </div>
+
+  <!-- Thanh điều hướng chính -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <span class="brand-badge" id="nav-avatar-text">HD</span>
+        <span id="nav-name" class="editable">Hoàng Thị Hạnh Dung</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#channels">2 Kênh Thật</a></li>
+        <li><a href="#projects">4 Dự Án Lớn</a></li>
+        <li><a href="#main-showreel-player">Showreel 3D</a></li>
+        <li><a href="#pipeline">Quy Trình</a></li>
+        <li><a href="#skills">Kỹ Năng</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="mode-switch" role="tablist" aria-label="Chế độ xem">
+          <button type="button" class="mode-btn active" id="btn-mode-portfolio">🌐 Web Portfolio</button>
+          <button type="button" class="mode-btn" id="btn-mode-cv">📄 Xem CV A4</button>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm trigger-print-cv">
+          ⬇ Xuất CV PDF
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       PHẦN 1: GIAO DIỆN WEBSITE PORTFOLIO & SHOWREEL THỰC CHIẾN
+       ======================================================================== -->
+  <main class="portfolio-view-wrapper">
+    <!-- HERO SECTION -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span id="hero-status" class="editable">Sẵn sàng Thực tập Marketing / Content / Creative Video</span>
+            </div>
+            <div class="hero-role editable" id="hero-role">AI Content Marketing & Creative Video Intern</div>
+            <h1 class="hero-title editable" id="hero-tagline">
+              Kết hợp Tư duy Chiến lược Nội dung, Sản xuất Video 3D/TVC & Tự động hóa AI để tạo ra tăng trưởng thực tế.
+            </h1>
+            <p class="hero-bio editable" id="hero-bio"></p>
+
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">📂 Xem 4 Dự Án Thực Chiến ↓</a>
+              <a href="bài tập cuối môn AI Content - Hoàng thị Hạnh Dung (antigravity)/00-BAO-CAO-TONG-HOP-CUOI-MON-HOANG-THI-HANH-DUNG.html" target="_blank" rel="noopener" class="btn btn-outline">
+                📊 Mở Báo Cáo Xây Kênh 12 Trang ↗
+              </a>
+              <button type="button" class="btn btn-outline" id="hero-open-cv">
+                📄 Xem Bản CV A4 & Tải PDF
+              </button>
+            </div>
+          </div>
+
+          <!-- Thẻ thông tin cá nhân -->
+          <aside class="profile-card">
+            <div class="profile-avatar-wrap" id="profile-avatar">HD</div>
+            <h3 id="card-name" class="editable">Hoàng Thị Hạnh Dung</h3>
+            <div class="sub-role editable" id="card-role">AI Content Marketing & Creative Video Intern</div>
+            <ul class="contact-list">
+              <li><span>📍</span> <span id="card-location" class="editable"></span></li>
+              <li><span>✉️</span> <span id="card-email" class="editable"></span></li>
+              <li><span>📞</span> <span id="card-phone" class="editable"></span></li>
+              <li><span>🎵</span> <span id="card-linkedin"></span></li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- Con số nổi bật -->
+        <div class="highlights-grid" id="highlights-grid"></div>
+      </div>
+    </section>
+
+    <!-- 2 KÊNH MẠNG XÃ HỘI THỰC TẾ ĐÃ XÂY DỰNG (LIVE SOCIAL CHANNELS) -->
+    <section class="section" id="channels">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Real-World Proof • Kênh Đang Hoạt Động</div>
+            <h2 class="section-title">02 Kênh Mạng Xã Hội Thực Tế Đã Xây Dựng</h2>
+          </div>
+          <p class="section-subtitle">
+            Sản phẩm thực tế có link truy cập công khai và chỉ số đo lường thật: Từ định vị thương hiệu, lập kế hoạch 26 bài/tháng đến tự động hóa sản xuất bằng AI.
+          </p>
+        </div>
+
+        <div class="channels-grid" id="live-channels-grid"></div>
+      </div>
+    </section>
+
+    <!-- 4 DỰ ÁN THỰC CHIẾN NỔI BẬT (CASE STUDIES) -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Featured Case Studies & Deliverables</div>
+            <h2 class="section-title">04 Dự Án Thực Chiến & Tác Phẩm Nổi Bật</h2>
+          </div>
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Tất cả dự án (04)</button>
+            <button class="filter-btn" data-filter="AI Content & Social Growth">Xây Kênh & AI Content OS</button>
+            <button class="filter-btn" data-filter="Commercial TVC">TVC Quảng Cáo (Pilates & Resort)</button>
+            <button class="filter-btn" data-filter="3D Animation Film">Phim Hoạt Hình 3D</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"></div>
+
+        <!-- RẠP CHIẾU SHOWREEL PHIM NGẮN 3D TRỰC TIẾP -->
+        <div class="showreel-box" id="main-showreel-player">
+          <div class="showreel-header">
+            <div>
+              <span class="showreel-badge">★ Featured 3D Animation Showreel (02:15)</span>
+              <h2 style="font-family: var(--font-serif); font-size: 1.45rem; margin-top: 0.45rem;" class="editable">
+                Phim Ngắn Hoạt Hình 3D: “Về Nhà Ăn Cơm Cùng Bà” — Hoàng Thị Hạnh Dung
+              </h2>
+            </div>
+            <div style="font-size: 0.84rem; color: #A1A1AA;" class="editable">
+              Vai trò: Kịch bản • Thiết kế Nhân vật & Bối cảnh 3D • Đạo diễn Góc máy • Dựng phim hoàn chỉnh
+            </div>
+          </div>
+          <div class="showreel-video-frame">
+            <video controls preload="metadata" poster="assets/ba-va-hanh.png">
+              <source src="master_assets/Phim-3D-Bua-Com-Voi-Ba-web.mp4" type="video/mp4" />
+              Trình duyệt của bạn không hỗ trợ phát video.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BÓC TÁCH 5 BƯỚC QUY TRÌNH SẢN XUẤT (PRODUCTION PIPELINE) -->
+    <section class="section" id="pipeline">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">End-to-End Workflow • Behind The Scenes</div>
+            <h2 class="section-title">Quy Trình 5 Bước: Từ Chiến Lược Đến Sản Xuất 3D/TVC & Tự Động Hóa</h2>
+          </div>
+          <p class="section-subtitle">
+            Cách mình vận hành một dự án truyền thông trọn gói: Nghiên cứu Insight → Khóa tạo hình Nhân vật 8K/3D → Dựng Bối cảnh → Storyboard 8 Cảnh → Xuất bản & Tự động hóa kênh. <em>(Click vào ảnh để phóng to)</em>
+          </p>
+        </div>
+
+        <div class="pipeline-list" id="pipeline-list"></div>
+      </div>
+    </section>
+
+    <!-- MẪU KỊCH BẢN PHÂN CẢNH & COPYWRITING -->
+    <section class="section" id="samples">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Đọc nhanh trong 30 giây</div>
+            <h2 class="section-title">Trích Đoạn Kịch Bản TVC & Phim Ngắn 3D</h2>
+          </div>
+          <p class="section-subtitle">
+            Cấu trúc 3 hồi và cách phối hợp giữa Góc máy (Camera), Lời thoại (Voice-over) và Lời kêu gọi hành động (CTA) trong từng dự án.
+          </p>
+        </div>
+
+        <div class="samples-grid" id="samples-grid"></div>
+      </div>
+    </section>
+
+    <!-- KỸ NĂNG CHUYÊN MÔN 4 TRỤ CỘT -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Core Competencies</div>
+            <h2 class="section-title">Bộ Kỹ Năng 4 Trụ Cột: Chiến Lược • Video 3D/TVC • Copy/Visual • AI OS</h2>
+          </div>
+          <p class="section-subtitle">
+            Đáp ứng trọn vẹn nhu cầu của các Agency, Production House và Phòng Marketing hiện đại.
+          </p>
+        </div>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- HỌC VẤN & KINH NGHIỆM DỰ ÁN -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Nền tảng & Quá trình rèn luyện</div>
+            <h2 class="section-title">Kinh Nghiệm Dự Án Thực Chiến & Đào Tạo</h2>
+          </div>
+        </div>
+        <div class="skills-grid" id="web-exp-edu"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       PHẦN 2: CHẾ ĐỘ XEM CV CHUẨN A4 & XUẤT PDF
+       ======================================================================== -->
+  <section class="cv-view-wrapper" id="cv-view">
+    <div class="container">
+      <div class="cv-actions-bar">
+        <div>
+          <strong>📄 Bản CV Thực Tập Chuẩn Khổ Giấy A4 — Hoàng Thị Hạnh Dung</strong>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">
+            Khi nhấn "In / Lưu thành PDF", hệ thống tự động ẩn thanh công cụ và xuất đúng 1 trang CV A4 sắc nét.
+          </p>
+        </div>
+        <div style="display: flex; gap: 0.6rem;">
+          <button type="button" class="btn btn-outline btn-sm" id="btn-back-portfolio">
+            ← Quay lại Web Portfolio
+          </button>
+          <button type="button" class="btn btn-primary btn-sm trigger-print-cv">
+            🖨️ In / Lưu thành file PDF (Chuẩn A4)
+          </button>
+        </div>
+      </div>
+
+      <!-- Trang giấy A4 -->
+      <div class="cv-paper" id="cv-paper-content"></div>
+    </div>
+  </section>
+
+  <!-- MODAL HIỂN THỊ CHI TIẾT CASE STUDY & PHÓNG TO ẢNH (LIGHTBOX) -->
+  <div class="modal-backdrop" id="case-study-modal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close-btn" aria-label="Đóng">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Sẵn sàng đồng hành và tạo giá trị thực tế trong kỳ Thực tập sắp tới!</h3>
+        <p>Liên hệ trực tiếp qua Email: <strong id="footer-email" style="color:#fff;"></strong> • SĐT: <strong id="footer-phone" style="color:#fff;"></strong></p>
+      </div>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="bài tập cuối môn AI Content - Hoàng thị Hạnh Dung (antigravity)/00-BAO-CAO-TONG-HOP-CUOI-MON-HOANG-THI-HANH-DUNG.pdf" target="_blank" rel="noopener" class="btn btn-outline" style="background: transparent; color: #fff; border-color: rgba(255,255,255,0.35);">
+          📄 Mở Báo Cáo PDF 12 Trang
+        </a>
+        <button type="button" class="btn btn-primary trigger-print-cv">
+          ⬇ Tải CV Định Dạng PDF
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

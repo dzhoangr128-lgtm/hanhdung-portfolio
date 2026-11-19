@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kstudy AICO01 - Bài 04: Sản xuất Bài viết & Visual Brief</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #f59e0b;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-gray: #f8fafc;
+            --border: #e2e8f0;
+            --success: #10b981;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+        .header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .badge {
+            background-color: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .meta-info {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary-light);
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        h1 { color: var(--primary); font-size: 26px; margin-bottom: 8px; }
+        h2 {
+            color: var(--primary);
+            font-size: 18px;
+            margin: 30px 0 15px 0;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            display: flex;
+            align-items: center;
+        }
+        h3 { font-size: 15px; color: var(--primary); margin: 18px 0 8px 0; }
+        p, li { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+        ul, ol { padding-left: 20px; margin-bottom: 15px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13.5px;
+        }
+        th, td {
+            padding: 11px 13px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        tr:hover { background-color: #f8fafc; }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        .hook-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 14px 18px;
+            border-radius: 6px;
+            margin: 12px 0;
+            font-size: 14px;
+            color: #166534;
+            line-height: 1.7;
+        }
+        .highlight-box {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #92400e;
+            line-height: 1.7;
+        }
+        .prompt-box {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 16px 20px;
+            border-radius: 8px;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 15px 0;
+            white-space: pre-wrap;
+        }
+        .post-container {
+            background: #ffffff;
+            border: 2px solid #3b82f6;
+            border-radius: 10px;
+            padding: 24px;
+            margin: 20px 0;
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.08);
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .post-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            margin-right: 12px;
+        }
+        .post-author {
+            font-weight: bold;
+            font-size: 15px;
+            color: var(--primary);
+        }
+        .post-time {
+            font-size: 12px;
+            color: #6b7280;
+        }
+        .post-content {
+            font-size: 14.5px;
+            line-height: 1.8;
+            color: #1f2937;
+        }
+        .split-box {
+            border-radius: 8px;
+            padding: 16px;
+            border: 1px dashed #cbd5e1;
+        }
+        .split-before {
+            background: #fff1f2;
+            border-color: #fda4af;
+        }
+        .split-after {
+            background: #f0fdf4;
+            border-color: #86efac;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>HỌC VIỆN KSTUDY — AICO01</h1>
+            <p style="margin:0; font-weight:600; color:#64748b;">BÀI THỰC HÀNH 04: SẢN XUẤT BÀI VIẾT & THIẾT KẾ VISUAL BRIEF</p>
+        </div>
+        <div class="badge">Hoàn Thành 100%</div>
+    </div>
+
+    <div class="meta-info">
+        <strong>Dự án:</strong> Pilates & Wellness Studio<br>
+        <strong>Môn học:</strong> AICO01 — Buổi 4: Viết bài content & Thiết kế hình ảnh (viet-content & thiet-ke-hinh-anh-content)<br>
+        <strong>Giáo viên chấm điểm:</strong> Cô Bích Phạm<br>
+        <strong>Đầu ra:</strong> One-page Content Brief, CRAFT-F Prompt, Bài viết Publish-Ready, Visual Brief 10 ô, Quy cách Before/After 4:5, Quality Gate 6 điểm
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PHẦN 4A: VIẾT BÀI CONTENT                  -->
+    <!-- ========================================== -->
+    <h2>1. PHẦN 4A: VIẾT BÀI CONTENT SOCIAL (SKILL: VIET-CONTENT)</h2>
+
+    <div class="card">
+        <h3>Concept 1: Hông chậu đổ trước & Bụng phình (Angle đạt 18/18 điểm)</h3>
+        <p><strong>• Góc tiếp cận:</strong> Nỗi đau & Phản biện niềm tin cũ — <em>"Bạn không hề béo bụng, bạn đang bị đổ xương chậu về phía trước (Anterior Pelvic Tilt)"</em>.</p>
+        <p><strong>• Mục tiêu bài viết:</strong> Thu hút nhận biết (TOFU), đập tan hiểu lầm ăn kiêng/gập bụng sai cách, kéo tương tác lưu bài (Save) và comment xin bài tập tự kiểm tra dáng.</p>
+    </div>
+
+    <h3>Bảng One-Page Content Brief (11 Tiêu chí chuẩn Kstudy)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 220px;">Thành phần Brief</th>
+                <th>Chi tiết nội dung ứng dụng cho Dự án Pilates</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Mục tiêu bài viết</strong></td>
+                <td>Thu hút chú ý (TOFU), tạo sự tò mò, kéo lượt lưu bài (Save) và kích hoạt comment xin bài tập tự kiểm tra dáng.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Người xem chính</strong></td>
+                <td>Nữ giới, dân văn phòng 25 – 35 tuổi (người gầy hoặc bình thường nhưng bụng dưới luôn phình, ngồi nhiều ít vận động).</td>
+            </tr>
+            <tr>
+                <td><strong>3. Insight / Rào cản</strong></td>
+                <td>Tự ti vì bụng dưới cứ chìa ra dù ăn ít, nghĩ mình béo bụng nên gập bụng/ăn kiêng khắt khe nhưng bụng không nhỏ mà lưng lại đau.</td>
+            </tr>
+            <tr>
+                <td><strong>4. Góc tiếp cận (Angle)</strong></td>
+                <td><strong>Phản biện & Nỗi đau:</strong> <em>"Bạn không hề béo bụng, bạn đang bị đổ xương chậu về phía trước (Anterior Pelvic Tilt)"</em>.</td>
+            </tr>
+            <tr>
+                <td><strong>5. Thông điệp cốt lõi</strong></td>
+                <td>Muốn bụng phẳng phải đưa xương chậu về đúng vị trí cân bằng bằng Pilates — Nắn đúng tư thế, dáng tự khắc đẹp.</td>
+            </tr>
+            <tr>
+                <td><strong>6. Bằng chứng / Nguyên liệu</strong></td>
+                <td>Cơ chế giải phẫu (cơ gập hông co rút do ngồi lâu); bài test 30 giây dựa tường; hình ảnh góc nghiêng Before/After thực tế.</td>
+            </tr>
+            <tr>
+                <td><strong>7. Cấu trúc bài viết</strong></td>
+                <td><strong>Công thức PAS (Problem - Agitate - Solve):</strong><br>
+                • <em>Problem:</em> Ăn kiêng mãi bụng dưới vẫn to.<br>
+                • <em>Agitate:</em> Càng gập bụng càng đau thắt lưng và bụng càng trồi ra do xương chậu xoay.<br>
+                • <em>Solve:</em> Bài test tại nhà & giải pháp nắn chỉnh trục với Pilates.</td>
+            </tr>
+            <tr>
+                <td><strong>8. Kênh & Định dạng</strong></td>
+                <td>Bài viết Fanpage Facebook (kèm chùm ảnh góc nghiêng Before/After) kết hợp video ngắn Reels/TikTok.</td>
+            </tr>
+            <tr>
+                <td><strong>9. Lời kêu gọi (CTA)</strong></td>
+                <td>Comment <em>"TƯ THẾ"</em> để nhận video 3 phút hướng dẫn bài tập nhả cơ hông tại nhà; Hoặc inbox đặt lịch đo InBody & quét góc lệch cột sống 1:1 miễn phí tuần khai trương.</td>
+            </tr>
+            <tr>
+                <td><strong>10. Giọng thương hiệu</strong></td>
+                <td>Chuyên gia, thấu hiểu, đĩnh đạc, ấm áp, giải thích khoa học dễ hiểu như một người bạn đồng hành, không dùng từ ngữ hàn lâm.</td>
+            </tr>
+            <tr>
+                <td><strong>11. Điều CẤM TRÁNH (Don'ts)</strong></td>
+                <td>Không hù dọa bệnh lý nguy hiểm; không cam kết phi thực tế "phẳng bụng sau 1 buổi"; không nói xấu gym/yoga; không giật tít câu view rẻ tiền; minh bạch chi phí ("không giá trên trời").</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Câu lệnh CRAFT-F Prompt chuẩn Kstudy cho AI</h3>
+    <div class="prompt-box">[CONTEXT]: Phòng tập Pilates & Wellness Studio cao cấp chuẩn bị khai trương, nhắm tới nữ văn phòng 25-35 tuổi bị bụng dưới to do thói quen ngồi làm việc sai tư thế.
+[ROLE]: Bạn là Chuyên gia trị liệu tư thế và Huấn luyện viên Pilates giàu kinh nghiệm, đồng cảm và am hiểu tâm lý phụ nữ.
+[ACTION]: Viết bài đăng Facebook hoàn chỉnh theo công thức PAS kết hợp phân tích đối chứng hình ảnh Before/After.
+[FORMAT]: Hook giật khựng ➔ Vấn đề (Problem) ➔ Xoáy sâu (Agitate) ➔ Giải pháp khoa học (Solve) ➔ Lời kêu gọi hành động (CTA).
+[TONE]: Chuyên gia, ấm áp, gần gũi, giải thích khoa học dễ hiểu, tuyệt đối không dùng sáo rỗng hay hù dọa.
+[REFERENCES & CONSTRAINTS]: Lồng ghép bài test 30s với bức tường; mô tả ảnh Before/After góc nghiêng thực tế; không hứa hẹn phi thực tế; kết thúc bằng CTA 2 tầng (nhận video test miễn phí & quà tặng đo InBody tuần khai trương, cam kết giá minh bạch).</div>
+
+    <h3>Bảng phản biện 9 tiêu chí & Khử mùi AI (Audit Log)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 220px;">Tiêu chí kiểm tra</th>
+                <th style="width: 120px;">Đánh giá v0</th>
+                <th>Hướng xử lý & Tinh chỉnh khử mùi AI</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Đúng mục tiêu (TOFU)?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT</strong></td>
+                <td>Đánh trúng sự tò mò, mở rộng nhận thức, tối ưu hóa lượt share & save.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Đúng tệp người xem?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT</strong></td>
+                <td>Nhắm chính xác nữ văn phòng 25–35 tuổi ngồi nhiều, tự ti vì bụng dưới.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Hook có giữ lời hứa?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT</strong></td>
+                <td>Mở bài hỏi bụng phình dù ăn ít, thân bài giải mã chuẩn nguyên nhân cơ học.</td>
+            </tr>
+            <tr>
+                <td><strong>4. Insight / Rào cản thật?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT</strong></td>
+                <td>Nỗi đau ăn thâm hụt calo người gầy nhưng bụng vẫn nhô, sợ mặc váy body.</td>
+            </tr>
+            <tr>
+                <td><strong>5. Bằng chứng cụ thể?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT</strong></td>
+                <td>Có cơ chế giải phẫu, bài test 30s với tường và chùm ảnh Before/After.</td>
+            </tr>
+            <tr>
+                <td><strong>6. Cấu trúc dễ đọc?</strong></td>
+                <td><strong style="color: #ea580c;">CẦN SỬA</strong></td>
+                <td>Cần ngắt đoạn ngắn 1–2 câu, bổ sung icon dẫn dắt thị giác cho độc giả lướt mobile.</td>
+            </tr>
+            <tr>
+                <td><strong>7. Giọng thương hiệu?</strong></td>
+                <td><strong style="color: #ea580c;">CẦN SỬA</strong></td>
+                <td>Các từ tiếng Anh y khoa (<em>Anterior Pelvic Tilt, Pelvic Floor</em>) còn khô khan; cần Việt hóa thành "Hông chậu đổ trước", "Cơ cốt lõi nâng đỡ nội tạng".</td>
+            </tr>
+            <tr>
+                <td><strong>8. Khử mùi AI (AI Smell)?</strong></td>
+                <td><strong style="color: #ea580c;">CẦN SỬA</strong></td>
+                <td>Giọng văn nháp còn hơi văn vẻ sách vở; cần đưa khẩu ngữ nói chuyện tự nhiên của HLV, tạo sự đồng cảm sâu sắc.</td>
+            </tr>
+            <tr>
+                <td><strong>9. CTA rõ ràng, tự nhiên?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT</strong></td>
+                <td>Phân tầng 2 mức: Nhận video tự tập tại nhà (đầu phễu) + Lời mời đo máy InBody tại studio (giữa phễu), hoàn toàn không chèo kéo.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Bài viết Social hoàn chỉnh sẵn sàng đăng (Publish-Ready Copy)</h3>
+    <div class="post-container">
+        <div class="post-header">
+            <div class="post-avatar">P</div>
+            <div>
+                <div class="post-author">Pilates & Wellness Studio</div>
+                <div class="post-time">Vừa xong · 🌐 Công khai</div>
+            </div>
+        </div>
+        <div class="post-content">
+            <p style="font-weight: bold; font-size: 16px; color: #1e3a8a;">
+                Ăn kiêng khắt khe, gập bụng miệt mài 3 tháng mà bụng dưới vẫn cứ "chìa" ra một cục? 🤔<br>
+                Dừng lại một chút bạn ơi, khả năng rất cao là bạn <strong>KHÔNG HỀ BÉO BỤNG!</strong>
+            </p>
+            <p>Nhiều chị em đến phòng tập bên mình hay than thở:<br>
+            <em>"Chị ăn thâm hụt calo, tay chân gầy trơ xương quai xanh nhưng không hiểu sao bụng dưới cứ phình như có bầu 3 tháng, mặc váy body là mất hết tự tin."</em></p>
+
+            <p>Thế là lại lao vào nhịn ăn, lại gập bụng hùng hục mỗi tối. Nhưng càng tập thì bụng chẳng nhỏ đi, mà thắt lưng lại càng đau ê ẩm.</p>
+
+            <p>👉 <strong>Gốc rễ nằm ở đâu?</strong><br>
+            Nằm ở chính chiếc ghế văn phòng bạn ngồi 8 tiếng mỗi ngày!</p>
+
+            <p>Ngồi nhiều làm cơ gập hông bị co rút cứng đờ, kéo toàn bộ khung xương chậu của bạn đổ dốc về phía trước (dân chuyên môn gọi là tật <strong>"Hông chậu đổ trước"</strong>).</p>
+
+            <p>Khi xương chậu bị đổ:<br>
+            1️⃣ Thắt lưng bị ép võng sâu vào trong, gây đau mỏi triền miên.<br>
+            2️⃣ Toàn bộ nội tạng và thành bụng dưới bị "đẩy trồi" ra ngoài.</p>
+
+            <p>Nói cách khác: <strong>Đây là bụng phình do lệch khung xương, không phải do mỡ thừa.</strong> Bạn có nhịn ăn đến mấy thì khung xương vẫn lệch, bụng vẫn sẽ nhô ra!</p>
+
+            <hr style="margin: 15px 0; border: none; border-top: 1px dashed #cbd5e1;">
+
+            <p>📸 <em>(Đính kèm Album ảnh đối chiếu Before & After góc nghiêng)</em></p>
+            <p><strong>Bạn hãy nhìn vào bức ảnh góc nghiêng này:</strong><br>
+            • <strong>Ảnh bên trái (Before):</strong> Bạn học viên đứng tự nhiên khi chưa chỉnh — xương chậu đổ trước làm bụng dưới chìa ra, lưng võng, cổ hơi so.<br>
+            • <strong>Ảnh bên phải (After):</strong> Chỉ sau một buổi được HLV nhả cơ hông và kích hoạt đúng nhóm cơ cốt lõi nâng đỡ nội tạng — trục cơ thể trở về vị trí cân bằng, bụng dưới tự động phẳng lì mà bạn ấy <strong>hoàn toàn không cần phải hóp bụng hay nín thở!</strong></p>
+
+            <hr style="margin: 15px 0; border: none; border-top: 1px dashed #cbd5e1;">
+
+            <p>🔍 <strong>BÀI TEST 30 GIÂY TỰ KIỂM TRA TẠI NHÀ:</strong><br>
+            Bạn đứng tựa sát gót chân, mông và lưng vào tường. Thử luồn bàn tay ra sau hõm thắt lưng:<br>
+            • Nếu chỉ lọt vừa khít 1 bàn tay: Chúc mừng, tư thế của bạn bình thường.<br>
+            • Nếu khoảng trống lọt thỏm cả một nắm tay: Xương chậu của bạn đã bị đổ trước khá nhiều rồi đó!</p>
+
+            <hr style="margin: 15px 0; border: none; border-top: 1px dashed #cbd5e1;">
+
+            <p>💡 Thay vì tiếp tục gập bụng sai cách làm hỏng thêm cột sống, cơ thể bạn lúc này cần được nắn chỉnh đúng trục:</p>
+
+            <p>👉 Comment <strong>"TƯ THẾ"</strong> dưới bài viết, mình gửi tặng bạn video 3 phút hướng dẫn bài tập nhả cơ hông có thể tự tập ngay trên thảm tối nay.<br>
+            👉 Hoặc nếu muốn biết chính xác độ lệch trục của cơ thể mình, ghé studio tuần lễ khai trương này nhé: Tụi mình đang dành tặng <strong>30 suất đo chỉ số InBody và quét góc lệch cột sống 1:1 cùng HLV hoàn toàn miễn phí</strong>.</p>
+
+            <p style="font-weight: bold; color: #1e3a8a; margin-top: 10px;">Nắn đúng tư thế — Dáng tự khắc đẹp! ✨</p>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PHẦN 4B: THIẾT KẾ VISUAL BRIEF             -->
+    <!-- ========================================== -->
+    <h2>2. PHẦN 4B: THIẾT KẾ VISUAL BRIEF (SKILL: THIET-KE-HINH-ANH-CONTENT)</h2>
+
+    <div class="highlight-box">
+        <strong>Nguyên tắc thị giác 2 giây sống còn Buổi 4B:</strong><br>
+        <em>"Hình ảnh trong marketing không chỉ để đẹp — người xem lướt qua màn hình phải hiểu được thông điệp chính trong <strong>2 giây đầu tiên</strong>. Luôn xác định 'Cái gì cần nhìn thấy đầu tiên' trước khi bàn về màu sắc hay bố cục!"</em>
+    </div>
+
+    <h3>Khung Visual Brief 10 ô chuẩn Kstudy</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 220px;">Ô thông tin</th>
+                <th>Nội dung chi tiết quy chuẩn cho bộ ảnh</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Message chính của ảnh</strong></td>
+                <td><em>"Bụng phình do lệch xương chậu, không phải do mỡ — Nắn lại trục là phẳng bụng."</em></td>
+            </tr>
+            <tr>
+                <td><strong>2. Định dạng lựa chọn</strong></td>
+                <td><strong>Album ghép đôi Before / After</strong> (Ảnh bìa chính quan trọng nhất) kết hợp 3 ảnh phụ giải thích chi tiết.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Kênh & Tỷ lệ hiển thị</strong></td>
+                <td><strong>Facebook / Instagram:</strong> Tỷ lệ <strong>4:5</strong> (1080 x 1350 px) hoặc <strong>1:1</strong> (1080 x 1080 px) để tối ưu diện tích chiếm sóng trên màn hình di động.</td>
+            </tr>
+            <tr>
+                <td><strong>4. Điểm hút thị giác (Focal Point)</strong></td>
+                <td><strong>Vòng bụng dưới và độ võng của thắt lưng</strong> ở bức ảnh góc nghiêng Before (gây giật mình vì chạm đúng khuyết điểm của người xem).</td>
+            </tr>
+            <tr>
+                <td><strong>5. Bố cục (Layout)</strong></td>
+                <td><strong>Chia đôi màn hình (Split screen 50/50):</strong><br>
+                • Bên trái: <em>Before</em> (Góc nghiêng sai tư thế, có mũi tên đỏ chỉ vào bụng phình & lưng võng).<br>
+                • Bên phải: <em>After</em> (Góc nghiêng thẳng trục, bụng phẳng, tick xanh lá xác nhận).</td>
+            </tr>
+            <tr>
+                <td><strong>6. Thứ bậc chữ (Hierarchy)</strong></td>
+                <td>• <em>Cấp 1 (Lớn nhất, đọc trong 1s):</em> <strong>KHÔNG PHẢI BÉO BỤNG!</strong> (Font sans-serif, in hoa, màu tương phản mạnh).<br>
+                • <em>Cấp 2 (Đọc thứ hai):</em> "Do hông chậu đổ trước (Anterior Pelvic Tilt)".<br>
+                • <em>Cấp 3 (Nhãn phụ):</em> Nhãn "Before" và "After" đặt ở góc trên/dưới mỗi nửa ảnh.</td>
+            </tr>
+            <tr>
+                <td><strong>7. Phong cách (Brand Style)</strong></td>
+                <td>Tối giản, thanh lịch, chuẩn Wellness Studio: Tone màu be sáng, trắng, điểm xuyết xanh navy nhận diện; ánh sáng tự nhiên dịu nhẹ; phòng tập sạch sẽ tinh tế.</td>
+            </tr>
+            <tr>
+                <td><strong>8. Tư liệu cần dùng</strong></td>
+                <td>Ảnh chụp người mẫu/học viên thật mặc đồ tập ôm sát (legging + sport bra tối màu), góc chụp nghiêng 90 độ chuẩn ngang tầm thắt lưng.</td>
+            </tr>
+            <tr>
+                <td><strong>9. Lời kêu gọi (CTA trên ảnh)</strong></td>
+                <td>Mũi tên trượt kèm dòng chữ nhỏ: <em>"Vuốt sang xem bài test 30s"</em> hoặc logo studio ở góc an toàn.</td>
+            </tr>
+            <tr>
+                <td><strong>10. Điều CẤM TRÁNH (Don'ts)</strong></td>
+                <td>• Không nhồi nhét quá nhiều chữ lên ảnh làm rối mắt.<br>
+                • Không dùng ảnh photoshop bóp eo giả trân.<br>
+                • Không đặt chữ/logo sát mép viền (tránh bị giao diện ứng dụng cắt xén).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Mô phỏng Bố cục Ảnh bìa Before / After (Split-Screen 50/50 - Tỷ lệ 4:5)</h3>
+    <div style="text-align: center; margin: 25px 0;"><img src="pilates_before_after.jpg" style="max-width: 520px; width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 2px solid #3b82f6;"></div>
+<div class="grid-2">
+        <div class="split-box split-before">
+            <h4 style="color: #be123c; margin-bottom: 8px;">🔴 BEFORE (GÓC NGHIÊNG SAI TƯ THẾ)</h4>
+            <p><strong>• Thắt lưng:</strong> Võng sâu vào trong (đường chỉ đỏ)</p>
+            <p><strong>• Vòng bụng:</strong> Bụng dưới bị đẩy trồi ra phía trước</p>
+            <p><strong>• Trạng thái:</strong> Đau mỏi thắt lưng, tự ti khi mặc váy body</p>
+            <div class="hook-box" style="background:#fee2e2; border-color:#fca5a5; color:#991b1b; margin-top:10px;">
+                Nhãn đỏ: LỖI HÔNG CHẬU ĐỔ TRƯỚC
+            </div>
+        </div>
+        <div class="split-box split-after">
+            <h4 style="color: #15803d; margin-bottom: 8px;">🟢 AFTER (GÓC NGHIÊNG THẲNG TRỤC)</h4>
+            <p><strong>• Thắt lưng:</strong> Trục cột sống trở về đường cong tự nhiên</p>
+            <p><strong>• Vòng bụng:</strong> Bụng dưới phẳng lì tự nhiên, không cần hóp</p>
+            <p><strong>• Trạng thái:</strong> Thần thái thanh thoát, giải phóng hoàn toàn cơn đau</p>
+            <div class="hook-box" style="background:#dcfce7; border-color:#86efac; color:#166534; margin-top:10px;">
+                Nhãn xanh: ĐÃ NẮN ĐÚNG TRỤC CÂN BẰNG
+            </div>
+        </div>
+    </div>
+
+    <h3>Thứ bậc thị giác 4 cấp (Nguyên tắc 2 giây đọc lướt)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 180px;">Cấp độ</th>
+                <th style="width: 140px;">Thời gian tiếp nhận</th>
+                <th>Yếu tố thị giác & Nội dung hiển thị</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Cấp 1 — Nhìn đầu tiên</strong></td>
+                <td>0 – 1 giây</td>
+                <td>Sự tương phản rõ rệt giữa 2 vòng bụng góc nghiêng (Một bên phình rõ rệt — Một bên phẳng lì tự nhiên). Khách hàng giật mình vì thấy giống mình.</td>
+            </tr>
+            <tr>
+                <td><strong>Cấp 2 — Đọc thứ hai</strong></td>
+                <td>1 – 2 giây</td>
+                <td>Dòng tít đập thẳng vào mắt: <strong>"KHÔNG PHẢI BÉO BỤNG!"</strong> (Font chữ không chân, in hoa, màu nổi bật).</td>
+            </tr>
+            <tr>
+                <td><strong>Cấp 3 — Xem chi tiết</strong></td>
+                <td>2 – 5 giây</td>
+                <td>Các đường trục gióng thẳng và mũi tên giải phẫu chỉ rõ vùng xương chậu xoay và thắt lưng võng; nhãn Before/After.</td>
+            </tr>
+            <tr>
+                <td><strong>Cấp 4 — Bỏ hẳn trên ảnh</strong></td>
+                <td>—</td>
+                <td>Lược bỏ toàn bộ các đoạn văn giải thích dài dòng trên ảnh (để dành trọn vẹn cho phần bài viết nhằm giữ ảnh sạch và sang).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Mẫu Brief bàn giao Canva & Prompt tạo ảnh AI</h3>
+    <div class="card">
+        <strong style="color: var(--primary);">Mẫu Brief thiết kế Canva / Graphic Designer:</strong>
+        <p style="font-style: italic; margin-top: 8px;">
+            "Thiết kế ảnh tỷ lệ 4:5 (1080 x 1350 px). Bố cục chia đôi màn hình (Split screen 50/50) so sánh Before & After góc nghiêng người mẫu nữ mặc đồ tập thể thao ôm sát.<br>
+            • Nửa bên trái: Nhãn đỏ 'BEFORE', đường gióng màu đỏ chỉ rõ thắt lưng võng sâu và bụng dưới chìa ra trước.<br>
+            • Nửa bên phải: Nhãn xanh 'AFTER', đường gióng trục màu xanh lá thẳng tắp từ tai - vai - hông, bụng phẳng tự nhiên.<br>
+            • Tiêu đề lớn phía trên: 'BỤNG PHÌNH DO LỆCH XƯƠNG, KHÔNG PHẢI MỠ!'.<br>
+            • Phong cách: Tối giản, hiện đại, tone màu be/trắng ấm áp chuẩn không gian Pilates & Wellness Studio cao cấp. Giữ khoảng cách chữ an toàn cách mép tối thiểu 10%."
+        </p>
+    </div>
+
+    <div class="prompt-box"># Prompt tạo ảnh AI (Midjourney / DALL-E / Flux):
+A professional split-screen comparison image for a luxury Pilates & Wellness Studio, 4:5 aspect ratio. 
+Left side: Side-profile of a young Asian woman in dark workout clothes showing anterior pelvic tilt posture with an arched lower back and protruding lower belly, subtle red posture alignment guideline. 
+Right side: Side-profile of the same woman with perfectly aligned neutral spine posture, flat stomach, upright stance, subtle green alignment line. 
+Clean aesthetic, bright modern studio background with wooden reformer equipment, soft natural sunlight, elegant beige and navy blue tones, editorial fitness photography, photorealistic, 8k resolution.</div>
+
+    <h3>Cổng kiểm soát chất lượng Visual (Quality Gate 6 điểm)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 250px;">Tiêu chí kiểm soát</th>
+                <th style="width: 120px;">Đánh giá</th>
+                <th>Ghi chú kiểm tra thực tế</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1. Thông điệp rõ trong 2 giây?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT 100%</strong></td>
+                <td>Nhìn vào ảnh hiểu ngay vấn đề bụng phình do lệch dáng tư thế, không phải do mỡ.</td>
+            </tr>
+            <tr>
+                <td><strong>2. Điểm hút thị giác rõ ràng?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT 100%</strong></td>
+                <td>Tập trung đúng vùng bụng dưới và thắt lưng võng ở nửa bên trái Before.</td>
+            </tr>
+            <tr>
+                <td><strong>3. Chữ chính nổi bật, dễ đọc?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT 100%</strong></td>
+                <td>Tiêu đề in hoa, ngắn gọn 6 từ, độ tương phản cao, đọc rõ trên điện thoại nhỏ.</td>
+            </tr>
+            <tr>
+                <td><strong>4. Khớp phong cách thương hiệu?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT 100%</strong></td>
+                <td>Thanh lịch, cao cấp, chuẩn phong cách Wellness, không lòe loẹt hay rẻ tiền.</td>
+            </tr>
+            <tr>
+                <td><strong>5. Đúng tỷ lệ & Vùng an toàn?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT 100%</strong></td>
+                <td>Tỷ lệ 4:5 chuẩn dọc Facebook/Instagram, chữ cách mép viền an toàn > 10%.</td>
+            </tr>
+            <tr>
+                <td><strong>6. Kích thích đọc tiếp bài viết?</strong></td>
+                <td><strong style="color: #16a34a;">ĐẠT 100%</strong></td>
+                <td>Tạo sự mâu thuẫn nhận thức mạnh mẽ, kích thích người xem bấm "Xem thêm" đọc caption.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        HỌC VIỆN KSTUDY — CHƯƠNG TRÌNH ĐÀO TẠO THỰC CHIẾN AI CONTENT MARKETING (AICO01)<br>
+        Bản quyền thuộc về Học viện Kstudy & Giảng viên Bích Phạm · Bản chuẩn xuất bản 2026
+    </div>
+</div>
+
+</body>
+</html>

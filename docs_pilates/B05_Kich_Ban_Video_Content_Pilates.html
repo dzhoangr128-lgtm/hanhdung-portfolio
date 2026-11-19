@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kstudy AICO01 - Bài 05: Kịch bản Video Content</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #f59e0b;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-gray: #f8fafc;
+            --border: #e2e8f0;
+            --success: #10b981;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+        .header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .badge {
+            background-color: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .meta-info {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary-light);
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        h1 { color: var(--primary); font-size: 26px; margin-bottom: 8px; }
+        h2 {
+            color: var(--primary);
+            font-size: 18px;
+            margin: 30px 0 15px 0;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+            display: flex;
+            align-items: center;
+        }
+        h3 { font-size: 15px; color: var(--primary); margin: 18px 0 8px 0; }
+        p, li { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+        ul, ol { padding-left: 20px; margin-bottom: 15px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 11px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        tr:hover { background-color: #f8fafc; }
+        .card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        .highlight-box {
+            background: #fffbeb;
+            border: 1px solid #fef3c7;
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #92400e;
+            line-height: 1.7;
+        }
+        .tag-pass {
+            color: #16a34a;
+            font-weight: bold;
+        }
+        .script-badge {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        .img-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .img-container img {
+            max-width: 380px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border: 2px solid #3b82f6;
+        }
+        .img-caption {
+            font-size: 13px;
+            color: #64748b;
+            margin-top: 8px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div>
+            <h1>HỌC VIỆN KSTUDY — AICO01</h1>
+            <p style="margin:0; font-weight:600; color:#64748b;">BÀI THỰC HÀNH 05: XÂY DỰNG KỊCH BẢN VIDEO CONTENT (REELS / TIKTOK)</p>
+        </div>
+        <div class="badge">Hoàn Thành 100%</div>
+    </div>
+
+    <div class="meta-info">
+        <strong>Dự án:</strong> Pilates & Wellness Studio (Nắn chỉnh vóc dáng & Trị liệu tư thế)<br>
+        <strong>Môn học:</strong> AICO01 — Buổi 5: Kịch bản video content (kich-ban-video-content)<br>
+        <strong>Giáo viên chấm điểm:</strong> Cô Bích Phạm<br>
+        <strong>Đầu ra:</strong> Kịch bản 7 cột chi tiết, Cổng kiểm 5 điểm, Storyboard & Shot list 8 cột, Production Brief chuẩn bị quay dựng
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 1. TƯ DUY VIDEO & ĐỊNH DẠNG               -->
+    <!-- ========================================== -->
+    <h2>1. TỔNG QUAN DỰ ÁN & TƯ DUY KỊCH BẢN KHOA HỌC</h2>
+
+    <div class="img-container">
+        <img src="pilates_video_cover.jpg" alt="Video Thumbnail">
+        <p class="img-caption"><strong>Ảnh bìa Video Thumbnail AI (Tỷ lệ 9:16):</strong> HLV nắn chỉnh tư thế trực tiếp cho học viên trên máy Reformer</p>
+    </div>
+
+    <div class="highlight-box">
+        <strong>Nguyên tắc sống còn của Video Marketing (Kstudy Standards):</strong><br>
+        <em>"Video ngắn không phải là bài đọc thuộc lòng. Video là sự cộng hưởng giữa 3 lớp: <strong>Lời thoại nói được bằng miệng (Ear-friendly)</strong> + <strong>Hình ảnh chuyển động (Eye-catching)</strong> + <strong>Chữ nhấn trên màn hình (Thumb-stopping)</strong>. Lời thoại phải tự nhiên, phản ánh 100% sự thật khoa học, tuyệt đối không hứa hẹn phi thực tế!"</em>
+    </div>
+
+    <div class="card">
+        <h3>Hồ sơ kịch bản (Production Profile):</h3>
+        <ul>
+            <li><strong>Tên kịch bản:</strong> <em>"Chị ơi, không phải béo bụng!"</em> (Dạng Live Consultation & Posture Fix — Khám dáng & Nắn chỉnh thực tế).</li>
+            <li><strong>Thời lượng mục tiêu:</strong> 50 giây (Thời lượng vàng tối ưu thuật toán giữ chân trên TikTok / Facebook Reels / Instagram Reels).</li>
+            <li><strong>Nhân vật:</strong> 01 Nữ học viên văn phòng (biểu cảm tự nhiên, trang phục tập ôm sát) + 01 Nữ Huấn luyện viên Pilates (ấm áp, đĩnh đạc, chuyên môn cao).</li>
+            <li><strong>Bối cảnh:</strong> Studio Pilates cao cấp, tone màu be/trắng sáng, bên cạnh máy tập Reformer gỗ.</li>
+        </ul>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 2. BẢNG KỊCH BẢN VIDEO 7 CỘT              -->
+    <!-- ========================================== -->
+    <h2>2. BẢNG KỊCH BẢN VIDEO 7 CỘT CHI TIẾT (CHUẨN KSTUDY)</h2>
+    <p>Bảng kịch bản phân rã chi tiết 4 chặng nội dung kết hợp đồng bộ giữa tai nghe, mắt nhìn và nhịp giữ chân người xem:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 110px;">Chặng & Thời lượng</th>
+                <th style="width: 220px;">Lời thoại / Voiceover (Nói tự nhiên)</th>
+                <th style="width: 190px;">Hình ảnh & Cảnh quay (Visual & Camera)</th>
+                <th style="width: 150px;">Chữ trên màn hình (Text Overlay)</th>
+                <th style="width: 100px;">Âm thanh / SFX</th>
+                <th style="width: 130px;">Điểm giữ chân (Retention Hook)</th>
+                <th style="width: 120px;">Ghi chú & CTA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <span class="script-badge">CHẶNG 1</span><br>
+                    <strong>Nỗi đau học viên</strong><br>
+                    (0 – 5 giây)
+                </td>
+                <td>
+                    <strong>Học viên:</strong><br>
+                    <em>"Em ơi, chị ngồi làm việc nhiều, người thì không béo nhưng sao nhìn góc nghiêng thắt lưng nó cứ bị võng sâu hoắm, còn bụng dưới thì nhô hẳn ra phía trước thế này em nhỉ?"</em>
+                </td>
+                <td>
+                    <strong>Góc nghiêng soi gương:</strong><br>
+                    Học viên đứng xoay người nhìn vào gương studio, tay chỉ vào khoảng võng ở thắt lưng và phần bụng dưới. HLV bước nhẹ lại gần.
+                </td>
+                <td>
+                    <strong style="color: #be123c;">"THẮT LƯNG VÕNG — BỤNG DƯỚI NHÔ RA?"</strong><br>
+                    <small>Font sans-serif in hoa, viền vàng nổi bật</small>
+                </td>
+                <td>
+                    Âm thanh "Whoosh" chuyển cảnh tò mò, tạo sự tập trung.
+                </td>
+                <td>
+                    Chạm trúng 100% nỗi đau của nữ văn phòng: người bình thường nhưng góc nghiêng thắt lưng võng, bụng nhô.
+                </td>
+                <td>
+                    Vào thẳng vấn đề trong 3 giây đầu, không vòng vo.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="script-badge">CHẶNG 2</span><br>
+                    <strong>HLV khám & Bắt bệnh</strong><br>
+                    (5 – 16 giây)
+                </td>
+                <td>
+                    <strong>HLV:</strong><br>
+                    <em>"Bụng này của chị không phải do mỡ đâu, mà do thói quen ngồi nhiều làm khung xương chậu bị xoay trục về phía trước rồi. Xương lệch làm thắt lưng võng xuống, tự khắc bụng dưới bị đẩy chìa ra. Phải nắn lại trục xương thì bụng mới phẳng được chị ạ!"</em>
+                </td>
+                <td>
+                    <strong>Góc nghiêng 90°:</strong><br>
+                    HLV đặt nhẹ 2 tay lên mào chậu của học viên chỉ rõ góc lệch xương. Máy quay lia cận thắt lưng võng và cơ hông co cứng.
+                </td>
+                <td>
+                    <strong style="color: #be123c;">XƯƠNG CHẬU LỆCH TRỤC ➔ BỤNG BỊ ĐẨY CHÌA RA</strong><br>
+                    <small>Mũi tên đỏ chỉ góc lệch khung xương</small>
+                </td>
+                <td>
+                    Tiếng chuông cảnh báo "Ding" nhẹ khi chỉ ra lỗi lệch trục. Nhạc nền tò mò.
+                </td>
+                <td>
+                    Đập tan hiểu lầm (Myth-busting): Bụng to do lệch xương, không phải do mỡ thừa.
+                </td>
+                <td>
+                    Khẳng định kiến thức chuyên môn giải phẫu uy tín.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="script-badge">CHẶNG 3</span><br>
+                    <strong>Nắn chỉnh & Tập trên máy</strong><br>
+                    (16 – 38 giây)
+                </td>
+                <td>
+                    <strong>HLV:</strong><br>
+                    <em>"Lên máy đây em hướng dẫn động tác nhả cơ hông và đánh thức lại nhóm cơ bụng sâu nhé. Hít sâu bằng mũi... thở chậm bằng miệng... cuộn nhẹ xương chậu về rốn, áp sát thắt lưng xuống đệm. Chị thở hết khí ra và cảm nhận thành bụng dưới từ từ rút sâu vào trong... Đúng rồi, giữ nguyên trục và đẩy nhẹ chân ra nào!"</em><br><br>
+                    <strong>Học viên (Cảm nhận thật):</strong><br>
+                    <em>"Ôi thắt lưng nhẹ hẳn em ơi! Lần đầu tiên chị cảm nhận được cơ bụng dưới nó tự rút vào trong, chứ không bị gồng căng giật ở thắt lưng như lúc tự gập bụng ở nhà!"</em><br><br>
+                    <strong>HLV:</strong><br>
+                    <em>"Đúng rồi chị, khung chậu về đúng trục thì cơ bụng mới làm việc được. Đi đúng phác đồ là dáng tự khắc sẽ gom gọn lại thôi chị ạ!"</em>
+                </td>
+                <td>
+                    <strong>Chuyển cảnh mượt:</strong><br>
+                    Học viên nằm trên máy Reformer gỗ cao cấp. HLV đặt tay nhẹ nhàng lên xương chậu hướng dẫn nhịp thở sâu.<br><br>
+                    <strong>B-roll cận cảnh:</strong><br>
+                    Góc máy cận quay vào vùng eo và thắt lưng: Thắt lưng áp êm sát đệm máy, thành bụng dưới siết lại theo nhịp thở ra, trục cơ thể thẳng hàng.
+                </td>
+                <td>
+                    <strong style="color: #15803d;">KÍCH HOẠT CƠ BỤNG SÂU ➔ GIẢI PHÓNG ÁP LỰC THẮT LƯNG</strong><br>
+                    <small>(Tick xanh lá xác nhận)</small>
+                </td>
+                <td>
+                    Nhạc nền chuyển sang Upbeat tươi sáng, tràn đầy năng lượng tích cực.
+                </td>
+                <td>
+                    Cảm nhận chân thật 100%: Thắt lưng nhẹ bẫng và cơ bụng tự rút vào trong, không quảng cáo điêu hay nói quá.
+                </td>
+                <td>
+                    Khoe không gian máy móc Reformer sang trọng và sự tận tâm của HLV.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="script-badge">CHẶNG 4</span><br>
+                    <strong>Lời kêu gọi hành động</strong><br>
+                    (38 – 50 giây)
+                </td>
+                <td>
+                    <strong>HLV:</strong><br>
+                    <em>"Đừng vội nhịn ăn hay uống trà giảm cân khi chưa kiểm tra lại khung xương của mình chị em nhé! Chị em nào muốn tự tập thử thì comment ngay 'DÁNG' bên dưới, mình gửi video 3 phút nhả cơ hông tối nay tự tập được luôn. Hoặc tiện đường cứ ghé studio tuần lễ khai trương này để tụi mình đo quét dáng 1:1 miễn phí — trải nghiệm không gian Wellness chuẩn xịn mà giá tập cực kỳ minh bạch, không lo bị chèo kéo đâu ạ!"</em>
+                </td>
+                <td>
+                    <strong>Góc trung cảnh:</strong><br>
+                    HLV và học viên cùng đứng cạnh máy Reformer, tươi cười thân thiện hướng về máy quay. HLV cầm bảng kết quả phân tích dáng InBody.
+                </td>
+                <td>
+                    👉 <strong>COMMENT "DÁNG" NHẬN BÀI TẬP TẠI NHÀ</strong><br>
+                    🎁 <strong>ĐO QUÉT DÁNG 1:1 MIỄN PHÍ TUẦN KHAI TRƯƠNG</strong><br>
+                    <small>(Cam kết giá minh bạch — Chuẩn Wellness)</small>
+                </td>
+                <td>
+                    Tiếng "Ding" vui tai khi hiện CTA. Nhạc nền kết thúc nhẹ nhàng.
+                </td>
+                <td>
+                    Lời mời quà tặng không rủi ro: Vừa nhận bài tập tại nhà vừa có cơ hội trải nghiệm studio sang trọng miễn phí.
+                </td>
+                <td>
+                    <strong>CTA 2 tầng:</strong><br>
+                    • Tầng 1: Comment "DÁNG"<br>
+                    • Tầng 2: Ghé studio đo máy miễn phí.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ========================================== -->
+    <!-- 3. CỔNG KIỂM SOÁT CHẤT LƯỢNG KỊCH BẢN     -->
+    <!-- ========================================== -->
+    <h2>3. CỔNG KIỂM SOÁT CHẤT LƯỢNG KỊCH BẢN (5 TIÊU CHÍ KSTUDY QUALITY GATE)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 50px;">STT</th>
+                <th style="width: 250px;">Tiêu chí kiểm soát</th>
+                <th style="width: 120px;">Đánh giá</th>
+                <th>Căn cứ đối soát thực tế trên kịch bản</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>Hook liên quan trực tiếp thông điệp chính?</strong></td>
+                <td><span class="tag-pass">ĐẠT 100%</span></td>
+                <td>3 giây đầu học viên chỉ góc nghiêng lưng võng bụng nhô khớp 100% với thông điệp: "Bụng phình do lệch xương, không phải mỡ".</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>Lời thoại nói được bằng miệng tự nhiên?</strong></td>
+                <td><span class="tag-pass">ĐẠT 100%</span></td>
+                <td>Câu từ đối thoại đời thường, không drama giả trân, ngắt nghỉ theo đúng nhịp thở thật của HLV và học viên.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>Có hình ảnh chuyển động (B-roll) cho từng ý?</strong></td>
+                <td><span class="tag-pass">ĐẠT 100%</span></td>
+                <td>Góc máy soi gương ➔ Góc nghiêng bắt bệnh ➔ Cận cảnh nắn chỉnh trên máy Reformer ➔ Cận cơ bụng rút vào ➔ Đứng cười thân thiện.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>Text overlay hỗ trợ, không nhồi nhét chữ?</strong></td>
+                <td><span class="tag-pass">ĐẠT 100%</span></td>
+                <td>Chữ ngắn gọn dưới 7 từ, chỉ nhấn từ khóa đắt giá: "Thắt lưng võng bụng nhô?", "Xương chậu lệch trục", "Kích hoạt cơ bụng sâu", "Comment DÁNG".</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>CTA rõ ràng, khớp mục tiêu chuyển đổi?</strong></td>
+                <td><span class="tag-pass">ĐẠT 100%</span></td>
+                <td>Vừa kích thích comment để thuật toán phân phối viral, vừa kéo khách ghé studio trải nghiệm dịch vụ tuần khai trương.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ========================================== -->
+    <!-- 4. STORYBOARD & SHOT LIST 8 CỘT           -->
+    <!-- ========================================== -->
+    <h2>4. STORYBOARD & SHOT LIST 8 CỘT (KẾ HOẠCH QUAY DỰNG THỰC TẾ)</h2>
+    <p>Bảng phân cảnh chi tiết giúp ekip quay dựng và diễn viên phối hợp mượt mà tại phim trường:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 80px;">Shot #</th>
+                <th style="width: 150px;">Cỡ cảnh & Góc máy</th>
+                <th style="width: 160px;">Hành động nhân vật</th>
+                <th style="width: 150px;">B-roll chuyển động</th>
+                <th style="width: 140px;">Phụ đề & Text Overlay</th>
+                <th style="width: 140px;">Âm thanh / Thoại</th>
+                <th style="width: 120px;">Đạo cụ & Thiết bị</th>
+                <th style="width: 110px;">Ghi chú dựng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Shot 1</strong><br>(0–5s)</td>
+                <td><strong>Trung cảnh (Medium)</strong> — Góc nghiêng soi gương</td>
+                <td>Học viên đứng soi gương, tay chỉ thắt lưng võng và bụng; HLV bước vào khung hình.</td>
+                <td>Lia máy từ gương sang học viên, nhấn vào góc nghiêng cơ thể.</td>
+                <td>"THẮT LƯNG VÕNG — BỤNG DƯỚI NHÔ RA?"</td>
+                <td>Học viên: <em>"Em ơi, chị ngồi làm việc nhiều... bụng dưới nhô hẳn ra..."</em></td>
+                <td>Gương lớn studio, đồ tập ôm sát</td>
+                <td>Cắt nhịp nhanh, zoom nhẹ vào thắt lưng ở giây thứ 3.</td>
+            </tr>
+            <tr>
+                <td><strong>Shot 2</strong><br>(5–16s)</td>
+                <td><strong>Toàn cảnh nghiêng (Profile)</strong> — Góc 90°</td>
+                <td>HLV đặt 2 tay lên mào chậu của học viên chỉ góc lệch trục.</td>
+                <td>Giữ máy cố định (Tripod), ánh sáng chiếu rõ đường cong thắt lưng võng.</td>
+                <td>"XƯƠNG CHẬU LỆCH TRỤC ➔ BỤNG BỊ ĐẨY CHÌA RA"</td>
+                <td>HLV: <em>"Bụng này không phải mỡ đâu... phải nắn lại trục xương chị ạ!"</em></td>
+                <td>Thước gióng trục ảo (hậu kỳ vẽ thêm)</td>
+                <td>Thêm mũi tên đồ họa đỏ chỉ hõm thắt lưng võng.</td>
+            </tr>
+            <tr>
+                <td><strong>Shot 3</strong><br>(16–28s)</td>
+                <td><strong>Toàn cảnh máy tập (Wide Studio)</strong></td>
+                <td>Học viên nằm lên máy Reformer gỗ; HLV quỳ hướng dẫn tư thế chân và hơi thở.</td>
+                <td>Camera trượt từ từ (Gimbal slider) khoe không gian studio sang trọng và máy móc hiện đại.</td>
+                <td>"NẮN CHỈNH TRỤC TRÊN MÁY REFORMER"</td>
+                <td>HLV: <em>"Hít sâu bằng mũi... thở chậm bằng miệng... cuộn nhẹ xương chậu..."</em></td>
+                <td>Máy tập Pilates Reformer, đệm tập</td>
+                <td>Nhạc chuyển sang Upbeat tươi sáng, chuyên nghiệp.</td>
+            </tr>
+            <tr>
+                <td><strong>Shot 4</strong><br>(28–38s)</td>
+                <td><strong>Cận cảnh đặc tả (Detail Shot)</strong></td>
+                <td>Cơ bụng dưới học viên tự động rút sâu vào trong khi thở ra và nắn đúng trục.</td>
+                <td>Quay cận vùng bụng và thắt lưng áp sát đệm; học viên mắt sáng lên vui mừng.</td>
+                <td>"KÍCH HOẠT CƠ BỤNG SÂU ➔ GIẢI PHÓNG ÁP LỰC THẮT LƯNG"</td>
+                <td>Học viên: <em>"Ôi thắt lưng nhẹ hẳn em ơi... cơ bụng tự rút vào trong!"</em></td>
+                <td>Máy Reformer, ánh sáng tự nhiên dịu</td>
+                <td>SFX "Ting" cùng icon tick xanh lá xác nhận.</td>
+            </tr>
+            <tr>
+                <td><strong>Shot 5</strong><br>(38–50s)</td>
+                <td><strong>Trung cảnh (Medium)</strong> — Góc chính diện</td>
+                <td>HLV và học viên cùng đứng cạnh máy Reformer, tươi cười rạng rỡ hướng về máy quay.</td>
+                <td>Góc máy ấm áp, thân thiện, kết thúc video.</td>
+                <td>👉 COMMENT "DÁNG" NHẬN BÀI TẬP<br>🎁 ĐO QUÉT DÁNG 1:1 MIỄN PHÍ</td>
+                <td>HLV: <em>"Đừng vội nhịn ăn khi chưa kiểm tra khung xương... comment DÁNG nhé!"</em></td>
+                <td>Bảng kết quả quét dáng, logo studio</td>
+                <td>Giữ Text CTA trong Safe Zone, tránh nút TikTok che.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ========================================== -->
+    <!-- 5. PRODUCTION BRIEF                       -->
+    <!-- ========================================== -->
+    <h2>5. PRODUCTION BRIEF (HƯỚNG DẪN THỰC THI SẢN XUẤT)</h2>
+    <div class="card">
+        <h3>1. Thiết bị & Kỹ thuật quay tối giản:</h3>
+        <p>• <strong>Máy quay:</strong> 01 Điện thoại iPhone (hoặc smartphone đời mới) quay chế độ 4K 60fps hoặc 1080p 60fps góc dọc 9:16.<br>
+        • <strong>Âm thanh:</strong> 02 Micro cài áo không dây (Wireless Lavalier Mic) để thu âm giọng nói trong trẻo, khử tạp âm vọng của phòng tập.<br>
+        • <strong>Ánh sáng:</strong> Tận dụng tối đa ánh sáng tự nhiên qua cửa kính lớn của studio kết hợp 01 đèn Softbox tản sáng dịu nhẹ.</p>
+
+        <h3>2. Diễn xuất & Trang phục:</h3>
+        <p>• <strong>Học viên:</strong> Đồ tập thể thao tối màu ôm sát (quần legging đen + áo croptop hoặc bra thể thao), búi tóc gọn gàng để lộ trục cổ và cột sống. Biểu cảm tự nhiên, thể hiện rõ sự bất ngờ và nhẹ nhõm ở chặng 3.<br>
+        • <strong>Huấn luyện viên:</strong> Đồ tập màu pastel hoặc đồng phục thương hiệu Pilates Studio, tác phong tự tin, động tác nắn chỉnh dứt khoát nhưng nhẹ nhàng, ánh mắt ấm áp.</p>
+
+        <h3>3. Vùng an toàn (Safe Zone 9:16):</h3>
+        <p>• Toàn bộ chữ phụ đề (Text Overlay) và thông tin CTA phải đặt ở khoảng giữa màn hình (cách mép phải 15% để tránh nút Thả tim/Share, cách mép dưới 20% để tránh phần mô tả caption của TikTok/Reels).</p>
+    </div>
+
+    <div class="footer">
+        HỌC VIỆN KSTUDY — CHƯƠNG TRÌNH ĐÀO TẠO THỰC CHIẾN AI CONTENT MARKETING (AICO01)<br>
+        Bản quyền thuộc về Học viện Kstudy & Giảng viên Bích Phạm · Bản chuẩn xuất bản 2026
+    </div>
+</div>
+
+</body>
+</html>

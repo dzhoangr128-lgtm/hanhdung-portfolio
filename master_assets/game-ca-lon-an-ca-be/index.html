@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đại Dương Săn Mồi - Feeding Frenzy Ocean</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="game-container">
+    <!-- Canvas trò chơi -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Giao diện HUD khi chơi -->
+    <div id="hud" class="hidden">
+      <!-- Cột trái: Thông tin cá & Cấp độ -->
+      <div class="hud-left">
+        <div class="player-badge">
+          <div class="avatar-ring">
+            <canvas id="playerAvatarCanvas" width="60" height="60"></canvas>
+          </div>
+          <div class="player-info">
+            <div class="player-level" id="playerLevelText">CẤP 1</div>
+            <div class="player-species" id="playerSpeciesText">Cá Hề Nhỏ</div>
+          </div>
+        </div>
+
+        <!-- Thanh tiến hóa -->
+        <div class="growth-container">
+          <div class="growth-label">
+            <span>TIẾN HÓA</span>
+            <span id="growthPercent">0%</span>
+          </div>
+          <div class="growth-bar-bg">
+            <div class="growth-bar-fill" id="growthBar"></div>
+            <div class="growth-markers">
+              <span class="marker m1 active">1</span>
+              <span class="marker m2">2</span>
+              <span class="marker m3">3</span>
+              <span class="marker m4">👑</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thanh thể lực bơi nhanh (Stamina) -->
+        <div class="stamina-container">
+          <div class="stamina-label">
+            <span>TĂNG TỐC (Space / Click)</span>
+            <span id="staminaText">100%</span>
+          </div>
+          <div class="stamina-bar-bg">
+            <div class="stamina-bar-fill" id="staminaBar"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Giữa: Combo & Frenzy -->
+      <div class="hud-center">
+        <div id="comboContainer" class="hidden">
+          <div class="combo-text">COMBO <span id="comboMultiplier">x2</span></div>
+          <div class="combo-timer-bar"><div id="comboTimerFill"></div></div>
+        </div>
+        <div id="frenzyBanner" class="frenzy-banner hidden">
+          🔥 CUỒNG NỘ ĐẠI DƯƠNG! BẤT KHẢ CHIẾN BẠI! 🔥
+        </div>
+        <div id="warningBanner" class="warning-banner hidden">
+          ⚠️ CẢNH BÁO: HẢI QUÁI XUẤT HIỆN! ⚠️
+        </div>
+      </div>
+
+      <!-- Phải: Điểm số, kỷ lục, điều khiển -->
+      <div class="hud-right">
+        <div class="score-board">
+          <div class="score-title">ĐIỂM SỐ</div>
+          <div class="score-value" id="scoreDisplay">0</div>
+          <div class="high-score-small">Kỷ lục: <span id="highScoreSmall">0</span></div>
+        </div>
+
+        <div class="hud-buttons">
+          <button id="btnSound" class="icon-btn" title="Bật/Tắt Âm thanh">🔊</button>
+          <button id="btnMusic" class="icon-btn" title="Bật/Tắt Nhạc nền">🎵</button>
+          <button id="btnPause" class="icon-btn" title="Tạm dừng">⏸️</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Màn hình Bắt Đầu -->
+    <div id="startScreen" class="overlay-screen">
+      <div class="start-card">
+        <div class="title-glow">
+          <span class="subtitle">👑 SIÊU PHẨM FEEDING FRENZY ĐẠI DƯƠNG RỰC RỠ 👑</span>
+          <h1 class="main-title">ĐẠI DƯƠNG<br><span class="highlight">SĂN MỒI</span></h1>
+          <p class="tagline">Cá Lớn Nuốt Cá Bé - Đồng Hành Cùng Công Chúa Tiên Cá Tuyệt Sắc</p>
+        </div>
+
+        <div class="fish-preview-box">
+          <div class="preview-stage">
+            <canvas id="previewCanvas" width="220" height="140"></canvas>
+          </div>
+          <div class="preview-caption">Bơi lội bằng chuột hoặc phím • Nuốt cá nhỏ hơn • Tránh kẻ săn mồi khổng lồ</div>
+        </div>
+
+        <div class="guide-grid">
+          <div class="guide-item">
+            <div class="icon">🖱️ / ⌨️</div>
+            <div class="desc"><strong>Điều khiển:</strong> Di chuyển chuột hoặc dùng <b>WASD / Mũi tên</b></div>
+          </div>
+          <div class="guide-item">
+            <div class="icon">⚡</div>
+            <div class="desc"><strong>Lướt nhanh:</strong> Giữ <b>Chuột trái / Phím Space</b> để tăng tốc</div>
+          </div>
+          <div class="guide-item">
+            <div class="icon">🐡</div>
+            <div class="desc"><strong>Cảnh giác:</strong> Đừng chạm vào cá lớn hơn hoặc cá nóc gai!</div>
+          </div>
+          <div class="guide-item">
+            <div class="icon">🔥</div>
+            <div class="desc"><strong>Frenzy:</strong> Ăn liên tục để hóa thần và nuốt trọn tất cả!</div>
+          </div>
+        </div>
+
+        <button id="btnStartGame" class="btn-primary pulse">
+          <span class="btn-icon">🎮</span> BẮT ĐẦU CHƠI NGAY
+        </button>
+      </div>
+    </div>
+
+    <!-- Màn hình Tạm Dừng -->
+    <div id="pauseScreen" class="overlay-screen hidden">
+      <div class="pause-card">
+        <h2>TẠM DỪNG</h2>
+        <p>Hít một hơi thở sâu dưới làn nước mát...</p>
+        <div class="pause-buttons">
+          <button id="btnResume" class="btn-primary">TIẾP TỤC</button>
+          <button id="btnRestartFromPause" class="btn-secondary">CHƠI LẠI</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Màn hình Kết Thúc (Game Over / Thắng cuộc) -->
+    <div id="gameOverScreen" class="overlay-screen hidden">
+      <div class="end-card">
+        <div id="endTitle" class="end-title">BỊ NUỐT MẤT RỒI!</div>
+        <div id="endSubtitle" class="end-subtitle">Bạn đã trở thành bữa tối của kẻ đi săn lớn hơn...</div>
+
+        <div class="stats-summary">
+          <div class="stat-box">
+            <div class="stat-label">ĐIỂM ĐẠT ĐƯỢC</div>
+            <div class="stat-num" id="endScore">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">CẤP CAO NHẤT</div>
+            <div class="stat-num" id="endLevel">Cấp 1</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">SỐ CÁ ĐÃ ĂN</div>
+            <div class="stat-num" id="endFishCount">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">COMBO CAO NHẤT</div>
+            <div class="stat-num" id="endMaxCombo">x1</div>
+          </div>
+        </div>
+
+        <div id="newRecordBadge" class="new-record hidden">🎉 KỶ LỤC ĐIỂM SỐ MỚI! 🎉</div>
+
+        <div class="end-actions">
+          <button id="btnPlayAgain" class="btn-primary pulse">
+            <span>🔄</span> CHƠI LẠI NGAY
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Engine (Web Audio API) -->
+  <script src="audio.js"></script>
+  <!-- Visual Effects & Tropical Ocean Reef -->
+  <script src="effects.js"></script>
+  <!-- Fish Entities & Legendary Mermaid -->
+  <script src="fish.js"></script>
+  <!-- Core Feeding Frenzy Engine -->
+  <script src="game.js"></script>
+</body>
+</html>
